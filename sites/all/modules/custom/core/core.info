@@ -1,0 +1,11 @@
+name = Core module
+description = GVK Core module
+package = Custom
+core = 7.x
+
+
+; Information added by Drupal.org packaging script on 2019-05-10
+version = "7.x-3.23"
+core = "7.x"
+project = "custom"
+datestamp = "1557505389"

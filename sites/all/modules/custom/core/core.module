@@ -1,0 +1,567 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function core_menu() {
+  $items = [];
+
+  $items['dashboard'] = [
+    'title' => 'Панель мониторинга',
+    'page callback' => 'core_page_dashboard',
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Панель мониторинга',
+    'type' => MENU_CALLBACK,
+  ];
+  $items['report'] = [
+    'title' => 'Отчет системы',
+    'page callback' => 'core_page_report',
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Панель мониторинга',
+    'type' => MENU_CALLBACK,
+  ];
+  $items['settings'] = [
+    'title' => 'Настройка программы',
+    'page callback' => 'core_page_settings',
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Панель мониторинга',
+    'type' => MENU_CALLBACK,
+  ];
+  $items['units'] = [
+    'title' => 'Управление узлами связи',
+    'page callback' => 'core_page_units',
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Панель мониторинга',
+    'type' => MENU_CALLBACK,
+  ];
+
+  $items['unit/%'] = [
+    'title' => 'Управление объектом',
+    'page callback' => 'core_page_unit',
+    'page arguments' => [1],
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Информаци об объекте',
+    'type' => MENU_CALLBACK,
+  ];
+  $items['unit/%/edit'] = [
+    'title' => 'Управление тэгами объекта',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['core_unit_edit_form', 1],
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Создание узла связи',
+    'type' => MENU_CALLBACK,
+  ];
+  $items['unit/%/tags'] = [
+    'title' => 'Управление тэгами объекта',
+    'page callback' => 'core_page_unit_tags',
+    'page arguments' => [1],
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Информаци о тэгах объекта',
+    'type' => MENU_CALLBACK,
+  ];
+  $items['create/unit'] = [
+    'title' => 'Создание узла',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['core_unit_create_form'],
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Создание узла связи',
+    'type' => MENU_CALLBACK,
+  ];
+
+  $items['create/tag'] = [
+    'title' => 'Создание тэга',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['core_tag_create_form'],
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Создание узла связи',
+    'type' => MENU_CALLBACK,
+  ];
+  $items['api'] = [
+    'title' => 'Ajax get',
+    'page callback' => 'core_ajax_get',
+    'page arguments' => [1],
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Ajax get request',
+    'type' => MENU_CALLBACK,
+  ];
+
+  return $items;
+}
+
+function core_ajax_get() {
+  $params = drupal_get_query_parameters();
+
+  db_set_active('kns');
+  $result = db_select($params['prm'], 'tbl')
+    ->fields('tbl', array('VAL', 'TM'))
+    ->orderBy('tbl.TM', 'DESC')
+    ->range(0,1)
+    ->execute()
+    ->fetchField();
+  db_set_active();
+ print json_encode((int)$result);
+}
+
+
+function core_page_unit($unit_id) {
+  $query = db_select('eck_unit', 'u');
+  $query->fields('u');
+  $query->condition('u.id', (int) $unit_id);
+  $query->distinct();
+  $unit = $query->execute()->fetch();
+
+  $query = db_select('eck_tag', 't');
+  $query->fields('t');
+  $query->condition('t.unit_id', (int) $unit_id);
+  $query->distinct();
+  $tags = $query->execute()->fetchAll();
+  return theme('unit_page', ['tags' => $tags, 'unit' => $unit]);
+}
+
+
+function render_contract_status($status = 'Y') {
+  if ($status == 'Y') {
+    return '<span style="color: #74cc7e">Активен</span>';
+  }
+  else {
+    return '<span style="color: #cc3000">Отключен</span>';
+  }
+}
+
+function core_page_dashboard() {
+  $query = db_select('eck_unit', 'u');
+  $query->fields('u');
+
+  $query->distinct();
+  $units = $query->execute()->fetchAll();
+
+  return theme('dashboard_page', ['units' => $units]);
+
+}
+
+function core_page_units() {
+  $query = db_select('eck_unit', 'u');
+  $query->fields('u');
+
+  $query->distinct();
+  $units = $query->execute()->fetchAll();
+
+  return theme('units', ['units' => $units]);
+
+}
+
+function core_page_unit_tags($unit_id) {
+
+  $query = db_select('eck_unit', 'u');
+  $query->fields('u');
+  $query->condition('u.id', (int) $unit_id);
+  $query->distinct();
+  $unit = $query->execute()->fetch();
+
+  $query = db_select('eck_tag', 't');
+  $query->fields('t');
+  $query->condition('t.unit_id', (int) $unit_id);
+  $query->distinct();
+  $tags = $query->execute()->fetchAll();
+  return theme('tags', ['tags' => $tags, 'unit' => $unit]);
+}
+
+
+function core_theme($existing, $type, $theme, $path) {
+
+  $base = [
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'la') . '/templates/forms',
+  ];
+
+  return [
+    'core_unit_edit_form' => $base + [
+        'template' => 'default',
+      ],
+    'core_unit_create_form' => $base + [
+        'template' => 'default',
+      ],
+    'core_tag_create_form' => $base + [
+        'template' => 'tag_form',
+      ],
+    'dashboard_page' => [
+      'template' => 'dashboard',
+      'path' => drupal_get_path('theme', 'la') . '/templates/pages',
+      //'render element' => 'page',
+      'variables' => [
+        'units' => [
+        ],
+      ],
+    ],
+    'unit_page' => [
+      'template' => 'unit',
+      'path' => drupal_get_path('theme', 'la') . '/templates/pages',
+      //'render element' => 'page',
+      'variables' => [
+        'unit' => [
+        ],
+        'tags' => [
+        ],
+      ],
+    ],
+    'units' => [
+      'template' => 'units',
+      'path' => drupal_get_path('theme', 'la') . '/templates/pages',
+      //'render element' => 'page',
+      'variables' => [
+        'units' => [
+        ],
+      ],
+    ],
+    'tags' => [
+      'template' => 'tags',
+      'path' => drupal_get_path('theme', 'la') . '/templates/pages',
+      //'render element' => 'page',
+      'variables' => [
+        'tags' => [
+        ],
+      ],
+    ],
+  ];
+}
+
+function core_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'user_login' || $form_id == 'user_login_block') {
+    $form['name']['#title'] = 'Email';
+    $form['name']['#description'] = 'Введите email';
+    $form['pass']['#description'] = 'Введите пароль выданный вам';
+    $form['actions']['submit']['#attributes']['class'][] = 'btn-primary';
+    $form['actions']['submit']['#attributes']['class'][] = 'btn';
+    $form['actions']['submit']['#attributes']['class'][] = 'btn-sm';
+  }
+  if ($form_id == 'webform_client_form_1') {
+    $form['actions']['previous']['#attributes']['class'] = [
+      'btn',
+      'btn-outline-dark',
+      'btn-sm',
+      'mg-r15',
+    ];
+    $form['actions']['next']['#attributes']['class'] = [
+      'btn',
+      'btn-primary',
+      'btn-sm',
+    ];
+    $form['actions']['submit']['#attributes']['class'] = [
+      'btn',
+      'btn-primary',
+      'btn-sm',
+    ];
+    $form['#validate'][] = 'core_contract_lc_validate';
+    $form['#submit'][] = 'core_contract_save_form_submit';
+    if (isset($form_state['input']['submitted']['contract_number'])) {
+      db_set_active('bitrix');
+      $query = db_select('b_tszh_accounts', 'accounts');
+      $query->innerJoin('b_tszh_house', 'house', 'accounts.HOUSE_ID = house.ID');
+      $query->fields('accounts');
+      $query->fields('house', ['ADDRESS_USER_ENTERED']);
+      $query->condition('accounts.XML_ID', (int) $form_state['input']['submitted']['contract_number']);
+      $contracts = $query->execute()->fetchAll();
+      db_set_active();
+      if (!empty($contracts)) {
+        $text = '<h4>Вы добавляете лицевой счет № ' . $form_state['input']['submitted']['contract_number'] . '</h4>';
+        $text .= '<p style="padding-top: 30px">Ответсвенный собственник: ' . $contracts[0]->NAME . '</p>';
+        $text .= '<p style="margin-bottom: 60px">Адрес: ' . $contracts[0]->ADDRESS_USER_ENTERED . ' </p>';
+        $form['submitted']['confirmation_address']['#markup'] = $text;
+
+      }
+      else {
+        $form['submitted']['confirmation_address']['#markup'] = 'Ошибка добавление лицевого счета';
+      }
+
+
+    }
+  }
+
+}
+
+function core_unit_create_form($form, &$form_state) {
+
+  $form['title'] = [
+    '#title' => 'Название узла',
+    '#description' => 'Имя узла для идентификации',
+    '#type' => 'textfield',
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['description'] = [
+    '#title' => 'Описание узла',
+    '#description' => 'Адрес местонахождения',
+    '#type' => 'textarea',
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['ip_address'] = [
+    '#title' => 'IP адрес',
+    '#description' => 'TCPIP адрес для опроса узла',
+    '#type' => 'textfield',
+    '#default_value' => '127.0.0.1',
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['port'] = [
+    '#title' => 'Порт узла',
+    '#description' => 'Порт для опроса узла',
+    '#type' => 'textfield',
+    '#default_value' => 502,
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['slave_id'] = [
+    '#title' => 'Slave ID',
+    '#description' => 'ID устройства в modbus сети',
+    '#type' => 'textfield',
+    '#default_value' => '0',
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['status'] = [
+    '#title' => 'Статус',
+    '#type' => 'select',
+    '#options' => [0 => 'Выключен', 1 => 'Включен'],
+    '#attributes' => [
+      'class' => [
+        'form-control',
+        'selectize-document-assigned-uid',
+      ],
+    ],
+  ];
+  $form['submit'] = [
+    '#type' => 'submit',
+    '#attributes' => ['class' => ['btn', 'btn-primary']],
+    '#value' => 'Создать узел',
+  ];
+
+
+  return $form;
+}
+
+function core_unit_edit_form($form, &$form_state, $unit_id) {
+
+  $query = db_select('eck_unit', 'u');
+  $query->fields('u');
+  $query->condition('u.id', (int) $unit_id);
+  $query->distinct();
+  $unit = $query->execute()->fetch();
+
+  $form['unit_id'] = [
+    '#type' => 'hidden',
+    '#value' => $unit_id,
+    '#required' => TRUE,
+  ];
+  $form['title'] = [
+    '#title' => 'Название узла',
+    '#description' => 'Имя узла для идентификации',
+    '#type' => 'textfield',
+    '#default_value' => $unit->title,
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['description'] = [
+    '#title' => 'Описание узла',
+    '#description' => 'Адрес местонахождения',
+    '#type' => 'textarea',
+    '#default_value' => $unit->description,
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['ip_address'] = [
+    '#title' => 'IP адрес',
+    '#description' => 'TCPIP адрес для опроса узла',
+    '#type' => 'textfield',
+    '#default_value' => $unit->ip_address,
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['port'] = [
+    '#title' => 'Порт узла',
+    '#description' => 'Порт для опроса узла',
+    '#type' => 'textfield',
+    '#default_value' => $unit->port,
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['slave_id'] = [
+    '#title' => 'Slave ID',
+    '#description' => 'ID устройства в modbus сети',
+    '#type' => 'textfield',
+    '#default_value' => $unit->slave_id,
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['status'] = [
+    '#title' => 'Статус',
+    '#type' => 'select',
+    '#default_value' => $unit->status,
+    '#options' => [0 => 'Выключен', 1 => 'Включен'],
+    '#attributes' => [
+      'class' => [
+        'form-control',
+        'selectize-document-assigned-uid',
+      ],
+    ],
+  ];
+  $form['submit'] = [
+    '#type' => 'submit',
+    '#attributes' => ['class' => ['btn', 'btn-primary']],
+    '#value' => 'Сохранить изменения',
+  ];
+
+
+  return $form;
+}
+
+function core_unit_edit_form_submit($form, $form_state) {
+  $unit_parameters = [
+    'title' => $form_state['values']['title'],
+    'description' => $form_state['values']['description'],
+    'port' => (int) $form_state['values']['port'],
+    'ip_address' => $form_state['values']['ip_address'],
+    'status' => (int) $form_state['values']['status'],
+    'slave_id' => (int) $form_state['values']['slave_id'],
+    'changed' => REQUEST_TIME,
+  ];
+  db_update('eck_unit')
+    ->fields($unit_parameters)
+    ->condition('id', (int) $form_state['values']['unit_id'])
+    ->execute();
+  drupal_set_message('Успешное обновление');
+}
+
+function core_unit_create_form_submit($form, $form_state) {
+  $unit_parameters = [
+    'type' => 'unit',
+    'title' => $form_state['values']['title'],
+    'description' => $form_state['values']['description'],
+    'port' => $form_state['values']['port'],
+    'ip_address' => $form_state['values']['ip_address'],
+    'status' => $form_state['values']['status'],
+    'slave_id' => (int) $form_state['values']['slave_id'],
+    'created' => REQUEST_TIME,
+    'changed' => REQUEST_TIME,
+  ];
+
+  $unit = entity_create('unit', $unit_parameters);
+  $unit->save();
+  drupal_set_message('Успешное создание');
+}
+
+function core_tag_create_form($form, &$form_state) {
+
+  $form['title'] = [
+    '#title' => 'Название узла',
+    '#description' => 'Имя узла для идентификации',
+    '#type' => 'textfield',
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['machine_name'] = [
+    '#title' => 'Машинное имя',
+    '#description' => 'Имя используемое в шаблоне',
+    '#type' => 'textfield',
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['register'] = [
+    '#title' => 'Адрес регистра',
+    '#description' => 'Числовой адрес регистра',
+    '#type' => 'textfield',
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['length'] = [
+    '#title' => 'Длина регистра',
+    '#description' => 'Числовая длина регистра',
+    '#type' => 'textfield',
+    '#attributes' => ['class' => ['form-control']],
+    '#required' => TRUE,
+  ];
+  $form['unit_id'] = [
+    '#title' => 'Узел связи',
+    '#type' => 'select',
+    '#options' => _core_get_units(),
+    '#attributes' => [
+      'class' => [
+        'form-control',
+        'selectize-document-assigned-uid',
+      ],
+    ],
+  ];
+  $form['submit'] = [
+    '#type' => 'submit',
+    '#attributes' => [
+      'class' => [
+        'btn',
+        'btn-warning',
+        'rounded-0',
+        'text-white',
+        'float-right',
+      ],
+    ],
+    '#value' => 'Создать тэг',
+  ];
+
+
+  return $form;
+}
+
+
+function core_tag_create_form_submit($form, $form_state) {
+  $tag_parameters = [
+    'type' => 'tag',
+    'title' => $form_state['values']['title'],
+    'machine_name' => $form_state['values']['machine_name'],
+    'register' => $form_state['values']['register'],
+    'length' => $form_state['values']['length'],
+    'unit_id' => $form_state['values']['unit_id'],
+    'changed' => REQUEST_TIME,
+  ];
+
+  $tag = entity_create('tag', $tag_parameters);
+  $tag->save();
+  drupal_set_message('Успешное создание');
+}
+
+function _core_get_units() {
+  $result = [];
+  $query = db_select('eck_unit', 'u');
+  $query->fields('u', ['id', 'title']);
+
+  $query->distinct();
+  $units = $query->execute()->fetchAll();
+  if ($units) {
+    foreach ($units as $n => $unit) {
+      $result[$unit->id] = $unit->title;
+    }
+  }
+  return $result;
+}
+
+
+function core_registration_block_user_form_submit_validate($form, &$form_state) {
+  if (!valid_email_address($form_state['values']['mail'])) {
+    form_set_error('mail', 'Email указан с ошибкой');
+  }
+  if (user_load_by_mail($form_state['values']['mail'])) {
+    form_set_error('mail', 'На этот email уже была регистрация, использовать его повторно нельзя');
+  }
+}
+
+
+function core_meters_send_form_validate($form, $form_state) {
+
+  if (!is_numeric($form_state['values']['meter_value'])) {
+    form_set_error('meter_value', 'Показания состоит только из чисел');
+  }
+  if (floatval($form_state['values']['meter_value']) < floatval($form_state['values']['last_value_tech'])) {
+    form_set_error('meter_value', 'Новые показания не могут быть меньше предыдущих');
+  }
+  if ((floatval($form_state['values']['meter_value']) - floatval($form_state['values']['last_value_tech'])) > 1000) {
+    form_set_error('meter_value', 'Новые показания слишком большие, больше 1000 куб. метров передать нельзя');
+  }
+}
+

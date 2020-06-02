@@ -1,0 +1,36 @@
+.btn-active {
+    background-color: #f5a623;
+    border-color: #f5a623;
+    color: #ffffff;
+}
+.btn-error {
+    background-color: #f55f60;
+    border-color: #f55f60;
+}
+.btn-rounded.btn-icon {
+    line-height: 44px;
+}
+.btn.btn-icon {
+
+    width: 48px;
+    height: 48px;
+}
+.resizable-textarea .grippie {
+    display: none;
+}
+.default-text {
+    text-decoration: none;
+    color: #8c8c8c;
+}
+.default-text:hover {
+    color: #8c8c8c;
+    text-decoration: none;
+}
+.text-attr.btn-active {
+    background-color: transparent;
+    border-color: transparent;
+}
+.error-btn.btn-active {
+    background-color: #f51231;
+    border-color: #f51231;
+}

@@ -8,8 +8,7 @@
                     <a class="navbar-brand brand-logo" href="/"
                        style="color: #ffffff">КНС</a>
                     <a class="navbar-brand brand-logo-mini"
-                       href="index.html"><img src="../../images/logo-mini.svg"
-                                              alt="logo"></a>
+                       href="/">КНС</a>
                 </div>
                 <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                     <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"

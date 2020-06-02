@@ -9211,7 +9211,7 @@ pre code {
 
 @media (min-width: 768px) {
     .container {
-        max-width: 720px;
+        max-width: 99%;
     }
 }
 
@@ -9243,7 +9243,7 @@ pre code {
 
 @media (min-width: 768px) {
     .container, .container-sm, .container-md {
-        max-width: 720px;
+        max-width: 99%;
     }
 }
 
@@ -28175,7 +28175,7 @@ div.tagsinput span.tag a {
 
 @media (min-width: 768px) {
     .content-wrapper {
-        max-width: 720px;
+        max-width: 99%;
     }
 }
 

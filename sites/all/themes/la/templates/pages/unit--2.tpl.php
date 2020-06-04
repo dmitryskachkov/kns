@@ -55,28 +55,19 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-12 grid-margin stretch-card">
+    <div class="col-md-6 grid-margin stretch-card">
         <div class="card">
 
             <div class="card-body">
-                <div>
-                    <table class="table table-striped table-borderless">
-                        <thead>
+                <div id="engine1-chart" style="width: 100%; height: 340px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
 
-                        <tr>
-                            <th>Название тэга</th>
-                            <th>Машинное имя</th>
-                            <th>Номер регистра</th>
-                            <th>Длина</th>
-                            <th>Текущее значение</th>
-                            <th>Последний опрос</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-
-                        </tbody>
-                    </table>
-                </div>
+            <div class="card-body">
+                <div id="engine2-chart" style="width: 100%; height: 340px;"></div>
             </div>
         </div>
     </div>
@@ -299,28 +290,53 @@
                 }
             }]
         });
-        // Highcharts.stockChart('level-chart', {
-        //
-        //     rangeSelector: {
-        //         selected: 1
-        //     },
-        //
-        //     title: {
-        //         text: 'Уровень в резервуаре'
-        //     },
-        //
-        //     series: [{
-        //         type: 'area',
-        //         smoothed: false,
-        //         threshold: null,
-        //         name: 'Уровень',
-        //         data: data,
-        //         tooltip: {
-        //             valueDecimals: 0
-        //         }
-        //     }]
-        // });
+
+    });
+    Highcharts.getJSON('/history?prm=DBAVl_kns1_m241_engine1_engine1', function (data) {
+        // Create the chart
+        Highcharts.stockChart('engine1-chart', {
+
+            rangeSelector: {
+                selected: 1
+            },
+
+            title: {
+                text: 'Работа насоса №1'
+            },
+
+            series: [{
+                name: 'Статус насоса',
+                data: data,
+                step: true,
+                tooltip: {
+                    valueDecimals: 0
+                }
+            }]
+        });
+
     });
 
+    Highcharts.getJSON('/history?prm=DBAVl_kns1_m241_engine2_engine2', function (data) {
+        // Create the chart
+        Highcharts.stockChart('engine2-chart', {
 
+            rangeSelector: {
+                selected: 1
+            },
+
+            title: {
+                text: 'Работа насоса №2'
+            },
+
+            series: [{
+                name: 'Статус насоса',
+                data: data,
+                step: true,
+                tooltip: {
+                    valueDecimals: 0
+                }
+            }]
+        });
+
+    });
 </script>

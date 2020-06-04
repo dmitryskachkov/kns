@@ -114,7 +114,7 @@ function core_ajax_get_history() {
 
   db_set_active('kns');
   $result = db_select($params['prm'], 'tbl')
-    ->fields('tbl', array('VAL', 'TM'))
+    ->fields('tbl', array('TM', 'VAL'))
     ->orderBy('tbl.TM', 'ASC');
 
   if (isset($params['start'])) {
@@ -128,7 +128,10 @@ function core_ajax_get_history() {
   $result = $result->execute()->fetchAll();
 
   db_set_active();
-  print json_encode($result);
+  foreach ($result as $n=>$items) {
+    $result[$n] = [$items->TM, $items->VAL];
+  }
+  print json_encode($result, JSON_NUMERIC_CHECK);
 }
 
 function core_page_unit($unit_id) {

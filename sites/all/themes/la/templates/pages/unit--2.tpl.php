@@ -74,7 +74,7 @@
 </div>
 <script type="text/javascript">
     Highcharts.theme = {
-        colors: ['#b1b1b5', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066',
+        colors: ['#f5a623', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066',
             '#eeaaee', '#b1b1b5', '#DF5353', '#7798BF', '#aaeeee'],
         chart: {
             backgroundColor: {
@@ -268,26 +268,71 @@
     };
     // Apply the theme
     Highcharts.setOptions(Highcharts.theme);
+    var RangeSelectorTemplate = {
+        buttons: [
+            {
+                type: 'minute',
+                count: 1,
+                text: '1m'
+            },
+            {
+                type: 'minute',
+                count: 5,
+                text: '5m'
+            },
+            {
+                type: 'hour',
+                count: 3,
+                text: '3h'
+            },
+            {
+                type: 'hour',
+                count: 6,
+                text: '6h'
+            },
+            {
+                type: 'hour',
+                count: 12,
+                text: '12h'
+            },
+            {
+                type: 'hour',
+                count: 24,
+                text: '24h'
+            },
+            {
+                type: 'all',
+                text: 'All'
+            }
+        ],
+        inputEnabled: false, // it supports only days
+        selected: 2
+    };
+    var xAxisTemplate = {
+        type: 'datetime',
+        minRange: 300 * 1000
+    };
 
+    Highcharts.setOptions({
+        global: {
+            useUTC: false
+        }
+    });
     Highcharts.getJSON('/history?prm=DBAVl_kns1_m241_levels_level_total', function (data) {
         // Create the chart
         Highcharts.stockChart('level-chart', {
 
-            rangeSelector: {
-                selected: 1
-            },
+            xAxis: xAxisTemplate,
+            rangeSelector: RangeSelectorTemplate,
 
             title: {
                 text: 'Уровень в резервуаре'
             },
 
             series: [{
+                type: 'column',
                 name: 'Уровень',
                 data: data,
-                step: true,
-                tooltip: {
-                    valueDecimals: 0
-                }
             }]
         });
 
@@ -296,9 +341,9 @@
         // Create the chart
         Highcharts.stockChart('engine1-chart', {
 
-            rangeSelector: {
-                selected: 1
-            },
+            xAxis: xAxisTemplate,
+            rangeSelector: RangeSelectorTemplate,
+
 
             title: {
                 text: 'Работа насоса №1'
@@ -320,9 +365,9 @@
         // Create the chart
         Highcharts.stockChart('engine2-chart', {
 
-            rangeSelector: {
-                selected: 1
-            },
+            xAxis: xAxisTemplate,
+            rangeSelector: RangeSelectorTemplate,
+
 
             title: {
                 text: 'Работа насоса №2'

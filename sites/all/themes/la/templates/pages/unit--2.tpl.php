@@ -7,7 +7,6 @@
 <div class="row">
     <div class="col-md-4 grid-margin stretch-card">
         <div class="card">
-            <?php if ($unit) : ?>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">
@@ -49,7 +48,6 @@
                 </div>
 
             </div>
-            <?php endif; ?>
 
         </div>
     </div>
@@ -81,23 +79,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php if ($tags) : ?>
-                          <?php foreach ($tags as $n => $tag): ?>
-                                <tr>
-                                    <td><?php echo $tag->title ?></td>
-                                    <td class="font-weight-bold"><?php echo $tag->machine_name ?></td>
-                                    <td><?php echo $tag->register ?></td>
-                                    <td><?php echo $tag->length ?></td>
-                                    <td><?php echo $tag->value; ?></td>
-                                    <td><?php echo date('d.m.Y H:i' , $tag->changed); ?></td>
-                                </tr>
-                          <?php endforeach; ?>
-                        <?php else : ?>
-                            <tr>
-                                <td colspan="6"><p class="text-center" style="line-height: 300px">Тэгов в этом объекте пока нет</p></td>
 
-                            </tr>
-                        <?php endif ?>
                         </tbody>
                     </table>
                 </div>

@@ -132,18 +132,7 @@ function core_ajax_get_history() {
 }
 
 function core_page_unit($unit_id) {
-  $query = db_select('eck_unit', 'u');
-  $query->fields('u');
-  $query->condition('u.id', (int) $unit_id);
-  $query->distinct();
-  $unit = $query->execute()->fetch();
-
-  $query = db_select('eck_tag', 't');
-  $query->fields('t');
-  $query->condition('t.unit_id', (int) $unit_id);
-  $query->distinct();
-  $tags = $query->execute()->fetchAll();
-  return theme('unit_page', ['id' => (int) $unit_id, 'tags' => $tags, 'unit' => $unit]);
+  return theme_render_template(drupal_get_path('theme', 'la'). '/templates/pages/unit--' . (int)$unit_id . '.tpl.php', []);
 }
 
 
@@ -221,17 +210,17 @@ function core_theme($existing, $type, $theme, $path) {
         ],
       ],
     ],
-    'unit_page' => [
-      'template' => 'unit'. (is_numeric(arg(1)? '--'.(int)arg(1) :'')),
-      'path' => drupal_get_path('theme', 'la') . '/templates/pages',
-      //'render element' => 'page',
-      'variables' => [
-        'unit' => [
-        ],
-        'tags' => [
-        ],
-      ],
-    ],
+//    'unit_page' => [
+//      'template' => 'unit',
+//      'path' => drupal_get_path('theme', 'la') . '/templates/pages',
+//      //'render element' => 'page',
+//      'variables' => [
+//        'unit' => [
+//        ],
+//        'tags' => [
+//        ],
+//      ],
+//    ],
     'units' => [
       'template' => 'units',
       'path' => drupal_get_path('theme', 'la') . '/templates/pages',

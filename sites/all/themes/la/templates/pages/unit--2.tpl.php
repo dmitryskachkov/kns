@@ -83,8 +83,8 @@
 </div>
 <script type="text/javascript">
     Highcharts.theme = {
-        colors: ['#2b908f', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066',
-            '#eeaaee', '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
+        colors: ['#b1b1b5', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066',
+            '#eeaaee', '#b1b1b5', '#DF5353', '#7798BF', '#aaeeee'],
         chart: {
             backgroundColor: {
                 linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
@@ -281,7 +281,6 @@
         // Create the chart
         Highcharts.stockChart('level-chart', {
 
-
             rangeSelector: {
                 selected: 1
             },
@@ -291,6 +290,9 @@
             },
 
             series: [{
+                type: 'area',
+                smoothed: false,
+                threshold: null,
                 name: 'Уровень',
                 data: data,
                 tooltip: {

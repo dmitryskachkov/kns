@@ -7,14 +7,8 @@
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
                     <a class="navbar-brand brand-logo" href="/"
                        style="color: #ffffff">КНС</a>
-                    <a class="navbar-brand brand-logo-mini"
+                    <a class="navbar-brand brand-logo-mini" style="color: #ffffff"
                        href="/">КНС</a>
-                </div>
-                <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
-                            type="button" data-toggle="horizontal-menu-toggle">
-                        <span class="ti-menu"></span>
-                    </button>
                 </div>
             </div>
         </nav>

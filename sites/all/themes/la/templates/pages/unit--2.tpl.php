@@ -294,7 +294,7 @@
                 name: 'Уровень',
                 data: data,
                 tooltip: {
-                    valueDecimals: 1
+                    valueDecimals: 0
                 }
             }]
         });

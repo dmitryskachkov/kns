@@ -129,7 +129,7 @@ function core_ajax_get_history() {
 
   db_set_active();
   foreach ($result as $n=>$items) {
-    $result[$n] = [$items->TM, $items->VAL];
+    $result[$n] = [$items->TM * 1000, $items->VAL];
   }
   print json_encode($result, JSON_NUMERIC_CHECK);
 }

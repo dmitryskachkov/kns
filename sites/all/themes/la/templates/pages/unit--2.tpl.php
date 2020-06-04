@@ -277,6 +277,7 @@
     };
     // Apply the theme
     Highcharts.setOptions(Highcharts.theme);
+
     Highcharts.getJSON('/history?prm=DBAVl_kns1_m241_levels_level_total', function (data) {
         // Create the chart
         Highcharts.stockChart('level-chart', {
@@ -290,16 +291,35 @@
             },
 
             series: [{
-                type: 'area',
-                smoothed: false,
-                threshold: null,
                 name: 'Уровень',
                 data: data,
+                step: true,
                 tooltip: {
                     valueDecimals: 0
                 }
             }]
         });
+        // Highcharts.stockChart('level-chart', {
+        //
+        //     rangeSelector: {
+        //         selected: 1
+        //     },
+        //
+        //     title: {
+        //         text: 'Уровень в резервуаре'
+        //     },
+        //
+        //     series: [{
+        //         type: 'area',
+        //         smoothed: false,
+        //         threshold: null,
+        //         name: 'Уровень',
+        //         data: data,
+        //         tooltip: {
+        //             valueDecimals: 0
+        //         }
+        //     }]
+        // });
     });
 
 

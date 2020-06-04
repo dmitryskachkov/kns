@@ -222,7 +222,7 @@ function core_theme($existing, $type, $theme, $path) {
       ],
     ],
     'unit_page' => [
-      'template' => 'unit--'. arg(1),
+      'template' => 'unit'. (is_numeric(arg(1)? '--'.(int)arg(1) :'')),
       'path' => drupal_get_path('theme', 'la') . '/templates/pages',
       //'render element' => 'page',
       'variables' => [

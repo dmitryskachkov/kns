@@ -84,7 +84,14 @@ function core_menu() {
     'description' => 'Ajax get request',
     'type' => MENU_CALLBACK,
   ];
-
+  $items['history'] = [
+    'title' => 'Ajax get history of paremeter',
+    'page callback' => 'core_ajax_get_history',
+    'page arguments' => [1],
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Ajax get request',
+    'type' => MENU_CALLBACK,
+  ];
   return $items;
 }
 
@@ -102,6 +109,27 @@ function core_ajax_get() {
  print json_encode((int)$result);
 }
 
+function core_ajax_get_history() {
+  $params = drupal_get_query_parameters();
+
+  db_set_active('kns');
+  $result = db_select($params['prm'], 'tbl')
+    ->fields('tbl', array('VAL', 'TM'))
+    ->orderBy('tbl.TM', 'ASC');
+
+  if (isset($params['start'])) {
+    $result->condition('tbl.TM', (int)$params['start'], '>');
+  }
+
+  if (isset($params['end'])) {
+    $result->condition('tbl.TM', (int)$params['end'], '<');
+  }
+
+  $result = $result->execute()->fetchAll();
+
+  db_set_active();
+  print json_encode($result);
+}
 
 function core_page_unit($unit_id) {
   $query = db_select('eck_unit', 'u');
@@ -115,7 +143,7 @@ function core_page_unit($unit_id) {
   $query->condition('t.unit_id', (int) $unit_id);
   $query->distinct();
   $tags = $query->execute()->fetchAll();
-  return theme('unit_page', ['tags' => $tags, 'unit' => $unit]);
+  return theme('unit_page', ['id' => (int) $unit_id, 'tags' => $tags, 'unit' => $unit]);
 }
 
 
@@ -194,7 +222,7 @@ function core_theme($existing, $type, $theme, $path) {
       ],
     ],
     'unit_page' => [
-      'template' => 'unit',
+      'template' => 'unit--'. arg(1),
       'path' => drupal_get_path('theme', 'la') . '/templates/pages',
       //'render element' => 'page',
       'variables' => [

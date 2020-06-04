@@ -37,3 +37,29 @@
 .brand-logo-mini {
     color: #ffffff;
 }
+.form-text {
+    height: 35px;
+    margin-right: 0;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #444444;
+}
+.form-text:focus {
+    border: 1px solid #444444;
+}
+.description {
+    margin-top: 15px;
+}
+.auth-form-light {
+    color: #444444;
+}
+.auth-form-light h4
+{
+    color: #222222;
+    font-size: 20px;
+}
+.auth-form-light .form-submit {
+    padding: 10px 40px;
+    border-radius: 0;
+    margin-top: 15px;
+}

@@ -22,7 +22,8 @@ function core_menu() {
   ];
   $items['settings'] = [
     'title' => 'Настройка программы',
-    'page callback' => 'core_page_settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['core_settings_form', 1],
     'access callback' => 'user_is_logged_in',
     'description' => 'Панель мониторинга',
     'type' => MENU_CALLBACK,
@@ -360,6 +361,33 @@ function core_unit_create_form($form, &$form_state) {
   return $form;
 }
 
+function core_settings_form($form, &$form_state) {
+  $form['theme'] = [
+    '#title' => 'Тема оформления системы',
+    '#type' => 'select',
+    '#default_value' => 'la',
+    '#options' => ['la' => 'Тёмная'],
+    '#attributes' => [
+      'class' => [
+        'form-control',
+        'selectize-document-assigned-uid',
+      ],
+    ],
+  ];
+  $form['whater_rate'] = [
+    '#title' => 'Единица измерения расхода',
+    '#type' => 'select',
+    '#default_value' => 'm3',
+    '#options' => ['m3' => 'м3 кубические метры'],
+    '#attributes' => [
+      'class' => [
+        'form-control',
+        'selectize-document-assigned-uid',
+      ],
+    ],
+  ];
+  return $form;
+}
 function core_unit_edit_form($form, &$form_state, $unit_id) {
 
   $query = db_select('eck_unit', 'u');

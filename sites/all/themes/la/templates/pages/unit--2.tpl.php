@@ -285,25 +285,7 @@
                 count: 3,
                 text: '3h'
             },
-            {
-                type: 'hour',
-                count: 6,
-                text: '6h'
-            },
-            {
-                type: 'hour',
-                count: 12,
-                text: '12h'
-            },
-            {
-                type: 'hour',
-                count: 24,
-                text: '24h'
-            },
-            {
-                type: 'all',
-                text: 'All'
-            }
+
         ],
         inputEnabled: false, // it supports only days
         selected: 2

@@ -96,6 +96,9 @@ function core_menu() {
   return $items;
 }
 
+function core_page_report() {
+  return '';
+}
 function core_ajax_get() {
   $params = drupal_get_query_parameters();
 

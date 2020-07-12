@@ -34,20 +34,10 @@
                                 <div class="d-flex align-items-center justify-content-between flex-wrap">
                                     <div class="border-right pr-4 mb-3 mb-xl-0">
                                         <p class="text-muted">Объектов</p>
-                                        <h4 class="mb-0 font-weight-bold">
-                                            <?php print $unit_count ?></h4>
-                                    </div>
-                                    <div class="border-right pr-4 mb-3 mb-xl-0">
-                                        <p class="text-muted">Последний опрос</p>
-                                        <h4 class="mb-0 font-weight-bold">
-                                            23.03.2020</h4>
+                                        <h4 class="mb-0 font-weight-bold">1</h4>
                                     </div>
 
-                                    <div class="pr-3 mb-3 mb-xl-0">
-                                        <p class="text-muted">Тэгов</p>
-                                        <h4 class="mb-0 font-weight-bold">
-                                          <?php print $tag_count ?></h4>
-                                    </div>
+
 
                                 </div>
                             </div>

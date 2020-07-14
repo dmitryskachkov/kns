@@ -83,3 +83,6 @@
 p.small {
     font-size: 10px;
 }
+.ymaps-layers-pane {
+    -webkit-filter: grayscale(100%);
+}

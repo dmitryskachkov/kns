@@ -80,7 +80,7 @@
         <div class="card">
 
             <div class="card-body">
-                <div id="engine1-chart" style="width: 100%; height: 340px;"></div>
+                <div id="engine1-chart" style="width: 100%; height: 260px;"></div>
             </div>
         </div>
     </div>
@@ -88,11 +88,12 @@
         <div class="card">
 
             <div class="card-body">
-                <div id="engine2-chart" style="width: 100%; height: 340px;"></div>
+                <div id="engine2-chart" style="width: 100%; height: 260px;"></div>
             </div>
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
     Highcharts.theme = {
         colors: ['#f5a623', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066',

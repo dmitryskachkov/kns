@@ -9,6 +9,7 @@ stylesheets[all][] = css/site.css
 stylesheets[all][] = css/icons.css
 stylesheets[all][] = css/tablet.css
 stylesheets[all][] = css/style.css
+stylesheets[all][] = css/font-awesome.min.css
 
 scripts[] = js/master.js
 scripts[] = js/select2.min.js

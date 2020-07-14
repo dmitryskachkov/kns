@@ -37,6 +37,25 @@
                             </div>
 
                         </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_levels_voltage1" data-var="voltage1"> <i class="fa fa-bolt"></i> </button>
+                                <p class="small">Ввод №1</p>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_levels_voltage2" data-var="voltage2"> <i class="fa fa-bolt"></i> </button>
+                                <p class="small">Ввод №2</p>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_levels_cold" data-var="voltage2"> <i class="fa fa-snowflake-o" aria-hidden="true"></i></button>
+                                <p class="small">Температ.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_levels_door" data-var="door"> <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                                <p class="small">Вход</p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

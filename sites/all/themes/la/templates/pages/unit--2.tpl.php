@@ -69,7 +69,9 @@
 
             <div class="card-body">
                 <div id="level-chart" style="width: 100%; height: 340px;"></div>
+                <p><i class="fa fa-mouse-pointer"></i> * Кликните на интерактивный элемент, чтобы увидеть дату последнего обновления параметра.</p>
             </div>
+
         </div>
     </div>
 </div>
@@ -304,6 +306,11 @@
                 count: 3,
                 text: '3h'
             },
+              {
+                type: 'hour',
+                count: 12,
+                text: '12h'
+              },
 
         ],
         inputEnabled: false, // it supports only days

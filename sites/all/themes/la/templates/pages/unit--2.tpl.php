@@ -341,7 +341,7 @@
             },
 
             series: [{
-                 step: true,
+                type: 'area',
                 name: 'Уровень',
                 data: data,
               tooltip: {

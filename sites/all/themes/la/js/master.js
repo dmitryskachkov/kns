@@ -2,27 +2,36 @@
   Drupal.behaviors.exampleModule = {
     attach: function (context, settings) {
 
-            $(".interactive").each(function () {
-              var element = $(this);
-              setInterval(function() {
+      $(".toolipdate").click(function() {
+        var element = $(this);
+        $.get("/last?prm=" + element.attr("data-browse"), function (result) {
+          if (result) {
+            element.after("<div class=\"mytooltip\" id=\"" + element.attr("data-browse") + "\">Последнее обновление:" + result + "</div>");
+            $("#" + element.attr("data-browse")).fadeOut(6500);
+          }
+        });
+      });
 
-                $.get("/api?prm=" + element.attr("data-browse"), function (result) {
-                  if (result == 1) {
-                    if (!element.hasClass("btn-active")) {
-                      element.addClass("btn-active");
-                    }
-                  }
-                  else {
-                    if (element.hasClass("btn-active")) {
-                      element.removeClass("btn-active");
-                    }
+      $(".interactive").each(function () {
+        var element = $(this);
+        setInterval(function () {
 
-                  }
-                });
-              }, 100);
+          $.get("/api?prm=" + element.attr("data-browse"), function (result) {
+            if (result == 1) {
+              if (!element.hasClass("btn-active")) {
+                element.addClass("btn-active");
+              }
+            }
+            else {
+              if (element.hasClass("btn-active")) {
+                element.removeClass("btn-active");
+              }
 
-            });
+            }
+          });
+        }, 100);
 
+      });
 
 
     }

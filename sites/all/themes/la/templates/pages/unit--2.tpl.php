@@ -17,23 +17,23 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <button class="btn btn-inverse-light btn-fw" style="margin-bottom: 10px; background-color: transparent" > </button>
-                                <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_levels_level3" data-var="level3">3</button>
-                                <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level2" data-var="level2">2</button>
-                                <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level1" data-var="level1">1</button>
-                                <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level0" data-var="level0">0</button>
+                                <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_levels_level3" data-var="level3">3</button>
+                                <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level2" data-var="level2">2</button>
+                                <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level1" data-var="level1">1</button>
+                                <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level0" data-var="level0">0</button>
 
                             </div>
                             <div class="col-md-9">
                                 <p class="small" style="margin-top:20px; margin-bottom: 20px">Насосы в работе:</p>
                                 <div style="margin-left: 10px">
-                                    <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="DBAVl_kns1_m241_engine1_engine1" data-var="engine1.status">1</p>
-                                    <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="DBAVl_kns1_m241_engine2_engine2" data-var="engine2.status">2</p>
+                                    <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive" style="margin-right: 12px;" data-href="btn" data-browse="DBAVl_kns1_m241_engine1_engine1" data-var="engine1.status">1</p>
+                                    <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive" style="margin-right: 12px;" data-href="btn" data-browse="DBAVl_kns1_m241_engine2_engine2" data-var="engine2.status">2</p>
                                 </div>
                                 <hr>
-                                <p style="line-height: 20px">Режим работы: <span class="float-right interactive text-attr" data-browse="DBAVl_kns1_m241_main_mainmode" data-href="text" data-var="unit.mode">Автомат</span> </p>
-                                <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="DBAVl_kns1_m241_levels_level_error" data-href="btn" data-var="unit.error_level"></button></p>
-                                <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="DBAVl_kns1_m241_engine1_engine1_erro" data-href="btn"data-var="unit.error_engine"></button></p>
-                                <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="DBAVl_kns1_m241_engine2_engine2_erro" data-href="btn" data-var="unit.error_engine"></button></p>
+                                <p style="line-height: 20px">Режим работы: <span class="float-right interactive toolipdate text-attr" data-browse="DBAVl_kns1_m241_main_mainmode" data-href="text" data-var="unit.mode">Автомат</span> </p>
+                                <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn interactive" data-browse="DBAVl_kns1_m241_levels_level_error" data-href="btn" data-var="unit.error_level"></button></p>
+                                <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn  interactive"data-browse="DBAVl_kns1_m241_engine1_engine1_erro" data-href="btn"data-var="unit.error_engine"></button></p>
+                                <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn  interactive"data-browse="DBAVl_kns1_m241_engine2_engine2_erro" data-href="btn" data-var="unit.error_engine"></button></p>
                             </div>
 
                         </div>

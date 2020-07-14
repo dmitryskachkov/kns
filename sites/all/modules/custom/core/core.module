@@ -77,6 +77,14 @@ function core_menu() {
     'description' => 'Создание узла связи',
     'type' => MENU_CALLBACK,
   ];
+  $items['last'] = [
+    'title' => 'Ajax get',
+    'page callback' => 'core_ajax_get_last',
+    'page arguments' => [1],
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Ajax get request',
+    'type' => MENU_CALLBACK,
+  ];
   $items['api'] = [
     'title' => 'Ajax get',
     'page callback' => 'core_ajax_get',
@@ -110,7 +118,20 @@ function core_ajax_get() {
     ->execute()
     ->fetchField();
   db_set_active();
- print json_encode((int)$result);
+  print json_encode((int)$result);
+}
+function core_ajax_get_last() {
+  $params = drupal_get_query_parameters();
+
+  db_set_active('kns');
+  $result = db_select($params['prm'], 'tbl')
+    ->fields('tbl', array('TM'))
+    ->orderBy('tbl.TM', 'DESC')
+    ->range(0,1)
+    ->execute()
+    ->fetchField();
+  db_set_active();
+ print json_encode( date('d.m.Y H:i',$result));
 }
 
 function core_ajax_get_history() {

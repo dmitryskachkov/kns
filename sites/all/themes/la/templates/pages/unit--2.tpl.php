@@ -15,15 +15,15 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-3">
-                                <button class="btn btn-inverse-light btn-fw" style="margin-bottom: 10px; background-color: transparent" > </button>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <button class="btn btn-inverse-light btn-fw hiddex-xs" style="margin-bottom: 10px; background-color: transparent" > </button>
                                 <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_levels_level3" data-var="level3">3</button>
                                 <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level2" data-var="level2">2</button>
                                 <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level1" data-var="level1">1</button>
                                 <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level0" data-var="level0">0</button>
 
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-9 col-sm-9 col-xs-9">
                                 <p class="small" style="margin-top:20px; margin-bottom: 20px">Насосы в работе:</p>
                                 <div style="margin-left: 10px">
                                     <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive" style="margin-right: 12px;" data-href="btn" data-browse="DBAVl_kns1_m241_engine1_engine1" data-var="engine1.status">1</p>
@@ -321,19 +321,25 @@
     });
     Highcharts.getJSON('/history?prm=DBAVl_kns1_m241_levels_level_total', function (data) {
         // Create the chart
+
         Highcharts.stockChart('level-chart', {
 
             xAxis: xAxisTemplate,
             rangeSelector: RangeSelectorTemplate,
-
+              // rangeSelector: {
+              //   selected: 1
+              // },
             title: {
                 text: 'Уровень в резервуаре'
             },
 
             series: [{
-                type: 'column',
+                 step: true,
                 name: 'Уровень',
                 data: data,
+              tooltip: {
+                valueDecimals: 0
+              }
             }]
         });
 

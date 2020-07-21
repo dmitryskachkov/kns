@@ -52,7 +52,7 @@
                                 <p class="small">Температ.</p>
                             </div>
                             <div class="col-md-3">
-                                <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_main_door" data-var="door"> <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                                <button class="btn btn-inverse-light btn-fw toolipdate interactive" style="margin-bottom: 10px; " data-href="btn"  data-browse="DBAVl_kns1_m241_main_door" data-var="door"> <i class="fa fa-sign-in" aria-hidden="true"></i></button>
                                 <p class="small">Вход</p>
                             </div>
                         </div>
@@ -69,7 +69,9 @@
 
             <div class="card-body">
                 <div id="level-chart" style="width: 100%; height: 340px;"></div>
-                <p><i class="fa fa-mouse-pointer"></i> * Кликните на интерактивный элемент, чтобы увидеть дату последнего обновления параметра.</p>
+                <p style="margin-top: 20px">Автоматика насоса №1 <span style="margin-left: 20px; margin-right: 20px" class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive" data-href="btn" data-browse="DBAVl_kns1_m241_main_engine1mode" data-var="engine1mode"></span>  Автоматика насоса №2 <span style="margin-left: 20px" class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive" data-href="btn" data-browse="DBAVl_kns1_m241_main_engine2mode" data-var="engine1mode"></span></p>
+
+                <p style="margin-top: 20px"><i class="fa fa-mouse-pointer"></i> * Кликните на интерактивный элемент, чтобы увидеть дату последнего обновления параметра.</p>
             </div>
 
         </div>

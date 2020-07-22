@@ -242,8 +242,8 @@ function core_theme($existing, $type, $theme, $path) {
         ],
       ],
     ],
-  'reports' => [
-      'template' => 'reports',
+  'report' => [
+      'template' => 'report',
       'path' => drupal_get_path('theme', 'la') . '/templates/pages',
       //'render element' => 'page',
       'variables' => [

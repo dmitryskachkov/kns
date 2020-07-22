@@ -4,7 +4,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-8">
-                        <h2>Отчеты по объекту</h2>
+                        <h4>Отчеты по объекту</h4>
                         <p class="small">Выберите объект для просмотра отчета</p>
                     </div>
                     <div class="col-lg-4">
@@ -15,17 +15,19 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
+                        <hr>
                         <fieldset>
-                            <h3>Насосы</h3>
-                            <p>Количество насосов</p>
-                            <p>Количество насосов в автоматическом режиме</p>
-                            <p>Насос №1. Время работы</p>
-                            <p>Насос №2. Время работы</p>
+                            <h4>Отчет по работе насосов</h4>
+                            <p>Количество насосов  <span class="float-right">0</span></p>
+                            <p>Количество насосов в автоматическом режиме  <span class="float-right">0</span></p>
+                            <p>Насос №1. Время работы  <span class="float-right">0</span></p>
+                            <p>Насос №2. Время работы  <span class="float-right">0</span></p>
                         </fieldset>
+                        <hr>
                         <fieldset>
-                            <h3>Уровень резервуара</h3>
-                            <p>Количество уровней</p>
-                            <p>Максимальный уровень за последние сутки</p>
+                            <h4>Отчет по работе уровней резервуара</h4>
+                            <p>Количество уровней  <span class="float-right">0</span></p>
+                            <p>Максимальный уровень за последние сутки  <span class="float-right">0</span></p>
                         </fieldset>
                     </div>
                 </div>

@@ -14,8 +14,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
-                        <hr>
+                    <hr>
+                    <div class="col-lg-6">
+                        <h4>Информация об объекте</h4>
+                        <p>Наименование <span class="float-right">КНС Дорожный №22</span></p>
+                        <p>Оборудование: <span class="float-right">SE M241</span></p>
+                        <p>Обрывы связи: <span class="float-right">0</span></p>
+                    </div>
+                    <div class="col-lg-6">
+
                         <fieldset>
                             <h4>Отчет по работе насосов</h4>
                             <p>Количество насосов  <span class="float-right">0</span></p>
@@ -27,7 +34,7 @@
                         <fieldset>
                             <h4>Отчет по работе уровней резервуара</h4>
                             <p>Количество уровней  <span class="float-right">0</span></p>
-                            <p>Максимальный уровень за последние сутки  <span class="float-right">0</span></p>
+                            <p>Максимальный уровень за выбранный период  <span class="float-right">0</span></p>
                         </fieldset>
                     </div>
                 </div>

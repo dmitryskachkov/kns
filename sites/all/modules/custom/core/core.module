@@ -105,7 +105,11 @@ function core_menu() {
 }
 
 function core_page_report() {
-  return '';
+    $unit = [];
+    $engines = [];
+    $levels = [];
+    $main = [];
+    return theme('report', ['unit' => $unit, 'engines' => $engines, 'levels' => $levels, 'main' => $main]);
 }
 function core_ajax_get() {
   $params = drupal_get_query_parameters();
@@ -238,17 +242,17 @@ function core_theme($existing, $type, $theme, $path) {
         ],
       ],
     ],
-//    'unit_page' => [
-//      'template' => 'unit',
-//      'path' => drupal_get_path('theme', 'la') . '/templates/pages',
-//      //'render element' => 'page',
-//      'variables' => [
-//        'unit' => [
-//        ],
-//        'tags' => [
-//        ],
-//      ],
-//    ],
+  'reports' => [
+      'template' => 'reports',
+      'path' => drupal_get_path('theme', 'la') . '/templates/pages',
+      //'render element' => 'page',
+      'variables' => [
+          'unit' => [ ],
+          'engines' => [ ],
+          'levels' => [],
+          'main' => [],
+      ],
+  ],
     'units' => [
       'template' => 'units',
       'path' => drupal_get_path('theme', 'la') . '/templates/pages',

@@ -128,9 +128,16 @@ function core_ajax_get_last() {
   $params = drupal_get_query_parameters();
 
   db_set_active('kns');
+  $last_result = db_select($params['prm'], 'tbl')
+    ->fields('tbl', array('VAL'))
+    ->orderBy('tbl.TM', 'DESC')
+    ->range(0,1)
+    ->execute()
+    ->fetchField();
   $result = db_select($params['prm'], 'tbl')
     ->fields('tbl', array('TM'))
     ->orderBy('tbl.TM', 'DESC')
+    ->condition('tbl.VAL', $last_result , '!=')
     ->range(0,1)
     ->execute()
     ->fetchField();

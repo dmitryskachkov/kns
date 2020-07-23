@@ -1,7 +1,8 @@
 .btn-active {
     background-color: #f5a623;
     border-color: #f5a623;
-    color: #ffffff;
+    color: #313131;
+    font-weight: bold;
 }
 .btn-error {
     background-color: #f55f60;

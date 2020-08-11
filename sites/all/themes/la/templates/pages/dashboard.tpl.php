@@ -19,11 +19,11 @@
 
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <button class="btn btn-inverse-light btn-fw" style="margin-bottom: 10px; background-color: transparent" > </button>
-                                        <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_levels_level3" data-var="level3">3</button>
-                                        <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level2" data-var="level2">2</button>
-                                        <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level1" data-var="level1">1</button>
-                                        <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level0" data-var="level0">0</button>
+                                        <button class="btn btn-inverse-light btn-fw level" style="margin-bottom: 10px; background-color: transparent" > </button>
+                                        <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_levels_level3" data-var="level3">3</button>
+                                        <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level2" data-var="level2">2</button>
+                                        <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level1" data-var="level1">1</button>
+                                        <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level0" data-var="level0">0</button>
 
                                     </div>
                                     <div class="col-md-9">
@@ -68,14 +68,14 @@
 
                             <div class="row">
                                 <div class="col-md-3">
-                                    <button class="btn btn-inverse-light btn-fw" style="margin-bottom: 10px; background-color: transparent" > </button>
-                                    <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px; " data-href="btn"  data-var="level3">6</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px; " data-href="btn" data-var="level3">5</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px; " data-href="btn"  data-var="level3">4</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px; " data-href="btn" data-var="level3">3</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px" data-href="btn"  data-var="level2">2</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px" data-href="btn"  data-var="level1">1</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive" style="margin-bottom: 10px" data-href="btn" data-var="level0">0</button>
+                                    <button class="btn btn-inverse-light btn-fw level" style="margin-bottom: 10px; background-color: transparent" > </button>
+                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px; " data-href="btn"  data-var="level3">6</button>
+                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px; " data-href="btn" data-var="level3">5</button>
+                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px; " data-href="btn"  data-var="level3">4</button>
+                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px; " data-href="btn" data-var="level3">3</button>
+                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn"  data-var="level2">2</button>
+                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn"  data-var="level1">1</button>
+                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn" data-var="level0">0</button>
 
                                 </div>
                                 <div class="col-md-9">

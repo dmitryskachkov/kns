@@ -33,11 +33,21 @@
                             <div class="col-12 col-xl-7">
                                 <div class="d-flex align-items-center justify-content-between flex-wrap">
                                     <div class="border-right pr-4 mb-3 mb-xl-0">
-                                        <p class="text-muted">Объектов</p>
+                                        <p class="text-muted">Объекты</p>
                                         <h4 class="mb-0 font-weight-bold">1</h4>
                                     </div>
-
-
+                                    <div class="border-right pr-4 mb-3 mb-xl-0">
+                                        <p class="text-muted">Параметры</p>
+                                        <h4 class="mb-0 font-weight-bold">8</h4>
+                                    </div>
+                                    <div class="border-right pr-4 mb-3 mb-xl-0">
+                                        <p class="text-muted">Связь</p>
+                                        <h4 class="mb-0 font-weight-bold">100%</h4>
+                                    </div>
+                                    <div class="border-right pr-4 mb-3 mb-xl-0">
+                                        <p class="text-muted">Аварии</p>
+                                        <h4 class="mb-0 font-weight-bold">±</h4>
+                                    </div>
 
                                 </div>
                             </div>

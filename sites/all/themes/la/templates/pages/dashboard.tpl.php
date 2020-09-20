@@ -1,5 +1,13 @@
 
     <div class="row">
+        <div class="col-lg-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-custom mg-b-50">
+                    <li class="breadcrumb-item"><a href="/dashboard">Панель управления</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><span>Общая страница</span></li>
+                </ol>
+            </nav>
+        </div>
         <div class="col-md-4 grid-margin stretch-card">
             <div class="card">
 
@@ -19,12 +27,13 @@
 
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <button class="btn btn-inverse-light btn-fw level" style="margin-bottom: 10px; background-color: transparent" > </button>
-                                        <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px; " data-href="btn" data-browse="DBAVl_kns1_m241_levels_level3" data-var="level3">3</button>
-                                        <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level2" data-var="level2">2</button>
-                                        <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level1" data-var="level1">1</button>
-                                        <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level0" data-var="level0">0</button>
+                                        <div class="bar-progress">
+                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level3" data-var="level3"> </span>
+                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level2" data-var="level2"> </span>
+                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level1" data-var="level1"> </span>
+                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level0" data-var="level0"> </span>
 
+                                        </div>
                                     </div>
                                     <div class="col-md-9">
                                         <p class="small" style="margin-top:20px; margin-bottom: 20px">Насосы в работе:</p>
@@ -68,14 +77,9 @@
 
                             <div class="row">
                                 <div class="col-md-3">
-                                    <button class="btn btn-inverse-light btn-fw level" style="margin-bottom: 10px; background-color: transparent" > </button>
-                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px; " data-href="btn"  data-var="level3">6</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px; " data-href="btn" data-var="level3">5</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px; " data-href="btn"  data-var="level3">4</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px; " data-href="btn" data-var="level3">3</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn"  data-var="level2">2</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn"  data-var="level1">1</button>
-                                    <button class="btn btn-inverse-light btn-fw interactive level" style="margin-bottom: 10px" data-href="btn" data-var="level0">0</button>
+                                    <div class="bar-progress">
+
+                                    </div>
 
                                 </div>
                                 <div class="col-md-9">

@@ -7,7 +7,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <a class="default-text" href="/unit/2">
-                                    <h4>КНС Дорожный</h4>
+                                    <h4>КНС №22 Дорожный</h4>
                                     <p class="text-muted font-weight-light">пос. Дорожный | SE M241</p>
                                 </a>
                             </div>

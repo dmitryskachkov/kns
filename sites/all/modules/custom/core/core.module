@@ -149,15 +149,16 @@ function core_page_report($unit_id = NULL) {
         // Calculate working
         db_set_active('kns');
         if (db_table_exists($engine)) {
-        $result = db_select($engine, 'tbl')
-          ->fields('tbl', ['TM'])
-          ->condition('tbl.VAL', 1)
-          ->countQuery()
-          ->execute()
-          ->fetchField();
-        db_set_active();
-        $unit->engines[$n]['working'] = date('H:i', $result * 5);
+          $result = db_select($engine, 'tbl')
+            ->fields('tbl', ['TM'])
+            ->condition('tbl.VAL', 1)
+            ->countQuery()
+            ->execute()
+            ->fetchField();
+
+          $unit->engines[$n]['working'] = date('H:i', $result * 5);
         }
+        db_set_active();
 
       }
 
@@ -407,7 +408,7 @@ function core_unit_switch_form($form, &$form_state) {
     '#title' => '',
     '#type' => 'select',
     '#options' => $units,
-    "#empty_option"=>t('- Выберите объект-'),
+    "#empty_option" => t('- Выберите объект-'),
     '#attributes' => [
       'class' => [
         'form-control',
@@ -425,6 +426,7 @@ function core_unit_switch_form($form, &$form_state) {
 
   return $form;
 }
+
 function core_unit_switch_form_submit($form, &$form_state) {
   drupal_goto('report/' . $form_state['values']['unit']);
 }

@@ -2,6 +2,10 @@
   Drupal.behaviors.exampleModule = {
     attach: function (context, settings) {
 
+      $("#core-unit-switch-form select").change(function(){
+        $("#core-unit-switch-form").submit();
+      });
+
       $(".toolipdate").click(function() {
         var element = $(this);
         $.get("/last?prm=" + element.attr("data-browse"), function (result) {

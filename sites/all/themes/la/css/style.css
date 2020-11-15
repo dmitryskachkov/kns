@@ -114,3 +114,6 @@ p.small {
 .mg-b-50 {
     margin-bottom: 50px;
 }
+#core-unit-switch-form .btn {
+    display: none;
+}

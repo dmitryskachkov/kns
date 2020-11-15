@@ -20,6 +20,14 @@ function core_menu() {
     'description' => 'Панель мониторинга',
     'type' => MENU_CALLBACK,
   ];
+  $items['report/%'] = [
+    'title' => 'Отчет системы',
+    'page callback' => 'core_page_report',
+    'page arguments' => [1],
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Панель мониторинга',
+    'type' => MENU_CALLBACK,
+  ];
   $items['settings'] = [
     'title' => 'Настройка программы',
     'page callback' => 'drupal_get_form',
@@ -104,45 +112,96 @@ function core_menu() {
   return $items;
 }
 
-function core_page_report() {
-    $unit = [];
-    $engines = [];
-    $levels = [];
-    $main = [];
-    return theme('report', ['unit' => $unit, 'engines' => $engines, 'levels' => $levels, 'main' => $main]);
+function createDateRangeArray($strDateFrom, $strDateTo) {
+  // takes two dates formatted as YYYY-MM-DD and creates an
+  // inclusive array of the dates between the from and to dates.
+
+  // could test validity of dates here but I'm already doing
+  // that in the main script
+
+  $aryRange = [];
+
+  $iDateFrom = mktime(1, 0, 0, substr($strDateFrom, 5, 2), substr($strDateFrom, 8, 2), substr($strDateFrom, 0, 4));
+  $iDateTo = mktime(1, 0, 0, substr($strDateTo, 5, 2), substr($strDateTo, 8, 2), substr($strDateTo, 0, 4));
+
+  if ($iDateTo >= $iDateFrom) {
+    array_push($aryRange, date('Y-m-d', $iDateFrom)); // first entry
+    while ($iDateFrom < $iDateTo) {
+      $iDateFrom += 86400; // add 24 hours
+      array_push($aryRange, date('Y-m-d', $iDateFrom));
+    }
+  }
+  return $aryRange;
 }
+
+function core_page_report($unit_id = NULL) {
+
+  $unit = [];
+  $history = createDateRangeArray(date('Y-m-d', strtotime('-60 days', time())), date('Y-m-d', time()));
+
+  if ($unit_id) {
+    $unit = node_load($unit_id);
+
+    if (isset($unit->field_engines['und'][0]['value'])) {
+      $engines = explode("\r\n", $unit->field_engines['und'][0]['value']);
+      foreach ($engines as $n => $engine) {
+        $unit->engines[$n]['name'] = $engine;
+        // Calculate working
+        db_set_active('kns');
+        $result = db_select($engine, 'tbl')
+          ->fields('tbl', ['TM'])
+          ->condition('tbl.VAL', 1)
+          ->countQuery()
+          ->execute()
+          ->fetchField();
+        db_set_active();
+        $unit->engines[$n]['working'] = date('H:i', $result * 5);
+      }
+
+    }
+  }
+
+  return theme('report', [
+      'unit_switch_form' => drupal_get_form('core_unit_switch_form'),
+      'unit' => $unit,
+      'history' => array_reverse($history),
+    ]
+  );
+}
+
 function core_ajax_get() {
   $params = drupal_get_query_parameters();
 
   db_set_active('kns');
   $result = db_select($params['prm'], 'tbl')
-    ->fields('tbl', array('VAL', 'TM'))
+    ->fields('tbl', ['VAL', 'TM'])
     ->orderBy('tbl.TM', 'DESC')
-    ->range(0,1)
+    ->range(0, 1)
     ->execute()
     ->fetchField();
   db_set_active();
-  print json_encode((int)$result);
+  print json_encode((int) $result);
 }
+
 function core_ajax_get_last() {
   $params = drupal_get_query_parameters();
 
   db_set_active('kns');
   $last_result = db_select($params['prm'], 'tbl')
-    ->fields('tbl', array('VAL'))
+    ->fields('tbl', ['VAL'])
     ->orderBy('tbl.TM', 'DESC')
-    ->range(0,1)
+    ->range(0, 1)
     ->execute()
     ->fetchField();
   $result = db_select($params['prm'], 'tbl')
-    ->fields('tbl', array('TM'))
+    ->fields('tbl', ['TM'])
     ->orderBy('tbl.TM', 'DESC')
-    ->condition('tbl.VAL', $last_result , '!=')
-    ->range(0,1)
+    ->condition('tbl.VAL', $last_result, '!=')
+    ->range(0, 1)
     ->execute()
     ->fetchField();
   db_set_active();
- print json_encode( date('d.m.Y H:i',$result));
+  print json_encode(date('d.m.Y H:i', $result));
 }
 
 function core_ajax_get_history() {
@@ -150,28 +209,28 @@ function core_ajax_get_history() {
 
   db_set_active('kns');
   $result = db_select($params['prm'], 'tbl')
-    ->fields('tbl', array('TM', 'VAL'))
+    ->fields('tbl', ['TM', 'VAL'])
     ->orderBy('tbl.TM', 'ASC');
 
   if (isset($params['start'])) {
-    $result->condition('tbl.TM', (int)$params['start'], '>');
+    $result->condition('tbl.TM', (int) $params['start'], '>');
   }
 
   if (isset($params['end'])) {
-    $result->condition('tbl.TM', (int)$params['end'], '<');
+    $result->condition('tbl.TM', (int) $params['end'], '<');
   }
 
   $result = $result->execute()->fetchAll();
 
   db_set_active();
-  foreach ($result as $n=>$items) {
+  foreach ($result as $n => $items) {
     $result[$n] = [$items->TM * 1000, $items->VAL];
   }
   print json_encode($result, JSON_NUMERIC_CHECK);
 }
 
 function core_page_unit($unit_id) {
-  return theme_render_template(drupal_get_path('theme', 'la'). '/templates/pages/unit--' . (int)$unit_id . '.tpl.php', []);
+  return theme_render_template(drupal_get_path('theme', 'la') . '/templates/pages/unit--' . (int) $unit_id . '.tpl.php', []);
 }
 
 
@@ -249,17 +308,16 @@ function core_theme($existing, $type, $theme, $path) {
         ],
       ],
     ],
-  'report' => [
+    'report' => [
       'template' => 'report',
       'path' => drupal_get_path('theme', 'la') . '/templates/pages',
       //'render element' => 'page',
       'variables' => [
-          'unit' => [ ],
-          'engines' => [ ],
-          'levels' => [],
-          'main' => [],
+        'unit_switch_form' => [],
+        'unit' => [],
+        'history' => [],
       ],
-  ],
+    ],
     'units' => [
       'template' => 'units',
       'path' => drupal_get_path('theme', 'la') . '/templates/pages',
@@ -333,6 +391,39 @@ function core_form_alter(&$form, $form_state, $form_id) {
     }
   }
 
+}
+
+function core_unit_switch_form($form, &$form_state) {
+  $nodes = node_load_multiple([], ['type' => 'object']);
+
+  $units = [];
+  foreach ($nodes as $node) {
+    $units[$node->nid] = 'Объект: ' . $node->title;
+  }
+  $form['unit'] = [
+    '#title' => '',
+    '#type' => 'select',
+    '#options' => $units,
+    "#empty_option"=>t('- Выберите объект-'),
+    '#attributes' => [
+      'class' => [
+        'form-control',
+        'selectize-document-assigned-uid',
+      ],
+    ],
+  ];
+  $form['submit'] = [
+    '#type' => 'submit',
+    '#attributes' => ['class' => ['btn']],
+    '#value' => 'Сменить объект',
+
+  ];
+
+
+  return $form;
+}
+function core_unit_switch_form_submit($form, &$form_state) {
+  drupal_goto('report/' . $form_state['values']['unit']);
 }
 
 function core_unit_create_form($form, &$form_state) {
@@ -423,6 +514,7 @@ function core_settings_form($form, &$form_state) {
   ];
   return $form;
 }
+
 function core_unit_edit_form($form, &$form_state, $unit_id) {
 
   $query = db_select('eck_unit', 'u');

@@ -1,0 +1,43 @@
+
+name = Whiter
+description = A flexible, recolorable theme with many regions.
+package = Core
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = css/site.css
+stylesheets[all][] = css/icons.css
+stylesheets[all][] = css/tablet.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/font-awesome.min.css
+
+scripts[] = js/master.js
+scripts[] = js/select2.min.js
+scripts[] = js/highstock.js
+scripts[] = js/data.js
+scripts[] = js/exporting.js
+scripts[] = js/export-data.js
+
+regions[header] = Header
+regions[help] = Help
+regions[page_top] = page_top
+regions[highlighted] = Highlighted
+
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[content_bottom] = Content bottom
+
+regions[triptych_first] = Triptych first
+regions[triptych_last] = Triptych last
+
+regions[footer] = Footer
+
+settings[shortcut_module_link] = 0
+
+
+; Information added by Drupal.org packaging script on 2015-06-17
+version = "7.48"
+project = "drupal"
+datestamp = "1434567286"
+

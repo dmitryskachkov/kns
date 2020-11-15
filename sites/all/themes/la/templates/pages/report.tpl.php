@@ -31,7 +31,7 @@
                                 <p>Количество насосов  <span class="float-right"><?php print count($unit->engines); ?></span></p>
                               <?php foreach ($unit->engines as $n => $engine) : ?>
                                 <?php $n++; ?>
-                                  <p>Насос №<?php print $n ?>. Время работы  <span class="float-right"><?php print $engine['working'] ?> ч.</span></p>
+                                  <p>Насос №<?php print $n ?>. Время работы  <span class="float-right"><?php print $engine['working'] ?></span></p>
                                   <p class="small">TAG: <?php print $engine['name']; ?></p>
                               <?php endforeach; ?>
                             </fieldset>

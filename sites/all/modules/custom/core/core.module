@@ -148,6 +148,7 @@ function core_page_report($unit_id = NULL) {
         $unit->engines[$n]['name'] = $engine;
         // Calculate working
         db_set_active('kns');
+        if (db_table_exists($engine)) {
         $result = db_select($engine, 'tbl')
           ->fields('tbl', ['TM'])
           ->condition('tbl.VAL', 1)
@@ -156,6 +157,8 @@ function core_page_report($unit_id = NULL) {
           ->fetchField();
         db_set_active();
         $unit->engines[$n]['working'] = date('H:i', $result * 5);
+        }
+
       }
 
     }

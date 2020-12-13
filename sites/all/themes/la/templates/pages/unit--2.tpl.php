@@ -156,7 +156,7 @@
         </div>
     </div>
 </div>
-
+<script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
 <script type="text/javascript">
 
     Highcharts.theme = {
@@ -368,13 +368,13 @@
             },
             {
                 type: 'hour',
-                count: 3,
-                text: '3h'
+                count: 1,
+                text: '1h'
             },
             {
                 type: 'hour',
-                count: 12,
-                text: '12h'
+                count: 3,
+                text: '3h'
             },
 
         ],
@@ -470,93 +470,50 @@
 
     });
 
-    // Create the chart
-    function requestData(tag) {
-        jQuery.ajax({
-            url: '/history?prm=' + tag,
-            type: "GET",
-            dataType: "json",
-            success: function(data) {
-                return data;
-            },
-            cache: false
-        });
-    }
 
-    Highcharts.chart('main-chart', {
-        chart: {
-            type: 'spline',
-            scrollablePlotArea: {
-                minWidth: 600,
-                scrollPositionX: 1
-            }
-        },
-        title: {
-            text: 'Общая статистика по объекту'
-        },
-        xAxis: {
-            type: 'datetime',
-            labels: {
-                overflow: 'justify'
-            }
-        },
-            series: [{
-                name: 'Насос №1',
-                data: requestData('DBAVl_kns1_m241_engine1_engine1')
-            },
-                {
-                    name: 'Насос №2',
-                    data: requestData('DBAVl_kns1_m241_engine2_engine2')
+   // test = {'tag1':'привет1', 'tag2':'привет2'};
+
+    var MainChartOptions = [], MainChartCounter = 0,
+    MainChartTags = {
+      'DBAVl_kns1_m241_engine1_engine1': 'Насос №1',
+      'DBAVl_kns1_m241_engine2_engine2': 'Насос №2',
+      'DBAVl_kns1_m241_levels_level_total':'Уровень в резервуаре',
+      'DBAVl_kns1_m241_main_door':'Датчик движения',
+      'DBAVl_kns1_m241_main_voltage1':'Ввод №1',
+      'DBAVl_kns1_m241_main_voltage2':'Ввод №2',
+    };
+
+    $('#main-chart').append('<p class="chart-loader"> Загружаю данные ...</p>');
+
+    $.each(MainChartTags, function (tag, name) {
+      $.ajax({
+        url: '/history?prm=' + tag,
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+          if (data) {
+            MainChartOptions[MainChartCounter] = {name: name, data: data};
+
+            MainChartCounter += 1;
+            if (MainChartCounter === 6) {
+              Highcharts.chart('main-chart',{
+                rangeSelector: RangeSelectorTemplate,
+                xAxis: xAxisTemplate,
+                yAxis: {
+                  floor: 0,
                 },
-                {
-                    name: 'Уровень',
-                    data: requestData('DBAVl_kns1_m241_levels_level_total')
-                },
-                {
-                    name: 'Движение на объекте',
-                    data: requestData('DBAVl_kns1_m241_main_door')
-                }]
+                navigator: {enabled: false},
+                title: {text: 'Общая статистика по объекту'},
+                series: MainChartOptions
+
+              });
+            }
+          }
 
         }
-    );
-    // Highcharts.stockChart('main-chart', {
-    //
-    //     xAxis: xAxisTemplate,
-    //     rangeSelector: RangeSelectorTemplate,
-    //
-    //
-    //     title: {
-    //         text: 'Общая статистика объекта'
-    //     },
-    //     plotOptions: {
-    //         series: {
-    //             label: {
-    //                 connectorAllowed: false
-    //             },
-    //         }
-    //     },
-    //     series: [
-    //         {
-    //         name: 'Статус насоса 1',
-    //         data: mainchart['DBAVl_kns1_m241_engine1_engine1'],
-    //         step: true,
-    //         tooltip: {valueDecimals: 0},
-    //         },
-    //         {
-    //             name: 'Статус насоса 2',
-    //             data: mainchart['DBAVl_kns1_m241_engine2_engine2'],
-    //             step: true,
-    //             tooltip: { valueDecimals: 0}
-    //         },
-    //         {
-    //             name: 'Уровень',
-    //             data: mainchart['DBAVl_kns1_m241_levels_level_total'],
-    //             step: true,
-    //             tooltip: {valueDecimals: 0}
-    //         }
-    //             ]
-    // })
-    // ;
+      });
+    });
+
 
 
 </script>

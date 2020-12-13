@@ -503,6 +503,9 @@
             if (MainChartCounter === 6) {
               Highcharts.chart('main-chart',{
                 xAxis: xAxisTemplate,
+                chart: {
+                  zoomType: 'x'
+                },
                 rangeSelector: RangeSelectorTemplate,
 
 

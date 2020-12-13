@@ -489,7 +489,7 @@
     };
 
     $('#main-chart').append('<p class="chart-loader"> Загружаю данные ...</p>');
-    var day = (Date.now()/ 1000) - 43400;
+    var day = (Date.now()/ 1000) - 86400;
     $.each(MainChartTags, function (tag, name) {
       $.ajax({
         url: '/history?prm=' + tag + '&start=' + day ,

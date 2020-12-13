@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-body">
 
-                <div id="main-chart" style="width: 100%; height: 340px;"></div>
+                <div id="main-chart" style="width: 100%; height: 440px;"></div>
             </div>
         </div>
     </div>

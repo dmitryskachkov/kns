@@ -497,12 +497,8 @@
             MainChartCounter += 1;
             if (MainChartCounter === 6) {
               Highcharts.chart('main-chart',{
-                rangeSelector: RangeSelectorTemplate,
                 xAxis: xAxisTemplate,
-                yAxis: {
-                  floor: 0,
-                },
-                navigator: {enabled: false},
+                rangeSelector: RangeSelectorTemplate,
                 title: {text: 'Общая статистика по объекту'},
                 series: MainChartOptions
 

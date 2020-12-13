@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-body">
 
-                <div id="main-chart" style="width: 100%; height: 340px;"></div>
+                <div id="main-chart" style="width: 100%; height: 370px;"></div>
             </div>
         </div>
     </div>
@@ -359,23 +359,28 @@
             {
                 type: 'minute',
                 count: 1,
-                text: '1m'
+                text: '1 м.'
             },
             {
                 type: 'minute',
                 count: 5,
-                text: '5m'
+                text: '5 м.'
             },
             {
                 type: 'hour',
                 count: 1,
-                text: '1h'
+                text: '1 ч.'
             },
             {
                 type: 'hour',
                 count: 3,
-                text: '3h'
+                text: '3 ч.'
             },
+          {
+            type: 'hour',
+            count: 6,
+            text: '6 ч.'
+          },
 
         ],
         inputEnabled: false, // it supports only days
@@ -496,9 +501,11 @@
 
             MainChartCounter += 1;
             if (MainChartCounter === 6) {
-              Highcharts.chart('main-chart',{
+              Highcharts.stockChart('main-chart',{
                 xAxis: xAxisTemplate,
                 rangeSelector: RangeSelectorTemplate,
+
+
                 title: {text: 'Общая статистика по объекту'},
                 series: MainChartOptions
 

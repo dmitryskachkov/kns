@@ -489,10 +489,10 @@
     };
 
     $('#main-chart').append('<p class="chart-loader"> Загружаю данные ...</p>');
-
+    var day = (Date.now()/ 1000) - 86400;
     $.each(MainChartTags, function (tag, name) {
       $.ajax({
-        url: '/history?prm=' + tag,
+        url: '/history?prm=' + tag + '&start=' + day ,
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -501,7 +501,7 @@
 
             MainChartCounter += 1;
             if (MainChartCounter === 6) {
-              Highcharts.stockChart('main-chart',{
+              Highcharts.chart('main-chart',{
                 xAxis: xAxisTemplate,
                 rangeSelector: RangeSelectorTemplate,
 

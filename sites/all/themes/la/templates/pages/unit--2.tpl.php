@@ -320,7 +320,11 @@
     };
     // Apply the theme
     Highcharts.setOptions(Highcharts.theme);
-
+    Highcharts.setOptions({
+        time: {
+            timezoneOffset: +5 * 60
+        }
+    });
     var RangeSelectorTemplate = {
         buttons: [
             {
@@ -433,11 +437,28 @@
                     setExtremes: syncExtremes
                 },
             },
-
+            chart: {
+                type: 'area',
+                zoomType: 'x'
+            },
             title: {
                 text: 'Уровень в резервуаре'
             },
-
+            plotOptions: {
+                area: {
+                    pointStart: 1940,
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
             series: [{
                 type: 'area',
                 name: 'Уровень в резервуаре',
@@ -469,6 +490,7 @@
             MainChartCounter += 1;
             if (MainChartCounter === 2) {
               Highcharts.chart('engines',{
+
                 xAxis: {
                     type: 'datetime',
                     minRange: 300 * 1000,
@@ -477,10 +499,25 @@
                     },
                 },
                 chart: {
+                  type: 'area',
                   zoomType: 'x'
                 },
                 rangeSelector: RangeSelectorTemplate,
-
+                  plotOptions: {
+                      area: {
+                          pointStart: 1940,
+                          marker: {
+                              enabled: false,
+                              symbol: 'circle',
+                              radius: 2,
+                              states: {
+                                  hover: {
+                                      enabled: true
+                                  }
+                              }
+                          }
+                      }
+                  },
 
                 title: {text: 'Работа насосов'},
                 series: MainChartOptions

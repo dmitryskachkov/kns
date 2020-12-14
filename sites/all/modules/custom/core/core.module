@@ -242,7 +242,7 @@ function core_ajax_get_history()
     if (isset($params['start'])) {
         $result->condition('tbl.TM', (int)$params['start'], '>');
     } else {
-        $result->condition('tbl.TM', (int)time() - 86400 * 7, '>');
+        //$result->condition('tbl.TM', (int)time() - 86400 * 7, '>');
     }
 
     if (isset($params['end'])) {

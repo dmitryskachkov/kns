@@ -129,6 +129,7 @@
 
 <script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
 <script type="text/javascript">
+    const timezone = new Date().getTimezoneOffset()
     Highcharts.theme = {
         colors: ['#f5a623', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066',
             '#eeaaee', '#b1b1b5', '#DF5353', '#7798BF', '#aaeeee'],
@@ -325,8 +326,12 @@
     // Apply the theme
     Highcharts.setOptions(Highcharts.theme);
     Highcharts.setOptions({
+        global: {
+            timezoneOffset: timezone
+        },
         time: {
-            timezoneOffset: +5 * 60
+           //timezoneOffset: 10 * 60,
+            timezone: 'Asia/Yekaterinburg'
         }
     });
     var RangeSelectorTemplate = {

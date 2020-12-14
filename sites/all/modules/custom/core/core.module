@@ -110,6 +110,14 @@ function core_menu()
         'description' => 'Ajax get request',
         'type' => MENU_CALLBACK,
     ];
+    $items['timeline'] = [
+        'title' => 'Ajax get history of paremeter (only dates)',
+        'page callback' => 'core_ajax_get_timeline',
+        'page arguments' => [1],
+        'access callback' => 'user_is_logged_in',
+        'description' => 'Ajax get request',
+        'type' => MENU_CALLBACK,
+    ];
     return $items;
 }
 
@@ -246,6 +254,36 @@ function core_ajax_get_history()
     db_set_active();
     foreach ($result as $n => $items) {
         $result[$n] = [$items->TM * 1000, $items->VAL];
+    }
+    print json_encode($result, JSON_NUMERIC_CHECK);
+}
+
+function core_ajax_get_timeline()
+{
+    $params = drupal_get_query_parameters();
+
+    db_set_active('kns');
+    $result = db_select($params['prm'], 'tbl')
+        ->fields('tbl', ['TM'])
+        ->condition('tbl.VAL', 1)
+        ->isNotNull('tbl.TM')
+        ->orderBy('tbl.TM', 'ASC');
+
+    if (isset($params['start'])) {
+        $result->condition('tbl.TM', (int)$params['start'], '>');
+    } else {
+        //$result->condition('tbl.TM', (int)time() - 86400 * 7, '>');
+    }
+
+    if (isset($params['end'])) {
+        $result->condition('tbl.TM', (int)$params['end'], '<');
+    }
+
+    $result = $result->execute()->fetchAll();
+
+    db_set_active();
+    foreach ($result as $n => $items) {
+        $result[$n] = $items->TM * 1000;
     }
     print json_encode($result, JSON_NUMERIC_CHECK);
 }

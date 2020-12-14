@@ -352,10 +352,7 @@
         inputEnabled: false, // it supports only days
         selected: 2
     };
-    // var xAxisTemplate = {
-    //     type: 'datetime',
-    //     minRange: 300 * 1000
-    // };
+
 
     function searchPoint(event, chart) {
             var points = chart.series[0].points,
@@ -426,6 +423,33 @@
             }
         }
     var day = (Date.now()/ 1000) - 86400;
+
+    function requestVerticalLineForErrorData(tag, color) {
+        jQuery.ajax({
+            url: '/timeline?prm=' + tag,
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                result = [];
+                $.each(data, function (i,time) {
+                    result.push({
+                        color: color, // Red
+                        width: 10,
+                        value: time
+                    });
+                });
+                console.log(result);
+                return result.concat();
+            },
+            cache: false
+        });
+    }
+
+    var levels_errors = requestVerticalLineForErrorData('DBAVl_kns1_m241_levels_level_error','#FF0000');
+    var engine1_errors = requestVerticalLineForErrorData('DBAVl_kns1_m241_engine1_engine1_erro','#FF0000');
+    var engine2_errors = requestVerticalLineForErrorData('DBAVl_kns1_m241_engine2_engine2_erro','#FF0000');
+   // var total_engines_errors = [].concat(engine1_errors, engine2_errors);
+
     Highcharts.getJSON('/history?prm=DBAVl_kns1_m241_levels_level_total' + '&start=' + day , function (data) {
         // Create the chart
 
@@ -436,6 +460,7 @@
                 events: {
                     setExtremes: syncExtremes
                 },
+                plotLines: levels_errors
             },
             chart: {
                 type: 'area',
@@ -446,7 +471,6 @@
             },
             plotOptions: {
                 area: {
-                    pointStart: 1940,
                     marker: {
                         enabled: false,
                         symbol: 'circle',
@@ -492,6 +516,7 @@
               Highcharts.chart('engines',{
 
                 xAxis: {
+                    plotLines: engine1_errors,
                     type: 'datetime',
                     minRange: 300 * 1000,
                     events: {
@@ -505,7 +530,6 @@
                 rangeSelector: RangeSelectorTemplate,
                   plotOptions: {
                       area: {
-                          pointStart: 1940,
                           marker: {
                               enabled: false,
                               symbol: 'circle',

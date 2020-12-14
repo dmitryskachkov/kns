@@ -118,7 +118,7 @@
 <div class="col-md-12 grid-margin stretch-card">
     <div class="card">
 
-        <div class="card-body" id="charts">
+        <div class="card-body" id="charts" style="height: 600px">
             <div id="levels" style="width: 100%; height: 250px "></div>
             <div id="engines" style="width: 100%;height: 250px  "></div>
         </div>

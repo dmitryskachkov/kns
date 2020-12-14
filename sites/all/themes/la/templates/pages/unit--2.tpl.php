@@ -1,3 +1,6 @@
+<div class="row">
+
+
 <div class="col-md-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
@@ -125,7 +128,7 @@
 
     </div>
 </div>
-
+</div>
 
 <script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
 <script type="text/javascript">

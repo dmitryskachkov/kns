@@ -472,6 +472,9 @@
                 },
                 plotLines: levels_errors
             },
+            yAxis: {
+                max: 3
+            },
             chart: {
                 type: 'area',
                 zoomType: 'xy'
@@ -531,6 +534,9 @@
                                 events: {
                                     setExtremes: syncExtremes
                                 },
+                            },
+                            yAxis: {
+                                max: 1
                             },
                             scrollbar: {
                                 enabled: false

@@ -478,6 +478,7 @@
             },
             chart: {
                 type: 'area',
+                zoomType: 'x'
             },
             title: {
                 text: 'Уровень в резервуаре',
@@ -544,6 +545,7 @@
                             },
                             chart: {
                                 type: 'area',
+                                zoomType: 'x'
                             },
                             navigator: {
                                 enabled: false

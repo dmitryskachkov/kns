@@ -474,11 +474,10 @@
                 plotLines: levels_errors
             },
             yAxis: {
-                max: 3
+                max: 5
             },
             chart: {
                 type: 'area',
-                zoomType: 'xy'
             },
             title: {
                 text: 'Уровень в резервуаре',
@@ -538,14 +537,13 @@
                                 },
                             },
                             yAxis: {
-                                max: 1
+                                max: 2
                             },
                             scrollbar: {
                                 enabled: false
                             },
                             chart: {
                                 type: 'area',
-                                zoomType: 'x'
                             },
                             navigator: {
                                 enabled: false

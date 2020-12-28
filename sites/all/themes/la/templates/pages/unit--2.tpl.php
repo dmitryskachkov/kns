@@ -473,9 +473,7 @@
                 },
                 plotLines: levels_errors
             },
-            yAxis: {
-                max: 5
-            },
+
             chart: {
                 type: 'area',
                 zoomType: 'x'

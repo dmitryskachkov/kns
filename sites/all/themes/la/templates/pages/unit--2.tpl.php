@@ -12,7 +12,7 @@
                         <div class="col-md-4 col-sm-4 col-xs-4">
                             <a class="default-text" href="/unit/2">
                                 <h4>КНС №22 Дорожный</h4>
-                                <p class="text-muted font-weight-light">пос. Дорожный | SE M241</p>
+                                <p class="text-muted font-weight-light">Уровень в резервуаре</p>
                             </a>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px" data-href="btn"

@@ -146,26 +146,29 @@
         }
     });
     var RangeSelectorTemplate = {
+        buttonTheme: {
+            width: 60
+        },
         buttons: [
             {
                 type: 'minute',
-                count: 1,
-                text: '1m'
+                count: 30,
+                text: '30 мин'
             },
             {
                 type: 'minute',
-                count: 5,
-                text: '5m'
+                count: 1,
+                text: '1 час'
             },
             {
                 type: 'hour',
-                count: 3,
-                text: '3h'
+                count: 6,
+                text: '6 часов'
             },
             {
                 type: 'hour',
                 count: 12,
-                text: '12h'
+                text: '12 часов '
             },
 
         ],
@@ -272,6 +275,7 @@
         // Create the chart
 
         Highcharts.stockChart('levels', {
+            rangeSelector: RangeSelectorTemplate,
             xAxis: {
                 tickInterval: 600,
                 ordinal: false,
@@ -293,9 +297,7 @@
                 x: 20,
                 y: 70
             },
-            rangeSelector: {
-                selected: 1
-            },
+
             scrollbar: {
                 enabled: false
             },

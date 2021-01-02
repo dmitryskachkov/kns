@@ -464,14 +464,9 @@
         // Create the chart
 
         Highcharts.stockChart('levels', {
-            yAxis: {
-              tickPixelInterval: 10
-            },
             xAxis: {
                 ordinal: false,
                 type: 'datetime',
-                //minTickInterval: 100,
-                //minRange: 300 * 1000,
                 events: {
                     setExtremes: syncExtremes
                 },

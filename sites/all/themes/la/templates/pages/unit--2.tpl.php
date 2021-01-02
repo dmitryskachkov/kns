@@ -533,7 +533,7 @@
                                 ordinal: false,
                                 plotLines: engine1_errors,
                                 type: 'datetime',
-                                minRange: 300 * 1000,
+                                //minRange: 300 * 1000,
                                 events: {
                                     setExtremes: syncExtremes
                                 },

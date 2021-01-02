@@ -467,6 +467,7 @@
             xAxis: {
                 ordinal: false,
                 type: 'datetime',
+                tickInterval: 10,
                 //minRange: 300 * 1000,
                 events: {
                     setExtremes: syncExtremes

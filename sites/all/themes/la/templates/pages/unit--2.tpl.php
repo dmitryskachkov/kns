@@ -151,24 +151,24 @@
         },
         buttons: [
             {
-                type: 'minute',
-                count: 30,
-                text: '30 мин'
-            },
-            {
-                type: 'minute',
-                count: 1,
-                text: '1 час'
+                type: 'hour',
+                count: 3,
+                text: '3 часа'
             },
             {
                 type: 'hour',
                 count: 6,
-                text: '6 часов'
+                text: '5 часов'
             },
             {
                 type: 'hour',
                 count: 12,
-                text: '12 часов '
+                text: '12 часов'
+            },
+            {
+                type: 'hour',
+                count: 24,
+                text: '24 часа '
             },
 
         ],

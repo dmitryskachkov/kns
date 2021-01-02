@@ -285,7 +285,6 @@
               },
             rangeSelector: RangeSelectorTemplate,
             xAxis: {
-                tickInterval: 600,
                 ordinal: false,
                 type: 'datetime',
                 events: {

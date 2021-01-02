@@ -495,9 +495,10 @@
                 enabled: false
             },
             series: [{
-                type: 'area',
+                //type: 'area',
                 name: 'Уровень в резервуаре',
                 data: data,
+                step: true,
                 tooltip: {
                     valueDecimals: 0
                 }
@@ -569,101 +570,7 @@
             }
         });
     });
-    // Highcharts.getJSON('/history?prm=DBAVl_kns1_m241_engine1_engine1', function (data) {
-    //
-    //
-    //     // Create the chart
-    //     Highcharts.chart('engine1', {
-    //
-    //         xAxis: {
-    //             type: 'datetime',
-    //             minRange: 300 * 1000,
-    //             events: {
-    //                 setExtremes: syncExtremes
-    //             },
-    //         },
-    //
-    //
-    //         title: {
-    //             text: 'Работа насоса №1'
-    //         },
-    //
-    //         series: [{
-    //             name: 'Статус насоса',
-    //             data: data,
-    //             step: true,
-    //             tooltip: {
-    //                 valueDecimals: 0
-    //             }
-    //         }]
-    //     });
-    //
-    // });
-    //
-    // Highcharts.getJSON('/history?prm=DBAVl_kns1_m241_engine2_engine2', function (data) {
-    //
-    //
-    //     // Create the chart
-    //     Highcharts.chart('engine2', {
-    //
-    //         xAxis: {
-    //             type: 'datetime',
-    //             minRange: 300 * 1000,
-    //             events: {
-    //                 setExtremes: syncExtremes
-    //             },
-    //         },
-    //
-    //
-    //         title: {
-    //             text: 'Работа насоса №2'
-    //         },
-    //
-    //         series: [{
-    //             name: 'Статус насоса',
-    //             data: data,
-    //             step: true,
-    //             tooltip: {
-    //                 valueDecimals: 0
-    //             }
-    //         }]
-    //     });
-    //
-    // });
-    // Highcharts.chart('main-chart',{
-    //
-    //             xAxis: {
-    //                 events: {
-    //                     setExtremes: syncExtremes
-    //                 },
-    //                 labels: {
-    //                     format: '{value} km'
-    //                 }
-    //             },
-    //
-    //             tooltip: {
-    //                 positioner: function() {
-    //                     return {
-    //                         x: this.chart.chartWidth - this.label.width, // right aligned
-    //                         y: -1 // align to title
-    //                     };
-    //                 },
-    //                 borderWidth: 0,
-    //                 backgroundColor: 'none',
-    //                 pointFormat: '{point.y}',
-    //                 headerFormat: '',
-    //                 shadow: false,
-    //                 style: {
-    //                     fontSize: '18px'
-    //                 }
-    //             },
-    //             series: [{
-    //                 lineWidth:1,
-    //                 data: [0.35,0.33,0.54,0.47,0.24,0.35,0.48,0.21,0.5,0.35,0.06,0.53, 0.3],
-    //                 type: 'line'
-    //             }]
-    //       s  });
-    //
+
 
 
 </script>

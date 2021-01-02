@@ -1,27 +1,19 @@
 <body>
-<div class="container-scroller">
-    <!-- partial:partials/_horizontal-navbar.html -->
-    <div class="horizontal-menu">
-        <nav class="navbar top-navbar col-lg-12 col-12 p-0">
-            <div class="container">
-                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                    <a class="navbar-brand brand-logo" href="/"
-                       style="color: #ffffff">КНС</a>
-                    <a class="navbar-brand brand-logo-mini" style="color: #ffffff"
-                       href="/">КНС</a>
-                </div>
-            </div>
-        </nav>
-        <nav class="bottom-navbar">
-            <div class="container">
-              <?php print render($page['header']); ?>
-            </div>
-        </nav>
+<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <div class="navbar-brand-wrapper d-flex">
+        <a class="navbar-brand brand-logo mr-5" style="padding-left: 40px; padding-top: 20px" href="/">КНС</a>
     </div>
+    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
 
-    <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
-        <div class="main-panel">
+      <?php print render($page['header']); ?>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="ti-layout-grid2"></span>
+        </button>
+    </div>
+</nav>
+<div class="container-scroller">
+    <div>
+        <div>
             <div class="content-wrapper">
                 <div class="row">
                     <div class="col-md-12 grid-margin">
@@ -77,7 +69,7 @@
             </div>
             <!-- content-wrapper ends -->
             <!-- partial:partials/_footer.html -->
-            <div class="container">
+            <div>
                 <footer class="footer">
                     <div class="w-100 clearfix"><span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Разработано в СГМУП ГВК</span>
                     </div>

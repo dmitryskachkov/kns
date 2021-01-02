@@ -465,6 +465,7 @@
 
         Highcharts.stockChart('levels', {
             xAxis: {
+                tickInterval: 600,
                 ordinal: false,
                 type: 'datetime',
                 events: {

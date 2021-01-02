@@ -275,14 +275,14 @@
         // Create the chart
 
         Highcharts.stockChart('levels', {
-              plotOptions: {
+            plotOptions: {
                 series: {
                   connectNulls: true,
                   dataGrouping: {
                     enabled: false,
                   },
                 },
-              },
+            },
             rangeSelector: RangeSelectorTemplate,
             xAxis: {
                 ordinal: false,
@@ -343,7 +343,14 @@
                     MainChartCounter += 1;
                     if (MainChartCounter === 2) {
                         Highcharts.stockChart('engines', {
-
+                            plotOptions: {
+                                series: {
+                                  connectNulls: true,
+                                  dataGrouping: {
+                                    enabled: false,
+                                  },
+                                },
+                            },
                             xAxis: {
                                 ordinal: false,
                                 plotLines: engine1_errors,

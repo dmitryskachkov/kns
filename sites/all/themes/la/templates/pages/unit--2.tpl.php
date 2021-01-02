@@ -275,6 +275,14 @@
         // Create the chart
 
         Highcharts.stockChart('levels', {
+              plotOptions: {
+                series: {
+                  connectNulls: true,
+                  dataGrouping: {
+                    enabled: false,
+                  },
+                },
+              },
             rangeSelector: RangeSelectorTemplate,
             xAxis: {
                 tickInterval: 600,

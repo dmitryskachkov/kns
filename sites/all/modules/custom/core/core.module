@@ -167,7 +167,7 @@ function core_page_report($unit_id = NULL)
                         ->execute()
                         ->fetchField();
 
-                    $unit->engines[$n]['working'] = date('d д. H:i ч.', $result * 5);
+                    $unit->engines[$n]['working'] = $result * 5;
                 }
                 db_set_active();
 

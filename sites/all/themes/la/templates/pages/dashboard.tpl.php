@@ -47,10 +47,24 @@
                                         <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="DBAVl_kns1_m241_engine2_engine2" data-var="engine2.status">2</p>
                                         </div>
                                             <hr>
-                                        <p style="line-height: 20px">Режим работы: <span class="float-right interactive text-attr" data-browse="DBAVl_kns1_m241_main_mainmode" data-href="text" data-var="unit.mode">Автомат</span> </p>
                                         <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="DBAVl_kns1_m241_levels_level_error" data-href="btn" data-var="unit.error_level"></button></p>
                                         <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="DBAVl_kns1_m241_engine1_engine1_erro" data-href="btn"data-var="unit.error_engine"></button></p>
                                         <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="DBAVl_kns1_m241_engine2_engine2_erro" data-href="btn" data-var="unit.error_engine"></button></p>
+                                    <hr>
+                                        <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                                style="margin-bottom: 10px; " data-href="btn"
+                                                data-browse="DBAVl_kns1_m241_main_voltage1" data-var="voltage1"><i
+                                                    class="fa fa-bolt"></i> 1
+                                        </button>
+                                        <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                                style="margin-bottom: 10px; " data-href="btn"
+                                                data-browse="DBAVl_kns1_m241_main_voltage2" data-var="voltage2"><i
+                                                    class="fa fa-bolt"></i> 2
+                                        </button>
+                                        <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                                style="margin-bottom: 10px; " data-href="btn"
+                                                data-browse="DBAVl_kns1_m241_main_cold" data-var="voltage2"><i
+                                                    class="fa fa-snowflake-o" aria-hidden="true"></i></button>
                                     </div>
 
                                 </div>
@@ -96,10 +110,10 @@
                                         <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="" data-var="engine2.status">2</p>
                                     </div>
                                     <hr>
-                                    <p style="line-height: 20px">Режим работы: <span class="float-right interactive text-attr" data-browse="DBAVl_kns1_m241_main_mainmode" data-href="text" data-var="unit.mode">Автомат</span> </p>
                                     <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="" data-href="btn" data-var="unit.error_level"></button></p>
                                     <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="" data-href="btn"data-var="unit.error_engine"></button></p>
                                     <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="" data-href="btn" data-var="unit.error_engine"></button></p>
+                                    <hr>
                                 </div>
 
                             </div>

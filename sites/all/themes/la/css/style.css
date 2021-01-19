@@ -108,6 +108,9 @@ body {
 p.small {
     font-size: 10px;
 }
+.card-body {
+    background-color: #ffffff;
+}
 .ymaps-layers-pane {
     -webkit-filter: grayscale(100%);
 }

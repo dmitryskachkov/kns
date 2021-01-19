@@ -98,11 +98,16 @@
                                         class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                         data-href="btn"
                                         data-browse="DBAVl_kns1_m241_main_engine1mode"
-                                        data-var="engine1mode"></span> Автоматика насоса
-                                №2 <span style="margin-left: 20px"
+                                        data-var="engine1mode"></span>
+
+                                Автоматика насоса №2 <span style="margin-left: 20px; margin-right: 20px;"
                                          class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                          data-href="btn"
                                          data-browse="DBAVl_kns1_m241_main_engine2mode" data-var="engine1mode"></span>
+
+                                Временные задержки в работе насосов<span style="margin-left: 20px"
+                                                           class="btn btn-sm btn-inverse-light btn-fw toolipdate"
+                                                           data-href="btn"></span>
                             </p>
 
                             <p style="margin-top: 20px"><i class="fa fa-mouse-pointer"></i> * Кликните на интерактивный

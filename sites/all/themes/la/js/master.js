@@ -36,7 +36,21 @@
         }, 1000);
 
       });
+      $(".interactive-text").each(function () {
+        var element = $(this);
+        setInterval(function () {
 
+          $.get("/api?prm=" + element.attr("data-browse"), function (result) {
+            if (result) {
+              element.text(result);
+            }
+            else {
+                element.text("0");
+            }
+          });
+        }, 1000);
+
+      });
 
     }
   };

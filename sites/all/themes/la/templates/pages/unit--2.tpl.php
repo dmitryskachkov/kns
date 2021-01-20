@@ -9,7 +9,7 @@
 
 
                     <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-4">
+                        <div class="col-md-3 col-sm-4 col-xs-4">
                             <a class="default-text" href="/unit/2">
                                 <h4>КНС №22 Дорожный</h4>
                                 <p class="text-muted font-weight-light">Уровень в резервуаре</p>
@@ -31,23 +31,26 @@
                                     data-browse="DBAVl_kns1_m241_levels_level3" data-var="level3">3
                             </button>
 
-
                         </div>
                         <div class="col-md-2">
-                            <h4>Насосы в работе</h4>
+                            <h4>Состояние насосов</h4>
                             <p class="text-muted font-weight-light">Сигналы насосов</p>
                             <div style="margin-left: 10px">
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="DBAVl_kns1_m241_engine1_engine1" data-var="engine1.status">1</p>
+                                   data-browse="DBAVl_kns1_m241_engine1_engine1" data-var="engine1.status"><span class="interactive-text" data-browse="DBAVl_kns1_m241_main_engine1amper">0</span> A</p>
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="DBAVl_kns1_m241_engine2_engine2" data-var="engine2.status">2</p>
+                                   data-browse="DBAVl_kns1_m241_engine2_engine2" data-var="engine2.status"><span class="interactive-text" data-browse="DBAVl_kns1_m241_main_engine2amper">0</span> A</p>
                             </div>
-
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-2">
+                            <h4>Температура</h4>
+                            <p class="text-muted font-weight-light">На объекте</p>
+                            <h3 style="margin-top: 15px"><span class="interactive-text" data-browse="DBAVl_kns1_m241_main_temperature">0</span> ℃</h3>
+                        </div>
+                        <div class="col-md-3">
                             <h4>Прочее</h4>
                             <p class="text-muted font-weight-light">Дополнительные сигналы</p>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"

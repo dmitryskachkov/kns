@@ -61,6 +61,8 @@
         scrollY:        200,
         scrollCollapse: true,
         scroller:       true,
+        searching: false,
+        paging: false,
         ajax: "/events",
 
       } );

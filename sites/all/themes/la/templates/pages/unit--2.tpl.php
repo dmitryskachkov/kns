@@ -16,19 +16,19 @@
                             </a>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px" data-href="btn"
-                                    data-browse="DBAVl_kns1_m241_levels_level0" data-var="level0">0
+                                    data-browse="115" data-var="level0">0
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px" data-href="btn"
-                                    data-browse="DBAVl_kns1_m241_levels_level1" data-var="level1">1
+                                    data-browse="116" data-var="level1">1
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px" data-href="btn"
-                                    data-browse="DBAVl_kns1_m241_levels_level2" data-var="level2">2
+                                    data-browse="117" data-var="level2">2
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="DBAVl_kns1_m241_levels_level3" data-var="level3">3
+                                    data-browse="118" data-var="level3">3
                             </button>
 
                         </div>
@@ -38,55 +38,55 @@
                             <div style="margin-left: 10px">
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="DBAVl_kns1_m241_engine1_engine1" data-var="engine1.status"><span class="interactive-text" data-browse="DBAVl_kns1_m241_main_engine1amper">0</span> A</p>
+                                   data-browse="113" data-var="engine1.status"><span class="interactive-text" data-browse="110">0</span> A</p>
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="DBAVl_kns1_m241_engine2_engine2" data-var="engine2.status"><span class="interactive-text" data-browse="DBAVl_kns1_m241_main_engine2amper">0</span> A</p>
+                                   data-browse="114" data-var="engine2.status"><span class="interactive-text" data-browse="111">0</span> A</p>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <h4>Температура</h4>
                             <p class="text-muted font-weight-light">На объекте</p>
-                            <h3 style="margin-top: 15px"><span class="interactive-text" data-browse="DBAVl_kns1_m241_main_temperature">0</span> ℃</h3>
+                            <h3 style="margin-top: 15px"><span class="interactive-text" data-browse="109">0</span> ℃</h3>
                         </div>
                         <div class="col-md-3">
                             <h4>Прочее</h4>
                             <p class="text-muted font-weight-light">Дополнительные сигналы</p>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="DBAVl_kns1_m241_main_voltage1" data-var="voltage1"><i
+                                    data-browse="104" data-var="voltage1"><i
                                         class="fa fa-bolt"></i> 1
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="DBAVl_kns1_m241_main_voltage2" data-var="voltage2"><i
+                                    data-browse="105" data-var="voltage2"><i
                                         class="fa fa-bolt"></i> 2
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="DBAVl_kns1_m241_main_cold" data-var="voltage2"><i
+                                    data-browse="103" data-var="voltage2"><i
                                         class="fa fa-snowflake-o" aria-hidden="true"></i></button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="DBAVl_kns1_m241_main_door" data-var="door"><i class="fa fa-lock"
+                                    data-browse="102" data-var="door"><i class="fa fa-lock"
                                                                                                aria-hidden="true"></i>
                             </button>
                         </div>
                         <div class="col-md-2" style="padding-top: 30px">
                             <p style="line-height: 20px">Ошибка уровня:
                                 <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn interactive"
-                                        data-browse="DBAVl_kns1_m241_levels_level_error" data-href="btn"
+                                        data-browse="119" data-href="btn"
                                         data-var="unit.error_level"></button>
                             </p>
                             <p style="line-height: 20px">Ошибка насоса 1:
                                 <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn  interactive"
-                                        data-browse="DBAVl_kns1_m241_engine1_engine1_erro" data-href="btn"
+                                        data-browse="120" data-href="btn"
                                         data-var="unit.error_engine"></button>
                             </p>
                             <p style="line-height: 20px">Ошибка насоса 2:
                                 <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn  interactive"
-                                        data-browse="DBAVl_kns1_m241_engine2_engine2_erro" data-href="btn"
+                                        data-browse="121" data-href="btn"
                                         data-var="unit.error_engine"></button>
                             </p>
                         </div>
@@ -100,13 +100,13 @@
                                         style="margin-left: 20px; margin-right: 20px"
                                         class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                         data-href="btn"
-                                        data-browse="DBAVl_kns1_m241_main_engine1mode"
+                                        data-browse="106"
                                         data-var="engine1mode"></span>
 
                                 Автоматика насоса №2 <span style="margin-left: 20px; margin-right: 20px;"
                                          class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                          data-href="btn"
-                                         data-browse="DBAVl_kns1_m241_main_engine2mode" data-var="engine1mode"></span>
+                                         data-browse="107" data-var="engine1mode"></span>
 
                                 Временные задержки в работе насосов<span style="margin-left: 20px"
                                                            class="btn btn-sm btn-inverse-light btn-fw toolipdate"
@@ -139,6 +139,7 @@
 </div>
 
 <script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
+<script src="http://code.highcharts.com/maps/modules/map.js"></script>
 <script type="text/javascript">
     const timezone = new Date().getTimezoneOffset()
 
@@ -158,6 +159,11 @@
             width: 60
         },
         buttons: [
+            {
+                type: 'minute',
+                count: 30,
+                text: '30 мин'
+            },
             {
                 type: 'hour',
                 count: 3,
@@ -274,15 +280,18 @@
         });
     }
 
-    var levels_errors = requestVerticalLineForErrorData('DBAVl_kns1_m241_levels_level_error', '#FF0000');
-    var engine1_errors = requestVerticalLineForErrorData('DBAVl_kns1_m241_engine1_engine1_erro', '#FF0000');
-    var engine2_errors = requestVerticalLineForErrorData('DBAVl_kns1_m241_engine2_engine2_erro', '#FF0000');
+    var levels_errors = requestVerticalLineForErrorData('119', '#FF0000');
+    var engine1_errors = requestVerticalLineForErrorData('120', '#FF0000');
+    var engine2_errors = requestVerticalLineForErrorData('121', '#FF0000');
     // var total_engines_errors = [].concat(engine1_errors, engine2_errors);
 
-    Highcharts.getJSON('/history?prm=DBAVl_kns1_m241_levels_level_total', function (data) {
+    Highcharts.getJSON('/history?prm=108', function (data) {
         // Create the chart
 
         Highcharts.stockChart('levels', {
+            mapNavigation: {
+                enableMouseWheelZoom: true
+            },
             plotOptions: {
                 series: {
                   connectNulls: true,
@@ -333,8 +342,8 @@
     });
     var MainChartOptions = [], MainChartCounter = 0,
         MainChartTags = {
-            'DBAVl_kns1_m241_engine1_engine1': 'Насос №1',
-            'DBAVl_kns1_m241_engine2_engine2': 'Насос №2',
+            '113': 'Насос №1',
+            '114': 'Насос №2',
         };
     $('#engines').append('<p class="chart-loader" style="text-align: center"> Загружаю данные ...</p>');
 
@@ -351,6 +360,9 @@
                     MainChartCounter += 1;
                     if (MainChartCounter === 2) {
                         Highcharts.stockChart('engines', {
+                            mapNavigation: {
+                                enableMouseWheelZoom: true
+                            },
                             plotOptions: {
                                 series: {
                                   connectNulls: true,

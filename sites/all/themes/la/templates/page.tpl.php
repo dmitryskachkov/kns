@@ -30,7 +30,7 @@
                                     </div>
                                     <div class="border-right pr-4 mb-3 mb-xl-0">
                                         <p class="text-muted">Параметры</p>
-                                        <h4 class="mb-0 font-weight-bold">8</h4>
+                                        <h4 class="mb-0 font-weight-bold"><?php print core_total_tags(); ?></h4>
                                     </div>
                                     <div class="border-right pr-4 mb-3 mb-xl-0">
                                         <p class="text-muted">Связь</p>
@@ -71,8 +71,7 @@
             <!-- partial:partials/_footer.html -->
             <div>
                 <footer class="footer">
-                    <div class="w-100 clearfix"><span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Разработано в СГМУП ГВК</span>
-                    </div>
+                    <?php print render($page['footer']); ?>
                 </footer>
             </div>
 

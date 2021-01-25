@@ -19,7 +19,7 @@
                                     <div class="col-lg-12">
                                         <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                                 style="float:right; margin-bottom: 10px; " data-href="btn"
-                                                data-browse="DBAVl_kns1_m241_main_door" data-var="door"><i class="fa fa-lock"
+                                                data-browse="102" data-var="door"><i class="fa fa-lock"
                                                                                                            aria-hidden="true"></i>
                                         </button>
                                         <a class="default-text" href="/unit/2">
@@ -33,38 +33,38 @@
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="bar-progress">
-                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level3" data-var="level3"> </span>
-                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level2" data-var="level2"> </span>
-                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level1" data-var="level1"> </span>
-                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="DBAVl_kns1_m241_levels_level0" data-var="level0"> </span>
+                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="118" data-var="level3"> </span>
+                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="117" data-var="level2"> </span>
+                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="116" data-var="level1"> </span>
+                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="115" data-var="level0"> </span>
 
                                         </div>
                                     </div>
                                     <div class="col-md-9">
                                         <p class="small" style="margin-top:20px; margin-bottom: 20px">Насосы в работе:</p>
                                         <div style="margin-left: 10px">
-                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="DBAVl_kns1_m241_engine1_engine1" data-var="engine1.status">1</p>
-                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="DBAVl_kns1_m241_engine2_engine2" data-var="engine2.status">2</p>
+                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="113" data-var="engine1.status"><span class="interactive-text" data-browse="110">0</span> A</p>
+                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="114" data-var="engine2.status"><span class="interactive-text" data-browse="111">0</span> A</p>
                                         </div>
                                             <hr>
-                                        <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="DBAVl_kns1_m241_levels_level_error" data-href="btn" data-var="unit.error_level"></button></p>
-                                        <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="DBAVl_kns1_m241_engine1_engine1_erro" data-href="btn"data-var="unit.error_engine"></button></p>
-                                        <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="DBAVl_kns1_m241_engine2_engine2_erro" data-href="btn" data-var="unit.error_engine"></button></p>
+                                        <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"></button></p>
+                                        <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="120" data-href="btn"data-var="unit.error_engine"></button></p>
+                                        <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="121" data-href="btn" data-var="unit.error_engine"></button></p>
                                     <hr>
                                         <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                                 style="margin-bottom: 10px; " data-href="btn"
-                                                data-browse="DBAVl_kns1_m241_main_voltage1" data-var="voltage1"><i
+                                                data-browse="104" data-var="voltage1"><i
                                                     class="fa fa-bolt"></i> 1
                                         </button>
                                         <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                                 style="margin-bottom: 10px; " data-href="btn"
-                                                data-browse="DBAVl_kns1_m241_main_voltage2" data-var="voltage2"><i
+                                                data-browse="105" data-var="voltage2"><i
                                                     class="fa fa-bolt"></i> 2
                                         </button>
                                         <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                                 style="margin-bottom: 10px; " data-href="btn"
-                                                data-browse="DBAVl_kns1_m241_main_cold" data-var="voltage2"><i
-                                                    class="fa fa-snowflake-o" aria-hidden="true"></i></button>
+                                                data-browse=103" data-var="cold_status"><i
+                                                    class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                     </div>
 
                                 </div>

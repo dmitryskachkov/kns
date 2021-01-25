@@ -51,7 +51,19 @@
         }, 1000);
 
       });
+      $("#basic").DataTable( {
+        columns: [
+          { data: "created" },
+          { data: "obj_name" },
+          { data: "tag_name"},
+          { data: "state"}
+          ],
+        scrollY:        200,
+        scrollCollapse: true,
+        scroller:       true,
+        ajax: "/events",
 
+      } );
     }
   };
 }(jQuery));

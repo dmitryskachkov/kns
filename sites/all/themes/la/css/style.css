@@ -151,3 +151,6 @@ p.small {
 #event-body button.hidden {
     display: none;
 }
+.dataTables_length {
+    display: none;
+}

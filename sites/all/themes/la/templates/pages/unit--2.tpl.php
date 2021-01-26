@@ -259,7 +259,7 @@
 
     var day = (Date.now() / 1000) - 86400;
 
-    function requestVerticalLineForErrorData(stockChart, tag, color) {
+    function requestVerticalLineForErrorData(stockChart, tag, color, msg) {
         $.get('/timeline?prm=' + tag, function(data) {
             var data = JSON.parse(data);
 
@@ -272,7 +272,7 @@
                 });
 
                 stockChart.xAxis[0].addPlotLine({
-                    label: {text: 'Ошибка уровня'},
+                    label: {text: msg},
                     color: color, // Red
                     width: 1,
                     value: time
@@ -341,10 +341,8 @@
             }]
         });
 
-        var levels_errors = requestVerticalLineForErrorData(stockChart, '119', '#FF0000');
-       // var engine1_errors = requestVerticalLineForErrorData(stockChart, '120', '#FF0000');
-       // var engine2_errors = requestVerticalLineForErrorData(stockChart, '121', '#FF0000');
-        //var total_engines_errors = [].concat(engine1_errors, engine2_errors);
+        var levels_errors = requestVerticalLineForErrorData(stockChart, '119', '#FF0000','Ошибка уровня');
+
 
     });
 
@@ -367,7 +365,7 @@
 
                     MainChartCounter += 1;
                     if (MainChartCounter === 2) {
-                        Highcharts.stockChart('engines', {
+                        let enginesChart = Highcharts.stockChart('engines', {
                             mapNavigation: {
                                 enableMouseWheelZoom: true
                             },
@@ -416,12 +414,19 @@
                             series: MainChartOptions
 
                         });
+                        var engine1_errors = requestVerticalLineForErrorData(enginesChart, '120', '#ffaf4d', 'Ошибка двигателя 1');
+                        var engine2_errors = requestVerticalLineForErrorData(enginesChart, '121', '#4dbc29', 'Ошибка двигателя 2');
                     }
                 }
 
             }
         });
-    });
+    }
+    //var engine1_errors = requestVerticalLineForErrorData(enginesChart/, '120', '#FF0000');
+    //var engine2_errors = requestVerticalLineForErrorData(enginesChart, '121', '#FF0000');
+    //var total_engines_errors = [].concat(engine1_errors, engine2_errors)
+    );
+
 
 
 

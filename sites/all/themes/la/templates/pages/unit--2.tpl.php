@@ -38,10 +38,10 @@
                             <div style="margin-left: 10px">
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="113" data-error="120" data-var="engine1.status" ><span class="interactive-text" data-browse="110">0</span> A</p>
+                                   data-browse="113" data-error="120" data-var="engine1.status"   title="Насос №1"><span class="interactive-text" data-browse="110">0</span> A</p>
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="114" data-error="121" data-var="engine2.status"><span class="interactive-text" data-browse="111">0</span> A</p>
+                                   data-browse="114" data-error="121" data-var="engine2.status" title="Насос №2"><span class="interactive-text" data-browse="111">0</span> A</p>
                             </div>
                         </div>
 
@@ -55,21 +55,21 @@
                             <p class="text-muted font-weight-light">Дополнительные сигналы</p>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="104" data-var="voltage1"><i
+                                    data-browse="104" data-var="voltage1" title="Напряжение на вводе №1"><i
                                         class="fa fa-bolt"></i> 1
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="105" data-var="voltage2"><i
+                                    data-browse="105" data-var="voltage2" title="Напряжение на вводе №2"><i
                                         class="fa fa-bolt"></i> 2
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="103" data-var="voltage2"><i
+                                    data-browse="103" title="Датчик холода"><i
                                         class="fa fa-snowflake-o" aria-hidden="true"></i></button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="102" data-var="door"><i class="fa fa-lock"
+                                    data-browse="102" data-var="door" title="Датчик движения"><i class="fa fa-lock"
                                                                                                aria-hidden="true"></i>
                             </button>
                         </div>
@@ -77,17 +77,17 @@
                             <p style="line-height: 20px">Ошибка уровня:
                                 <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn interactive"
                                         data-browse="119" data-href="btn"
-                                        data-var="unit.error_level"></button>
+                                        data-var="unit.error_level" title="Проблемы с датчиками уровня"></button>
                             </p>
                             <p style="line-height: 20px">Ошибка насоса 1:
                                 <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn  interactive"
                                         data-browse="120" data-href="btn"
-                                        data-var="unit.error_engine"></button>
+                                        data-var="unit.error_engine" title="Ошибка РКЗ"></button>
                             </p>
                             <p style="line-height: 20px">Ошибка насоса 2:
                                 <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn  interactive"
                                         data-browse="121" data-href="btn"
-                                        data-var="unit.error_engine"></button>
+                                        data-var="unit.error_engine" title="Ошибка РКЗ"></button>
                             </p>
                         </div>
 
@@ -259,35 +259,37 @@
 
     var day = (Date.now() / 1000) - 86400;
 
-    function requestVerticalLineForErrorData(tag, color) {
-        jQuery.ajax({
-            url: '/timeline?prm=' + tag,
-            type: "GET",
-            dataType: "json",
-            success: function (data) {
-                result = [];
-                $.each(data, function (i, time) {
-                    result.push({
-                        color: color, // Red
-                        width: 10,
-                        value: time
-                    });
+    function requestVerticalLineForErrorData(stockChart, tag, color) {
+        $.get('/timeline?prm=' + tag, function(data) {
+            var data = JSON.parse(data);
+
+            const result = [];
+            $.each(data, function (i, time) {
+                result.push({
+                    color: color, // Red
+                    width: 1,
+                    value: time
                 });
-                return result.concat();
-            },
-            cache: false
+
+                stockChart.xAxis[0].addPlotLine({
+                    label: {text: 'Ошибка уровня'},
+                    color: color, // Red
+                    width: 1,
+                    value: time
+                });
+            });
+
+            // stockChart.xAxis[0].options.plotLines[0].value = chart.xAxis[0].options.plotLines.concat(result);
+            // stockChart.xAxis[0].update();
+
+            return result;
         });
     }
-
-    var levels_errors = requestVerticalLineForErrorData('119', '#FF0000');
-    var engine1_errors = requestVerticalLineForErrorData('120', '#FF0000');
-    var engine2_errors = requestVerticalLineForErrorData('121', '#FF0000');
-    // var total_engines_errors = [].concat(engine1_errors, engine2_errors);
 
     Highcharts.getJSON('/history?prm=108', function (data) {
         // Create the chart
 
-        Highcharts.stockChart('levels', {
+        let stockChart = Highcharts.stockChart('levels', {
             mapNavigation: {
                 enableMouseWheelZoom: true
             },
@@ -307,7 +309,7 @@
                 events: {
                     setExtremes: syncExtremes
                 },
-                plotLines: levels_errors
+                plotLines: []
             },
 
             chart: {
@@ -339,7 +341,13 @@
             }]
         });
 
+        var levels_errors = requestVerticalLineForErrorData(stockChart, '119', '#FF0000');
+       // var engine1_errors = requestVerticalLineForErrorData(stockChart, '120', '#FF0000');
+       // var engine2_errors = requestVerticalLineForErrorData(stockChart, '121', '#FF0000');
+        //var total_engines_errors = [].concat(engine1_errors, engine2_errors);
+
     });
+
     var MainChartOptions = [], MainChartCounter = 0,
         MainChartTags = {
             '113': 'Насос №1',
@@ -373,7 +381,7 @@
                             },
                             xAxis: {
                                 ordinal: false,
-                                plotLines: engine1_errors,
+                                plotLines: [],
                                 type: 'datetime',
                                 //minRange: 300 * 1000,
                                 events: {

@@ -145,3 +145,9 @@ p.small {
 #basic_wrapper .row {
     width: 100%;
 }
+#event-body.hidden {
+    display: none;
+}
+#event-body button.hidden {
+    display: none;
+}

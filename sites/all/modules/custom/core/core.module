@@ -102,6 +102,14 @@ function core_menu()
         'description' => 'Ajax get request',
         'type' => MENU_CALLBACK,
     ];
+    $items['quit'] = [
+        'title' => 'Ajax get',
+        'page callback' => 'core_ajax_quit',
+        'page arguments' => [1],
+        'access callback' => 'user_is_logged_in',
+        'description' => 'Ajax get request',
+        'type' => MENU_CALLBACK,
+    ];
     $items['history'] = [
         'title' => 'Ajax get history of paremeter',
         'page callback' => 'core_ajax_get_history',
@@ -380,6 +388,9 @@ function core_theme($existing, $type, $theme, $path)
         'event_block' => [
             'template' => 'event_block',
             'path' => drupal_get_path('theme', 'la') . '/templates/blocks',
+            'variables' => [
+                'event_count' => [],
+            ],
         ],
 
         'dashboard_page' => [
@@ -868,13 +879,20 @@ function core_block_view($delta = '') {
         case 'event_block':
 
             $block['subject'] = t('Events blocks');
-            $block['content'] = core_event_blcok();
+            $block['content'] = core_event_bloсk();
             break;
     }
     return $block;
 }
-function core_event_blcok() {
-    return theme('event_block', []);
+function core_event_bloсk() {
+    $event_count = 0;
+    db_set_active('kns');
+    $event_count = db_select('events', 'e')
+    ->condition('e.checked', 0)->countQuery()
+        ->execute()
+        ->fetchField();
+    db_set_active();
+    return theme('event_block', ['event_count' =>  $event_count]);
 }
 
 function core_ajax_get_events() {
@@ -883,7 +901,8 @@ function core_ajax_get_events() {
     $query->innerJoin('dictionary_objects', 'd', 'e.objnum = d.obj_id');
     $query->innerJoin('dictionary_tags', 't', 'e.cnlnum = t.tag_id');
     $query->condition('e.checked', 0);
-    $query->fields('e', ['oldcnlval','newcnlval', 'created']);
+    $query->orderBy('e.created', 'ASC');
+    $query->fields('e', ['id','oldcnlval','newcnlval', 'created']);
     $query->fields('d', ['obj_name']);
     $query->fields('t');
     $events = $query->execute()->fetchAll();
@@ -906,4 +925,24 @@ function core_ajax_get_events() {
     drupal_json_output(['data' => $events]);
     drupal_exit();
 
+}
+
+function core_ajax_quit() {
+    $params = drupal_get_query_parameters();
+    db_set_active('kns');
+    if (isset($params['id']) && !empty($params['id'])) {
+        if ($params['id'] == 'all') {
+            db_update('events')
+                ->fields(array('checked' => 1))
+
+                ->execute();
+        }
+        else {
+            db_update('events')
+                ->fields(array('checked' => 1))
+                ->condition('id', $params['id'])
+                ->execute();
+        }
+    }
+    db_set_active();
 }

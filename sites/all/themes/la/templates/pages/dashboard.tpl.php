@@ -43,8 +43,8 @@
                                     <div class="col-md-9">
                                         <p class="small" style="margin-top:20px; margin-bottom: 20px">Насосы в работе:</p>
                                         <div style="margin-left: 10px">
-                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="113" data-var="engine1.status"><span class="interactive-text" data-browse="110">0</span> A</p>
-                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="114" data-var="engine2.status"><span class="interactive-text" data-browse="111">0</span> A</p>
+                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="113" data-var="engine1.status"><span class="interactive-text" data-error="120" data-browse="110">0</span> A</p>
+                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="114" data-var="engine2.status"><span class="interactive-text" data-error="121" data-browse="111">0</span> A</p>
                                         </div>
                                             <hr>
                                         <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"></button></p>

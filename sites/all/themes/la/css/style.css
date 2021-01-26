@@ -26,8 +26,9 @@ body {
     font-weight: bold;
 }
 .btn-error {
-    background-color: #f55f60;
-    border-color: #f55f60;
+    /*background-color: #f55f60;*/
+    /*border-color: #f55f60;*/
+    animation: blinker 1s linear infinite;
 }
 .btn-rounded.btn-icon {
     line-height: 44px;
@@ -153,4 +154,15 @@ p.small {
 }
 .dataTables_length {
     display: none;
+}
+.blink_error {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        background-color: #c9322f;
+        border-color: #c9322f;
+        color: #ffffff;
+    }
 }

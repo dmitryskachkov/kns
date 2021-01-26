@@ -38,10 +38,10 @@
                             <div style="margin-left: 10px">
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="113" data-var="engine1.status"><span class="interactive-text" data-browse="110">0</span> A</p>
+                                   data-browse="113" data-error="120" data-var="engine1.status" ><span class="interactive-text" data-browse="110">0</span> A</p>
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="114" data-var="engine2.status"><span class="interactive-text" data-browse="111">0</span> A</p>
+                                   data-browse="114" data-error="121" data-var="engine2.status"><span class="interactive-text" data-browse="111">0</span> A</p>
                             </div>
                         </div>
 

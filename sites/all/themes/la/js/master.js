@@ -62,6 +62,21 @@
 
                         }
                     });
+                    if (element.attr("data-error")){
+                    $.get("/api?prm=" + element.attr("data-error"), function (result) {
+                        if (result == 1) {
+                            if (!element.hasClass("blink_error")) {
+                                element.addClass("blink_error");
+                            }
+                        } else {
+                            if (element.hasClass("blink_errore")) {
+                                element.removeClass("blink_error");
+                            }
+
+                        }
+                    });
+
+                    }
                 }, 1000);
 
             });

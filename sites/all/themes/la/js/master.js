@@ -10,8 +10,8 @@
                 var element = $(this);
                 $.get("/last?prm=" + element.attr("data-browse"), function (result) {
                     if (result) {
-                        element.after("<div class=\"mytooltip\" id=\"" + element.attr("data-browse") + "\">Последнее обновление:" + result + "</div>");
-                        $("#" + element.attr("data-browse")).fadeOut(6500);
+                        element.after("<div class=\"mytooltip\" id=\"" + element.attr("data-browse") + "\">Последнее изменение:" + result + "</div>");
+                        $("#" + element.attr("data-browse")).fadeOut(8500);
                     }
                 });
             });

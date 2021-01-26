@@ -273,7 +273,6 @@
                         value: time
                     });
                 });
-                console.log(result);
                 return result.concat();
             },
             cache: false
@@ -292,6 +291,7 @@
             mapNavigation: {
                 enableMouseWheelZoom: true
             },
+            colors: ["#6e411f"],
             plotOptions: {
                 series: {
                   connectNulls: true,

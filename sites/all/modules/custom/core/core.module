@@ -236,11 +236,12 @@ function core_ajax_get_last()
         ->range(0, 1)
         ->execute()
         ->fetchField();
-    $result = db_select('data', 'data')
+    ;
+    $result = db_select('history', 'data')
         ->fields('data', ['created'])
         ->orderBy('data.created', 'DESC')
-        ->condition('data.tag_id', $params['prm'])
-        ->condition('data.val', $last_result, '!=')
+        ->condition('data.tag_id', (int) $params['prm'])
+        ->condition('data.val', (int)$last_result, '!=')
         ->range(0, 1)
         ->execute()
         ->fetchField();

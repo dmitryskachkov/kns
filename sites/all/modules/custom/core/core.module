@@ -164,11 +164,11 @@ function core_page_report($unit_id = NULL)
 {
 
     $unit = [];
-
+    $history = [];
     if ($unit_id) {
         $unit = $units = entity_load('unit', [$unit_id]);
         $unit = $unit[$unit_id];
-        dpm($unit);
+
         db_set_active('kns');
         $query = db_select('events', 'e');
         $query->innerJoin('dictionary_objects', 'd', 'e.objnum = d.obj_id');
@@ -196,7 +196,7 @@ function core_page_report($unit_id = NULL)
                     break;
             }
         }
-        dpm($history);
+
     }
 
     return theme('report', [

@@ -188,7 +188,8 @@
         ],
         inputEnabled: true, // it supports only days
         selected: 2,
-        x: 40
+        x: 0,
+        y: 30;
     };
 
 

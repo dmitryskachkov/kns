@@ -188,7 +188,7 @@
         ],
         inputEnabled: true, // it supports only days
         selected: 2,
-        x: 20
+        x: 40
     };
 
 
@@ -408,7 +408,7 @@
                                 floating: true,
                                 align: 'bottom',
                                 x: 20,
-                                y: 30
+                                y: 70
                             },
                             series: MainChartOptions
 

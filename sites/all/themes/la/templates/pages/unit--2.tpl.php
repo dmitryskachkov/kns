@@ -187,7 +187,8 @@
 
         ],
         inputEnabled: true, // it supports only days
-        selected: 2
+        selected: 2,
+        x: 20
     };
 
 

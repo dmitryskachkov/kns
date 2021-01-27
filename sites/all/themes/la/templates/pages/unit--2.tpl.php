@@ -186,7 +186,7 @@
             },
 
         ],
-        inputEnabled: false, // it supports only days
+        inputEnabled: true, // it supports only days
         selected: 2
     };
 
@@ -400,7 +400,7 @@
                                 enabled: false
                             },
                             rangeSelector: {
-                                enabled: false
+                                enabled: true
                             },
 
 

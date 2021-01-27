@@ -108,6 +108,31 @@
                 scroller: true,
                 select: true,
                 searching: false,
+                language: {
+                  "decimal":        "",
+                  "emptyTable":     "Нет данных для отображеня",
+                  "info":           "Показано _START_ до _END_ из _TOTAL_ записей",
+                  "infoEmpty":      "Показано 0 записей",
+                  "infoFiltered":   "(filtered from _MAX_ total entries)",
+                  "infoPostFix":    "",
+                  "thousands":      ",",
+                  "lengthMenu":     "Показать _MENU_ для записей",
+                  "loadingRecords": "Загружаю данные...",
+                  "processing":     "Обрабатываю данные...",
+                  "search":         "Поиск:",
+                  "zeroRecords":    "Нет записей для отображения",
+                  "paginate": {
+                    "first":      "Первая",
+                    "last":       "Последняя",
+                    "next":       "Следующая",
+                    "previous":   "Предыдущая"
+                  },
+                  "aria": {
+                    "sortAscending":  ": активируйте для сортировки по возрастанию",
+                    "sortDescending": ": активируйте для сортировки по убыванию"
+                  }
+                },
+
                 //paging: false,
                 ajax: "/events",
 
@@ -135,7 +160,31 @@
             $("#remove_all_button").click(function () {
                 table.clear().draw();
                 $.ajax({
-                    url: "/quit?id=all"
+                      url: "/quit?id=all",
+                      language: {
+                        "decimal":        "",
+                        "emptyTable":     "Нет данных для отображеня",
+                        "info":           "Показано _START_ до _END_ из _TOTAL_ записей",
+                        "infoEmpty":      "Показано 0 записей",
+                        "infoFiltered":   "(filtered from _MAX_ total entries)",
+                        "infoPostFix":    "",
+                        "thousands":      ",",
+                        "lengthMenu":     "Показать _MENU_ для записей",
+                        "loadingRecords": "Загружаю данные...",
+                        "processing":     "Обрабатываю данные...",
+                        "search":         "Поиск:",
+                        "zeroRecords":    "Нет записей для отображения",
+                        "paginate": {
+                          "first":      "Первая",
+                          "last":       "Последняя",
+                          "next":       "Следующая",
+                          "previous":   "Предыдущая"
+                        },
+                        "aria": {
+                          "sortAscending":  ": активируйте для сортировки по возрастанию",
+                          "sortDescending": ": активируйте для сортировки по убыванию"
+                        }
+                      },
                 });
             });
         }

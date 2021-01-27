@@ -399,9 +399,7 @@
                             navigator: {
                                 enabled: false
                             },
-                            rangeSelector: {
-                                enabled: true
-                            },
+                          rangeSelector: RangeSelectorTemplate,
 
 
                             title: {

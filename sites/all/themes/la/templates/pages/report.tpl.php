@@ -28,14 +28,10 @@
 
                             <fieldset>
                                 <h4>Отчет по работе насосов</h4>
-                                <p>Количество насосов  <span class="float-right"><?php print count($unit->engines); ?></span></p>
-                                <?php if (isset($unit->engines)): ?>
-                              <?php foreach ($unit->engines as $n => $engine) : ?>
-                                <?php $n++; ?>
-                                  <p>Насос №<?php print $n ?>. Время работы  <span class="float-right"><?php print $engine['working'] ?> секунд.</span></p>
-                                  <p class="small">TAG: <?php print $engine['name']; ?></p>
-                              <?php endforeach; ?>
-                                <?php endif; ?>
+                                <p>Количество насосов  <span class="float-right">0</span></p>
+                                <p>Количество аварий уровня  <span class="float-right">0</span></p>
+                                <p>Количество аварий насосов  <span class="float-right">0</span></p>
+                                <p>Количество аварий перемерзаний  <span class="float-right">0</span></p>
                             </fieldset>
                             <hr>
 

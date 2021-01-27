@@ -146,6 +146,9 @@ p.small {
 #basic_wrapper .row {
     width: 100%;
 }
+#journal_wrapper .row {
+    width: 100%;
+}
 #event-body.hidden {
     display: none;
 }

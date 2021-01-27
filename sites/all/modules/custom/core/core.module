@@ -164,32 +164,39 @@ function core_page_report($unit_id = NULL)
 {
 
     $unit = [];
-    $history = createDateRangeArray(date('Y-m-d', strtotime('-60 days', time())), date('Y-m-d', time()));
 
     if ($unit_id) {
-        $unit = node_load($unit_id);
+        $unit = $units = entity_load('unit', [$unit_id]);
+        $unit = $unit[$unit_id];
+        dpm($unit);
+        db_set_active('kns');
+        $query = db_select('events', 'e');
+        $query->innerJoin('dictionary_objects', 'd', 'e.objnum = d.obj_id');
+        $query->innerJoin('dictionary_tags', 't', 'e.cnlnum = t.tag_id');
+        $query->condition('e.objnum', $unit_id);
+        $query->orderBy('e.created', 'ASC');
+        $query->fields('e', ['id', 'oldcnlval', 'newcnlval', 'created', 'checked']);
+        $query->fields('d', ['obj_name']);
+        $query->fields('t');
+        $history = $query->execute()->fetchAll();
 
-        if (isset($unit->field_engines['und'][0]['value'])) {
-            $engines = explode("\r\n", $unit->field_engines['und'][0]['value']);
-            foreach ($engines as $n => $engine) {
-                $unit->engines[$n]['name'] = $engine;
-                // Calculate working
-                db_set_active('kns');
-                if (db_table_exists($engine)) {
-                    $result = db_select($engine, 'tbl')
-                        ->fields('tbl', ['TM'])
-                        ->condition('tbl.VAL', 1)
-                        ->countQuery()
-                        ->execute()
-                        ->fetchField();
+        db_set_active();
 
-                    $unit->engines[$n]['working'] = $result * 5;
-                }
-                db_set_active();
-
+        foreach ($history as $i => $event) {
+            $history[$i]->created = date('d.m.Y H:i', $event->created);
+            switch ((int)$event->newcnlval) {
+                case 0:
+                    $history[$i]->state = $event->state_off;
+                    break;
+                case 1:
+                    $history[$i]->state = $event->state_on;
+                    break;
+                default:
+                    $history[$i]->state = $event->newcnlval;
+                    break;
             }
-
         }
+        dpm($history);
     }
 
     return theme('report', [
@@ -205,7 +212,7 @@ function core_ajax_get()
     $params = drupal_get_query_parameters();
     if (isset($params['prm']) && !empty($params['prm'])) {
 
-            db_set_active('kns');
+        db_set_active('kns');
         $result = db_select('data', 'data')
             ->fields('data', ['val'])
             ->condition('data.tag_id', $params['prm'])
@@ -217,8 +224,7 @@ function core_ajax_get()
 
         drupal_json_output((int)$result);
 
-    }
-    else {
+    } else {
         drupal_json_output(0);
     }
     drupal_exit();
@@ -235,12 +241,11 @@ function core_ajax_get_last()
         ->condition('data.tag_id', $params['prm'])
         ->range(0, 1)
         ->execute()
-        ->fetchField();
-    ;
+        ->fetchField();;
     $result = db_select('history', 'data')
         ->fields('data', ['created'])
         ->orderBy('data.created', 'DESC')
-        ->condition('data.tag_id', (int) $params['prm'])
+        ->condition('data.tag_id', (int)$params['prm'])
         ->condition('data.val', (int)$last_result, '!=')
         ->range(0, 1)
         ->execute()
@@ -257,13 +262,12 @@ function core_ajax_get_history()
     db_set_active('kns');
     $result = db_select('history', 'history')
         ->fields('history', ['created', 'val'])
-        ->condition('history.tag_id', (int) $params['prm'])
+        ->condition('history.tag_id', (int)$params['prm'])
         ->orderBy('history.created', 'ASC');
 
     if (isset($params['start'])) {
         $result->condition('history.created', (int)$params['start'], '>');
-    }
-    else {
+    } else {
         $result->condition('history.created', (int)time() - 86400 * 2, '>');
     }
 
@@ -492,11 +496,10 @@ function core_form_alter(&$form, $form_state, $form_id)
 
 function core_unit_switch_form($form, &$form_state)
 {
-    $nodes = node_load_multiple([], ['type' => 'object']);
+    $units = entity_load('unit');
 
-    $units = [];
-    foreach ($nodes as $node) {
-        $units[$node->nid] = 'Объект: ' . $node->title;
+    foreach ($units as $unit) {
+        $units[$unit->id] = 'Объект: ' . $unit->title;
     }
     $form['unit'] = [
         '#title' => '',
@@ -850,7 +853,8 @@ function core_meters_send_form_validate($form, $form_state)
     }
 }
 
-function core_total_tags() {
+function core_total_tags()
+{
     $result = 0;
     db_set_active('kns');
     $result = db_select('data', 'data')
@@ -861,10 +865,12 @@ function core_total_tags() {
     db_set_active();
     return $result;
 }
+
 /**
  * Реализация hook_block_info()
  */
-function core_block_info() {
+function core_block_info()
+{
     $blocks['event_block'] = array( // имя блока - индекс массива
         'info' => t('Events on objects'),
     );
@@ -875,7 +881,8 @@ function core_block_info() {
 /**
  * Реализация hook_block_view()
  */
-function core_block_view($delta = '') {
+function core_block_view($delta = '')
+{
     $block = array();
 
     switch ($delta) {
@@ -887,25 +894,28 @@ function core_block_view($delta = '') {
     }
     return $block;
 }
-function core_event_bloсk() {
+
+function core_event_bloсk()
+{
     $event_count = 0;
     db_set_active('kns');
     $event_count = db_select('events', 'e')
-    ->condition('e.checked', 0)->countQuery()
+        ->condition('e.checked', 0)->countQuery()
         ->execute()
         ->fetchField();
     db_set_active();
-    return theme('event_block', ['event_count' =>  $event_count]);
+    return theme('event_block', ['event_count' => $event_count]);
 }
 
-function core_ajax_get_events() {
+function core_ajax_get_events()
+{
     db_set_active('kns');
     $query = db_select('events', 'e');
     $query->innerJoin('dictionary_objects', 'd', 'e.objnum = d.obj_id');
     $query->innerJoin('dictionary_tags', 't', 'e.cnlnum = t.tag_id');
     $query->condition('e.checked', 0);
     $query->orderBy('e.created', 'ASC');
-    $query->fields('e', ['id','oldcnlval','newcnlval', 'created']);
+    $query->fields('e', ['id', 'oldcnlval', 'newcnlval', 'created']);
     $query->fields('d', ['obj_name']);
     $query->fields('t');
     $events = $query->execute()->fetchAll();
@@ -930,17 +940,16 @@ function core_ajax_get_events() {
 
 }
 
-function core_ajax_quit() {
+function core_ajax_quit()
+{
     $params = drupal_get_query_parameters();
     db_set_active('kns');
     if (isset($params['id']) && !empty($params['id'])) {
         if ($params['id'] == 'all') {
             db_update('events')
                 ->fields(array('checked' => 1))
-
                 ->execute();
-        }
-        else {
+        } else {
             db_update('events')
                 ->fields(array('checked' => 1))
                 ->condition('id', $params['id'])

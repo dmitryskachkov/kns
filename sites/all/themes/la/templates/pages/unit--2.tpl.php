@@ -188,8 +188,10 @@
         ],
         inputEnabled: true, // it supports only days
         selected: 2,
-        x: 0,
-        y: 30;
+        inputPosition: {
+            x: -40,
+            y: 0
+        },
     };
 
 

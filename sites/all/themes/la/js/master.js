@@ -177,8 +177,7 @@
                 var data = table.row( ".selected" ).data();
                 table.row(".selected").remove().draw(false);
                 $.ajax({
-                    url: "/quit?id=" + data.id,
-                    data: data,
+                    url: "/quit?id=" + data.id
                 });
 
             });

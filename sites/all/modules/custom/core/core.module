@@ -207,6 +207,23 @@ function core_page_report($unit_id = NULL)
     );
 }
 
+function core_tag_get($tag_id, $index=NULL)
+{
+
+    db_set_active('kns');
+    $result = db_select('data', 'data')
+        ->fields('data', ['val'])
+        ->condition('data.tag_id', $tag_id)
+        ->orderBy('data.created', 'DESC')
+        ->range(0, 1)
+        ->execute()
+        ->fetchField();
+    db_set_active();
+    return $result;
+
+
+}
+
 function core_ajax_get()
 {
     $params = drupal_get_query_parameters();

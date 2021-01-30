@@ -85,6 +85,11 @@
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-lg-12">
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                            style="float:right; margin-bottom: 10px; " data-href="btn"
+                                            data-browse="212" data-var="door"><i class="fa fa-lock"
+                                                                                 aria-hidden="true"></i>
+                                    </button>
                                     <a class="default-text" href="/unit/6">
                                         <h4>КНС Ледовый (не подключен)</h4>
                                         <p class="text-muted font-weight-light">ТЦ СитиМолл | SE M241</p>

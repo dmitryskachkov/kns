@@ -10,7 +10,7 @@
 
                     <div class="row">
                         <div class="col-md-3 col-sm-4 col-xs-4">
-                            <a class="default-text" href="/unit/2">
+                            <a class="default-text" href="/unit/6">
                                 <h4>КНС Ледовый</h4>
                                 <p class="text-muted font-weight-light">Уровень в резервуаре</p>
                             </a>
@@ -416,17 +416,15 @@
                             series: MainChartOptions
 
                         });
-                        var engine1_errors = requestVerticalLineForErrorData(enginesChart, '210', '#ffaf4d', 'Ошибка двигателя 1');
-                        var engine2_errors = requestVerticalLineForErrorData(enginesChart, '211', '#4dbc29', 'Ошибка двигателя 2');
+                        //var engine1_errors = requestVerticalLineForErrorData(enginesChart, '210', '#ffaf4d', 'Ошибка двигателя 1');
+                        //var engine2_errors = requestVerticalLineForErrorData(enginesChart, '211', '#4dbc29', 'Ошибка двигателя 2');
                     }
                 }
 
             }
         });
     }
-    //var engine1_errors = requestVerticalLineForErrorData(enginesChart/, '120', '#FF0000');
-    //var engine2_errors = requestVerticalLineForErrorData(enginesChart, '121', '#FF0000');
-    //var total_engines_errors = [].concat(engine1_errors, engine2_errors)
+
     );
 
 

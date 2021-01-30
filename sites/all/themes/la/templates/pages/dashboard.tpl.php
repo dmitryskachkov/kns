@@ -85,8 +85,8 @@
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <a class="default-text" href="/unit/3">
-                                        <h4>КНС Ледовый</h4>
+                                    <a class="default-text" href="/unit/6">
+                                        <h4>КНС Ледовый (не подключен)</h4>
                                         <p class="text-muted font-weight-light">ТЦ СитиМолл | SE M241</p>
                                     </a>
                                 </div>
@@ -96,24 +96,39 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="bar-progress">
-                                        <span class="bar-level bar25 " data-href="btn" data-browse="" data-var="level3"> </span>
-                                        <span class="bar-level bar25 " data-href="btn" data-browse="" data-var="level2"> </span>
-                                        <span class="bar-level bar25 " data-href="btn" data-browse="" data-var="level1"> </span>
-                                        <span class="bar-level bar25 " data-href="btn" data-browse="" data-var="level0"> </span>
+                                        <span class="bar-level bar25 " data-href="btn" data-browse="208" data-var="level3"> </span>
+                                        <span class="bar-level bar25 " data-href="btn" data-browse="207" data-var="level2"> </span>
+                                        <span class="bar-level bar25 " data-href="btn" data-browse="206" data-var="level1"> </span>
+                                        <span class="bar-level bar25 " data-href="btn" data-browse="205" data-var="level0"> </span>
 
                                     </div>
                                 </div>
                                 <div class="col-md-9">
                                     <p class="small" style="margin-top:20px; margin-bottom: 20px">Насосы в работе:</p>
                                     <div style="margin-left: 10px">
-                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="" data-var="engine1.status">1</p>
-                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="" data-var="engine2.status">2</p>
+                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="203" data-error="210"  data-var="engine1.status"><span class="interactive-text" data-browse="219">0</span> A</p>
+                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="204" data-error="211" data-var="engine2.status"><span class="interactive-text" data-browse="220">0</span> A</p>
                                     </div>
                                     <hr>
-                                    <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="" data-href="btn" data-var="unit.error_level"></button></p>
-                                    <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="" data-href="btn"data-var="unit.error_engine"></button></p>
-                                    <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="" data-href="btn" data-var="unit.error_engine"></button></p>
+                                    <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="209" data-href="btn" data-var="unit.error_level"></button></p>
+                                    <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="210" data-href="btn"data-var="unit.error_engine"></button></p>
+                                    <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="211" data-href="btn" data-var="unit.error_engine"></button></p>
                                     <hr>
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                            style="margin-bottom: 10px; " data-href="btn"
+                                            data-browse="214" data-var="voltage1"><i
+                                                class="fa fa-bolt"></i> 1
+                                    </button>
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                            style="margin-bottom: 10px; " data-href="btn"
+                                            data-browse="215" data-var="voltage2"><i
+                                                class="fa fa-bolt"></i> 2
+                                    </button>
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                            style="margin-bottom: 10px; " data-href="btn"
+                                            data-browse=213" data-var="cold_status"><i
+                                                class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="221" style="margin-left: 5px">0</span> ℃</button>
+
                                 </div>
 
                             </div>

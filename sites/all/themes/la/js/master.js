@@ -69,7 +69,7 @@
                                 element.addClass("blink_error");
                             }
                         } else {
-                            if (element.hasClass("blink_errore")) {
+                            if (element.hasClass("blink_error")) {
                                 element.removeClass("blink_error");
                             }
 

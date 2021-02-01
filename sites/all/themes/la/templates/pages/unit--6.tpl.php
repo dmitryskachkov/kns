@@ -48,7 +48,7 @@
                         <div class="col-md-2">
                             <h4>Температура</h4>
                             <p class="text-muted font-weight-light">На объекте</p>
-                            <h3 style="margin-top: 15px"><span class="interactive-text" data-browse="21">0</span> ℃</h3>
+                            <h3 style="margin-top: 15px"><span class="interactive-text" data-browse="221">0</span> ℃</h3>
                         </div>
                         <div class="col-md-3">
                             <h4>Прочее</h4>

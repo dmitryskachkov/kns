@@ -91,7 +91,7 @@
                                                                                  aria-hidden="true"></i>
                                     </button>
                                     <a class="default-text" href="/unit/6">
-                                        <h4>КНС Ледовый (не подключен)</h4>
+                                        <h4>КНС Ледовый</h4>
                                         <p class="text-muted font-weight-light">ТЦ СитиМолл | SE M241</p>
                                     </a>
                                 </div>

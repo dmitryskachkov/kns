@@ -101,10 +101,10 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="bar-progress">
-                                        <span class="bar-level bar25 " data-href="btn" data-browse="208" data-var="level3"> </span>
-                                        <span class="bar-level bar25 " data-href="btn" data-browse="207" data-var="level2"> </span>
-                                        <span class="bar-level bar25 " data-href="btn" data-browse="206" data-var="level1"> </span>
-                                        <span class="bar-level bar25 " data-href="btn" data-browse="205" data-var="level0"> </span>
+                                        <span class="bar-level bar25 interactive" data-href="btn" data-browse="208" data-var="level3"> </span>
+                                        <span class="bar-level bar25 interactive" data-href="btn" data-browse="207" data-var="level2"> </span>
+                                        <span class="bar-level bar25 interactive" data-href="btn" data-browse="206" data-var="level1"> </span>
+                                        <span class="bar-level bar25 interactive" data-href="btn" data-browse="205" data-var="level0"> </span>
 
                                     </div>
                                 </div>

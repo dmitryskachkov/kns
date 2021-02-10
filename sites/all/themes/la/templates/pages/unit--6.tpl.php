@@ -1,6 +1,7 @@
+<?php
+drupal_set_title('КНС УВД');
+?>
 <div class="row">
-
-
 <div class="col-md-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
@@ -11,7 +12,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-4 col-xs-4">
                             <a class="default-text" href="/unit/6">
-                                <h4>КНС Ледовый</h4>
+                                <h4>Резервуар</h4>
                                 <p class="text-muted font-weight-light">Уровень в резервуаре</p>
                             </a>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"

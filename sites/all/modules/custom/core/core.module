@@ -917,7 +917,7 @@ function core_event_bloсk()
     $event_count = 0;
     db_set_active('kns');
     $event_count = db_select('events', 'e')
-        ->condition('e.checked', 0)
+        ->condition('e.checked', 0)->countQuery()
         //->condition('e.warning_type',1)->countQuery()
         ->execute()
         ->fetchField();

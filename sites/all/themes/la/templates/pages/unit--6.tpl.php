@@ -1,5 +1,5 @@
 <?php
-drupal_set_title('КНС УВД');
+drupal_set_title('КНС Ледовый');
 ?>
 <div class="row">
 <div class="col-md-12 grid-margin stretch-card">

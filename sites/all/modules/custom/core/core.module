@@ -917,7 +917,8 @@ function core_event_bloсk()
     $event_count = 0;
     db_set_active('kns');
     $event_count = db_select('events', 'e')
-        ->condition('e.checked', 0)->countQuery()
+        ->condition('e.checked', 0)
+        ->condition('e.warning_type',1)->countQuery()
         ->execute()
         ->fetchField();
     db_set_active();
@@ -931,6 +932,7 @@ function core_ajax_get_events()
     $query->innerJoin('dictionary_objects', 'd', 'e.objnum = d.obj_id');
     $query->innerJoin('dictionary_tags', 't', 'e.cnlnum = t.tag_id');
     $query->condition('e.checked', 0);
+    $query->condition('e.warning_type',1);
     $query->orderBy('e.created', 'ASC');
     $query->fields('e', ['id', 'oldcnlval', 'newcnlval', 'created']);
     $query->fields('d', ['obj_name']);

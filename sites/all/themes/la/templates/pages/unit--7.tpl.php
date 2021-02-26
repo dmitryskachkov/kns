@@ -145,10 +145,12 @@ drupal_set_title('КНС УВД');
                                 data-browse="324" data-var="level2">2
                         </button>
 
-
                     </div>
+                </div>
+                <div class="row">
                     <div class="col-md-12">
-                        <h4>Насос</h4>
+                        <hr>
+                        <h4>Дренажный насос</h4>
                         <p class="text-muted font-weight-light">Сигналы насосов</p>
                         <div style="margin-left: 10px">
                             <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
@@ -156,12 +158,6 @@ drupal_set_title('КНС УВД');
                                data-browse="325" data-var="engine1.status" title="Дренажный насос">Д</p>
                         </div>
                     </div>
-
-
-
-
-
-
                 </div>
             </div>
         </div>

@@ -172,7 +172,7 @@ drupal_set_title('КНС УВД');
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div id="dr_levels" style="width: 100%; height: 220px "></div>
+                    <div id="dr_levels" style="width: 100%; height: 280px "></div>
                 </div>
             </div>
         </div>

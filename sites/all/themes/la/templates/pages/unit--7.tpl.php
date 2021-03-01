@@ -12,7 +12,7 @@ drupal_set_title('КНС УВД');
                     <div class="row">
                         <div class="col-md-3 col-sm-4 col-xs-4">
                             <a class="default-text" href="/unit/7">
-                                <h4>Резервуар</h4>
+                                <h4>Основной резервуар</h4>
                                 <p class="text-muted font-weight-light">Уровень в резервуаре</p>
                             </a>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
@@ -372,7 +372,7 @@ drupal_set_title('КНС УВД');
                 zoomType: 'x'
             },
             title: {
-                text: 'Уровень в резервуаре',
+                text: 'Уровень в основном резервуаре',
                 floating: true,
                 align: 'bottom',
                 x: 20,
@@ -387,7 +387,7 @@ drupal_set_title('КНС УВД');
             },
             series: [{
                 //type: 'area',
-                name: 'Уровень в резервуаре',
+                name: 'Уровень в основном резервуаре',
                 data: data,
                 step: true,
                 tooltip: {

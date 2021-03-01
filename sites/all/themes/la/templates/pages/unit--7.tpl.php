@@ -150,6 +150,12 @@ drupal_set_title('КНС УВД');
                 <div class="row">
                     <div class="col-md-12">
                         <hr>
+                        <p style="line-height: 20px">Ошибка уровня:
+                            <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn  interactive"
+                                    data-browse="332" data-href="btn"
+                                    data-var="unit.error_engine" title="Ошибка уровня (пробелы)"></button>
+                        </p>
+                        <hr>
                         <h4>Дренажный насос</h4>
                         <p class="text-muted font-weight-light">Сигналы насосов</p>
                         <div style="margin-left: 10px">
@@ -335,11 +341,69 @@ drupal_set_title('КНС УВД');
             return result;
         });
     }
-
     Highcharts.getJSON('/history?prm=318', function (data) {
         // Create the chart
 
         let stockChart = Highcharts.stockChart('levels', {
+            mapNavigation: {
+                enableMouseWheelZoom: true
+            },
+            colors: ["#6e411f"],
+            plotOptions: {
+                series: {
+                    connectNulls: true,
+                    dataGrouping: {
+                        enabled: false,
+                    },
+                },
+            },
+            rangeSelector: RangeSelectorTemplate,
+            xAxis: {
+                ordinal: false,
+                type: 'datetime',
+                events: {
+                    setExtremes: syncExtremes
+                },
+                plotLines: []
+            },
+
+            chart: {
+                type: 'area',
+                zoomType: 'x'
+            },
+            title: {
+                text: 'Уровень в резервуаре',
+                floating: true,
+                align: 'bottom',
+                x: 20,
+                y: 70
+            },
+
+            scrollbar: {
+                enabled: false
+            },
+            navigator: {
+                enabled: false
+            },
+            series: [{
+                //type: 'area',
+                name: 'Уровень в резервуаре',
+                data: data,
+                step: true,
+                tooltip: {
+                    valueDecimals: 0
+                }
+            }]
+        });
+
+        var levels_errors = requestVerticalLineForErrorData(stockChart, '309', '#FF0000','Ошибка уровня');
+
+
+    });
+    Highcharts.getJSON('/history?prm=331', function (data) {
+        // Create the chart
+
+        let stockChart = Highcharts.stockChart('dr_levels', {
             mapNavigation: {
                 enableMouseWheelZoom: true
             },
@@ -367,7 +431,7 @@ drupal_set_title('КНС УВД');
                 zoomType: 'x'
             },
             title: {
-                text: 'Уровень в резервуаре',
+                text: 'Уровень в дренажном резервуаре',
                 floating: true,
                 align: 'bottom',
                 x: 20,

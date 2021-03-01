@@ -183,6 +183,7 @@
                                     <div style="margin-left: 10px">
                                         <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="303" data-error="310"  data-var="engine1.status"><span class="interactive-text" data-browse="320">0</span> A</p>
                                         <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="304" data-error="311" data-var="engine2.status"><span class="interactive-text" data-browse="321">0</span> A</p>
+                                        <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="325"  data-var="engine_dr.status">Д</p>
                                     </div>
                                     <hr>
                                     <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="309" data-href="btn" data-var="unit.error_level"></button></p>

@@ -19,7 +19,7 @@
                                     <div class="col-lg-12">
                                         <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                                 style="float:right; margin-bottom: 10px; " data-href="btn"
-                                                data-browse="102" data-var="door"><i class="fa fa-lock"
+                                                data-browse="102" data-var="door"  data-say="Станция №22. Движение на объекте"><i class="fa fa-lock"
                                                                                                            aria-hidden="true"></i>
                                         </button>
                                         <a class="default-text" href="/unit/2">
@@ -33,7 +33,7 @@
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="bar-progress">
-                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="118" data-var="level3"> </span>
+                                            <span class="bar-level bar25 interactive" data-href="btn" data-browse="118" data-var="level3" data-say="Станция №22. Аварийный уровень в резервуаре."> </span>
                                             <span class="bar-level bar25 interactive" data-href="btn" data-browse="117" data-var="level2"> </span>
                                             <span class="bar-level bar25 interactive" data-href="btn" data-browse="116" data-var="level1"> </span>
                                             <span class="bar-level bar25 interactive" data-href="btn" data-browse="115" data-var="level0"> </span>
@@ -47,9 +47,9 @@
                                         <p class="btn btn-outline-secondary btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status"><span class="interactive-text" data-browse="111">0</span> A</p>
                                         </div>
                                             <hr>
-                                        <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"></button></p>
-                                        <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="120" data-href="btn"data-var="unit.error_engine"></button></p>
-                                        <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive"data-browse="121" data-href="btn" data-var="unit.error_engine"></button></p>
+                                        <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня"></button></p>
+                                        <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="120" data-href="btn"data-var="unit.error_engine" data-say="Станция №22. Ошибка двигателя №1"></button></p>
+                                        <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="121" data-href="btn" data-var="unit.error_engine" data-say="Станция №22. Ошибка двигателя №2"></button></p>
                                     <hr>
                                         <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                                 style="margin-bottom: 10px; " data-href="btn"

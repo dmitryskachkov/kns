@@ -2,6 +2,19 @@
     Drupal.behaviors.exampleModule = {
         attach: function (context, settings) {
 
+          function speak(text) {
+              let msg = new SpeechSynthesisUtterance();
+              let voices = speechSynthesis.getVoices();
+              msg.voice = voices[3];
+              msg.voiceURI = 'native';
+              msg.volume = 1;
+              msg.rate = 1;
+              msg.pitch = 1;
+              msg.text = text;
+              msg.lang = 'ru-RU'; // Язык
+              speechSynthesis.speak(msg);
+            }
+
             $("#core-unit-switch-form select").change(function () {
                 $("#core-unit-switch-form").submit();
             });
@@ -54,6 +67,9 @@
                         if (result == 1) {
                             if (!element.hasClass("btn-active")) {
                                 element.addClass("btn-active");
+                            }
+                            if (element.attr("data-say")) {
+                              speak(element.attr("data-say"));
                             }
                         } else {
                             if (element.hasClass("btn-active")) {

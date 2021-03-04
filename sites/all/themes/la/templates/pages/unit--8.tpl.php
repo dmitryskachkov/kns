@@ -1,5 +1,5 @@
 <?php
-drupal_set_title('КНС УВД');
+drupal_set_title('КНС 4');
 ?>
 <div class="row">
 <div class="col-md-12 grid-margin stretch-card">
@@ -11,7 +11,7 @@ drupal_set_title('КНС УВД');
 
                     <div class="row">
                         <div class="col-md-3 col-sm-4 col-xs-4">
-                            <a class="default-text" href="/unit/7">
+                            <a class="default-text" href="/unit/8">
                                 <h4>Основной резервуар</h4>
                                 <p class="text-muted font-weight-light">Уровень в резервуаре</p>
                             </a>

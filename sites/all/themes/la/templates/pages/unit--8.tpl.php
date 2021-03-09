@@ -17,19 +17,19 @@ drupal_set_title('КНС 4');
                             </a>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px" data-href="btn"
-                                    data-browse="305" data-var="level0">0
+                                    data-browse="405" data-var="level0">0
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px" data-href="btn"
-                                    data-browse="306" data-var="level1">1
+                                    data-browse="406" data-var="level1">1
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px" data-href="btn"
-                                    data-browse="307" data-var="level2">2
+                                    data-browse="407" data-var="level2">2
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="308" data-var="level3">3
+                                    data-browse="408" data-var="level3">3
                             </button>
 
                         </div>
@@ -39,50 +39,50 @@ drupal_set_title('КНС 4');
                             <div style="margin-left: 10px">
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="303" data-error="310" data-var="engine1.status" title="Насос №1"><span class="interactive-text" data-browse="320">0</span> A</p>
+                                   data-browse="403" data-error="310" data-var="engine1.status" title="Насос №1"><span class="interactive-text" data-browse="420">0</span> A</p>
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="304" data-error="311" data-var="engine2.status" title="Насос №2"><span class="interactive-text" data-browse="321">0</span> A</p>
+                                   data-browse="404" data-error="311" data-var="engine2.status" title="Насос №2"><span class="interactive-text" data-browse="421">0</span> A</p>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <h4>Температура</h4>
                             <p class="text-muted font-weight-light">На объекте</p>
-                            <h3 style="margin-top: 15px"><span class="interactive-text" data-browse="319">0</span> ℃</h3>
+                            <h3 style="margin-top: 15px"><span class="interactive-text" data-browse="419">0</span> ℃</h3>
                         </div>
                         <div class="col-md-3">
                             <h4>Прочее</h4>
                             <p class="text-muted font-weight-light">Дополнительные сигналы</p>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="314" data-var="voltage1" title="Напряжение на вводе №1"><i
+                                    data-browse="414" data-var="voltage1" title="Напряжение на вводе №1"><i
                                         class="fa fa-bolt"></i> 1
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="313" title="Датчик холода"><i
+                                    data-browse="413" title="Датчик холода"><i
                                         class="fa fa-snowflake-o" aria-hidden="true"></i></button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="312" data-var="door" title="Датчик движения"><i class="fa fa-lock"
+                                    data-browse="412" data-var="door" title="Датчик движения"><i class="fa fa-lock"
                                                                                                aria-hidden="true"></i>
                             </button>
                         </div>
                         <div class="col-md-2" style="padding-top: 30px">
                             <p style="line-height: 20px">Ошибка уровня:
                                 <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn interactive"
-                                        data-browse="309" data-href="btn"
+                                        data-browse="409" data-href="btn"
                                         data-var="unit.error_level" title="Проблемы с датчиками уровня"></button>
                             </p>
                             <p style="line-height: 20px">Ошибка насоса 1:
                                 <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn  interactive"
-                                        data-browse="310" data-href="btn"
+                                        data-browse="410" data-href="btn"
                                         data-var="unit.error_engine" title="Ошибка РКЗ"></button>
                             </p>
                             <p style="line-height: 20px">Ошибка насоса 2:
                                 <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn  interactive"
-                                        data-browse="311" data-href="btn"
+                                        data-browse="411" data-href="btn"
                                         data-var="unit.error_engine" title="Ошибка РКЗ"></button>
                             </p>
                         </div>
@@ -97,13 +97,13 @@ drupal_set_title('КНС 4');
                                         style="margin-left: 20px; margin-right: 20px"
                                         class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                         data-href="btn"
-                                        data-browse="316"
+                                        data-browse="416"
                                         data-var="engine1mode"></span>
 
                                 Автоматика насоса №2 <span style="margin-left: 20px; margin-right: 20px;"
                                          class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                          data-href="btn"
-                                         data-browse="317" data-var="engine1mode"></span>
+                                         data-browse="417" data-var="engine1mode"></span>
 
                                 Временные задержки в работе насосов<span style="margin-left: 20px"
                                                            class="btn btn-sm btn-inverse-light btn-fw toolipdate"

@@ -224,7 +224,7 @@
                                 <div class="col-lg-12">
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="float:right; margin-bottom: 10px; " data-href="btn"
-                                            data-browse="312" data-var="door"><i class="fa fa-lock"
+                                            data-browse="412" data-var="door"><i class="fa fa-lock"
                                                                                  aria-hidden="true"></i>
                                     </button>
                                     <a class="default-text" href="/unit/8">
@@ -238,35 +238,35 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="bar-progress">
-                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="308" data-var="level3"> </span>
-                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="307" data-var="level2"> </span>
-                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="306" data-var="level1"> </span>
-                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="305" data-var="level0"> </span>
+                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="408" data-var="level3"> </span>
+                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="407" data-var="level2"> </span>
+                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="406" data-var="level1"> </span>
+                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="405" data-var="level0"> </span>
 
                                     </div>
                                 </div>
                                 <div class="col-md-9">
                                     <p class="small" style="margin-top:20px; margin-bottom: 20px">Насосы в работе:</p>
                                     <div style="margin-left: 10px">
-                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="303" data-error="310"  data-var="engine1.status"><span class="interactive-text" data-browse="320">0</span> A</p>
-                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="304" data-error="311" data-var="engine2.status"><span class="interactive-text" data-browse="321">0</span> A</p>
-                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="325"  data-var="engine_dr.status">Д</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="403" data-error="310"  data-var="engine1.status"><span class="interactive-text" data-browse="320">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="404" data-error="311" data-var="engine2.status"><span class="interactive-text" data-browse="321">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="425"  data-var="engine_dr.status">Д</p>
                                     </div>
                                     <hr>
-                                    <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="309" data-href="btn" data-var="unit.error_level"></button></p>
-                                    <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="310" data-href="btn"data-var="unit.error_engine"></button></p>
-                                    <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="311" data-href="btn" data-var="unit.error_engine"></button></p>
+                                    <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="409" data-href="btn" data-var="unit.error_level"></button></p>
+                                    <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="410" data-href="btn"data-var="unit.error_engine"></button></p>
+                                    <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="411" data-href="btn" data-var="unit.error_engine"></button></p>
                                     <hr>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
-                                            data-browse="314" data-var="voltage1"><i
+                                            data-browse="414" data-var="voltage1"><i
                                                 class="fa fa-bolt"></i> 1
                                     </button>
 
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
-                                            data-browse=313" data-var="cold_status"><i
-                                                class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="319" style="margin-left: 5px">0</span> ℃</button>
+                                            data-browse=413" data-var="cold_status"><i
+                                                class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="419" style="margin-left: 5px">0</span> ℃</button>
 
                                 </div>
 

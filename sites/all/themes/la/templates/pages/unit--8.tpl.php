@@ -135,60 +135,6 @@ drupal_set_title('КНС 4');
 
     </div>
 </div>
-    <div class="col-md-3 grid-margin stretch-card">
-        <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <a class="default-text" href="/unit/7">
-                            <h4>Дренаж</h4>
-                            <p class="text-muted font-weight-light">Уровень в дренажном резервуаре</p>
-                        </a>
-                        <button class="btn btn-inverse-light btn-fw toolipdate interactive"
-                                style="margin-bottom: 10px" data-href="btn"
-                                data-browse="322" data-var="level0">0
-                        </button>
-                        <button class="btn btn-inverse-light btn-fw toolipdate interactive"
-                                style="margin-bottom: 10px" data-href="btn"
-                                data-browse="323" data-var="level1">1
-                        </button>
-                        <button class="btn btn-inverse-light btn-fw toolipdate interactive"
-                                style="margin-bottom: 10px" data-href="btn"
-                                data-browse="324" data-var="level2">2
-                        </button>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <hr>
-                        <p style="line-height: 20px">Ошибка уровня:
-                            <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn  interactive"
-                                    data-browse="332" data-href="btn"
-                                    data-var="unit.error_engine" title="Ошибка уровня (пробелы)"></button>
-                        </p>
-                        <hr>
-                        <h4>Дренажный насос</h4>
-                        <p class="text-muted font-weight-light">Сигналы насосов</p>
-                        <div style="margin-left: 10px">
-                            <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
-                               style="margin-right: 12px;" data-href="btn"
-                               data-browse="325" data-var="engine1.status" title="Дренажный насос">Д</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-9 grid-margin stretch-card">
-        <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div id="dr_levels" style="width: 100%; height: 310px "></div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 <script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
@@ -342,7 +288,7 @@ drupal_set_title('КНС 4');
             return result;
         });
     }
-    Highcharts.getJSON('/history?prm=318', function (data) {
+    Highcharts.getJSON('/history?prm=418', function (data) {
         // Create the chart
 
         let stockChart = Highcharts.stockChart('levels', {
@@ -397,74 +343,15 @@ drupal_set_title('КНС 4');
             }]
         });
 
-        var levels_errors = requestVerticalLineForErrorData(stockChart, '309', '#FF0000','Ошибка уровня');
-
-
-    });
-    Highcharts.getJSON('/history?prm=331', function (data) {
-        // Create the chart
-
-        let stockChart = Highcharts.stockChart('dr_levels', {
-            mapNavigation: {
-                enableMouseWheelZoom: true
-            },
-            colors: ["#6e411f"],
-            plotOptions: {
-                series: {
-                  connectNulls: true,
-                  dataGrouping: {
-                    enabled: false,
-                  },
-                },
-            },
-            rangeSelector: RangeSelectorTemplate,
-            xAxis: {
-                ordinal: false,
-                type: 'datetime',
-                events: {
-                    setExtremes: syncExtremes
-                },
-                plotLines: []
-            },
-
-            chart: {
-                type: 'area',
-                zoomType: 'x'
-            },
-            title: {
-                text: 'Уровень в дренажном резервуаре',
-                floating: true,
-                align: 'bottom',
-                x: 20,
-                y: 70
-            },
-
-            scrollbar: {
-                enabled: false
-            },
-            navigator: {
-                enabled: false
-            },
-            series: [{
-                //type: 'area',
-                name: 'Уровень в резервуаре',
-                data: data,
-                step: true,
-                tooltip: {
-                    valueDecimals: 0
-                }
-            }]
-        });
-
-        var levels_errors = requestVerticalLineForErrorData(stockChart, '309', '#FF0000','Ошибка уровня');
+        var levels_errors = requestVerticalLineForErrorData(stockChart, '409', '#FF0000','Ошибка уровня');
 
 
     });
 
     var MainChartOptions = [], MainChartCounter = 0,
         MainChartTags = {
-            '303': 'Насос №1',
-            '304': 'Насос №2',
+            '403': 'Насос №1',
+            '404': 'Насос №2',
         };
     $('#engines').append('<p class="chart-loader" style="text-align: center"> Загружаю данные ...</p>');
 

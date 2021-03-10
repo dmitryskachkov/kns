@@ -63,7 +63,7 @@
                                     <td><?php print $i; ?></td>
                                     <td>
                                         <?php print $log_line->tag_name; ?> : <?php print $log_line->state; ?>
-                                        <p class="small">Старое значение: <?php print $log_line->oldcnlval; ?>. Новое значение: <?php print $log_line->newcnlval; ?></p>
+                                        <p class="small">Старое значение: <?php print $log_line->oldcnlval; ?>. Новое значение: <?php print $log_line->newcnlval; ?> . Тэг <?php print $log_line->cnlnum; ?></p>
                                     </td>
                                     <td><?php print ($log_line->checked == 1 ? 'Квитировано пользователем': 'В журнале'); ?></td>
                                     <td><?php print $log_line->created; ?></td>

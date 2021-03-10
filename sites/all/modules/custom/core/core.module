@@ -175,7 +175,7 @@ function core_page_report($unit_id = NULL)
         $query->innerJoin('dictionary_tags', 't', 'e.cnlnum = t.tag_id');
         $query->condition('e.objnum', $unit_id);
         $query->orderBy('e.created', 'DESC');
-        $query->fields('e', ['id', 'oldcnlval', 'newcnlval', 'created', 'checked']);
+        $query->fields('e', ['id', 'oldcnlval', 'newcnlval', 'created', 'cnlnum', 'checked']);
         $query->fields('d', ['obj_name']);
         $query->fields('t');
         $query->range(0,2000);

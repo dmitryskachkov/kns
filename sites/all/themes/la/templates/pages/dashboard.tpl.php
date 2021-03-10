@@ -24,7 +24,7 @@
                                         </button>
                                         <a class="default-text" href="/unit/2">
                                         <h4>КНС 22</h4>
-                                        <p class="text-muted font-weight-light">Пос. Дорожный | SE M241</p>
+                                        <p class="text-muted font-weight-light">Пос. Дорожный | 192.168.22.51</p>
                                         </a>
                                     </div>
 
@@ -92,7 +92,7 @@
                                     </button>
                                     <a class="default-text" href="/unit/6">
                                         <h4>КНС Ледовый</h4>
-                                        <p class="text-muted font-weight-light">ТЦ СитиМолл | SE M241</p>
+                                        <p class="text-muted font-weight-light">ТЦ СитиМолл | 192.168.22.52</p>
                                     </a>
                                 </div>
 
@@ -162,7 +162,7 @@
                                     </button>
                                     <a class="default-text" href="/unit/7">
                                         <h4>КНС УВД</h4>
-                                        <p class="text-muted font-weight-light">ул. Инженерная 5 | SE M241</p>
+                                        <p class="text-muted font-weight-light">ул. Инженерная 5 |  192.168.22.53</p>
                                     </a>
                                 </div>
 
@@ -229,7 +229,7 @@
                                     </button>
                                     <a class="default-text" href="/unit/8">
                                         <h4>КНС 4 (не подключено)</h4>
-                                        <p class="text-muted font-weight-light">пос. Звездный (Зона) | SE M241</p>
+                                        <p class="text-muted font-weight-light">пос. Звездный (Зона) |  192.168.22.54</p>
                                     </a>
                                 </div>
 

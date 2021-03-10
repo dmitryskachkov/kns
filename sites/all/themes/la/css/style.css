@@ -169,3 +169,10 @@ p.small {
         color: #ffffff;
     }
 }
+#table-daily td {
+    padding: 5px 15px;
+}
+#table-daily td.active {
+    background-color: #3ea662;
+    color: #ffffff;
+}

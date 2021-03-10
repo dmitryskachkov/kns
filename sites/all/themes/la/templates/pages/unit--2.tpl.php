@@ -137,6 +137,7 @@ drupal_set_title('КНС №22');
 
     </div>
 </div>
+
 </div>
 
 <script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>

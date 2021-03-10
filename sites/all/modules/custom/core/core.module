@@ -171,7 +171,7 @@ function core_page_report($unit_id = NULL)
 
         db_set_active('kns');
         $query = db_select('events', 'e');
-        $query->innerJoin('dictionary_objects', 'd', 'e.objnum = d.obj_id');
+        $query->innerJoin('dictionary_objects', 'd', 'e.objnum = ' . $unit_id);
         $query->innerJoin('dictionary_tags', 't', 'e.cnlnum = t.tag_id');
         $query->condition('e.objnum', $unit_id);
         $query->orderBy('e.created', 'ASC');

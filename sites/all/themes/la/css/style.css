@@ -171,8 +171,22 @@ p.small {
 }
 #table-daily td {
     padding: 5px 15px;
+    text-align: center;
 }
 #table-daily td.active {
     background-color: #3ea662;
     color: #ffffff;
+}
+#table-daily td.active.total {
+    background-color: #ffffff;
+}
+#calendar-select {
+    width: 400px;
+}
+#calendar-select .form-type-date {
+    float: left;
+    margin-right: 30px;
+}
+table#table-daily {
+    overflow: hidden;
 }

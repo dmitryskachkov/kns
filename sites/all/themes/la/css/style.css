@@ -179,6 +179,7 @@ p.small {
 }
 #table-daily td.active.total {
     background-color: #ffffff;
+    color: #222222;
 }
 #calendar-select {
     width: 400px;

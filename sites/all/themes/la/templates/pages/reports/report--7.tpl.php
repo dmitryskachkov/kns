@@ -112,7 +112,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     <tr data-browse="310" class="color-interactive">
                         <th><p>Авария насоса №1</p></th>
@@ -139,7 +139,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     <tr data-browse="311" class="color-interactive">
                         <th><p>Авария насоса №2</p></th>
@@ -166,7 +166,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     <tr data-browse="316" class="color-interactive">
                         <th><p>Отключение автоматики насоса №1</p></th>
@@ -193,7 +193,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     <tr data-browse="317" class="color-interactive">
                         <th><p>Отключение автоматики насоса №2</p></th>
@@ -220,7 +220,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     <tr data-browse="312" class="color-interactive">
                         <th><p>Датчик движения</p></th>
@@ -247,7 +247,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     <tr data-browse="314" class="color-interactive">
                         <th><p>Проблемы с электроснабжением. Ввод №1</p></th>
@@ -274,7 +274,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     <tr data-browse="315" class="color-interactive">
                         <th><p>Проблемы с электроснабжением. Ввод №2</p></th>
@@ -301,7 +301,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     <tr data-browse="313" class="color-interactive">
                         <th><p>Замерзание станции</p></th>
@@ -328,7 +328,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     <tr style="border-top: 3px solid #333333" data-browse="303" class="color-interactive">
                         <th><p>Включения/отключения насоса №1</p></th>
@@ -355,7 +355,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     <tr data-browse="304" class="color-interactive">
                         <th><p>Включения/отключения насоса №2</p></th>
@@ -382,7 +382,7 @@
                         <td data-start-time="<?php print $date + (3600*20); ?>" data-end-time="<?php print $date + (3600*21); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*21); ?>" data-end-time="<?php print $date + (3600*22); ?>"></td>
                         <td data-start-time="<?php print $date + (3600*22); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
-                        <td class="total" data-start-time="<?php print $date + (3600); ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
+                        <td class="total" data-start-time="<?php print $date; ?>" data-end-time="<?php print $date + (3600*23); ?>"></td>
                     </tr>
                     </tbody>
                 </table>

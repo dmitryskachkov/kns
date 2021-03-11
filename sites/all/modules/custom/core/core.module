@@ -167,7 +167,7 @@ function createDateRangeArray($strDateFrom, $strDateTo) {
 }
 
 function core_page_report($unit_id = NULL, $date = NULL) {
-
+  $time = (!empty(arg(2)) ? arg(2): 0);
   $unit = [];
   $history = [];
   if ($unit_id) {
@@ -178,6 +178,9 @@ function core_page_report($unit_id = NULL, $date = NULL) {
     $query = db_select('events', 'e');
     $query->innerJoin('dictionary_objects', 'd', 'e.objnum = ' . $unit_id);
     $query->innerJoin('dictionary_tags', 't', 'e.cnlnum = t.tag_id');
+    if ($time) {
+      $query->condition('e.created', (int) $time, '>');
+    }
     $query->condition('e.objnum', $unit_id);
     $query->orderBy('e.created', 'DESC');
     $query->fields('e', [
@@ -273,7 +276,7 @@ function core_ajax_get() {
 function core_ajax_get_condition() {
   $params = drupal_get_query_parameters();
   if (isset($params['prm']) && !empty($params['prm']) && isset($params['start']) && isset($params['end'])) {
-    if ($cache = cache_get($params['prm'] . '_' . $params['start'])) {
+    if ($cache = cache_get($params['prm'] . '_' . $params['start'] . '_' . (int) $params['end'])) {
       // Возвращаем его данные, если он имеется.
       drupal_json_output( $cache->data);
     }
@@ -288,7 +291,7 @@ function core_ajax_get_condition() {
         ->execute()
         ->fetchField();
       db_set_active();
-      cache_set($params['prm'] . '_' . $params['start'], $result, 'cache', time() + 7200);
+      cache_set($params['prm'] . '_' . $params['start'] . '_' . (int) $params['end'], $result, 'cache', time() + 7200);
       drupal_json_output( $result);
     }
 
@@ -568,12 +571,11 @@ function core_report_date_switch_form($form, &$form_state) {
 
 
   ];
+  $time = (!empty(arg(2)) ? arg(2): time());
   $form['datet'] = [
     '#type' => 'date',
-    '#format' => 'd-m-Y',
-    //'#title' => t('Pickup Date'),
-    //'#default_value' => date('d-m-Y',arg(2)),
-    '#required' => TRUE,
+    '#default_value' => ['year' => date('Y', $time), 'month' => date('n', $time), 'day' => date('d', $time)],
+    //'#required' => TRUE,
     '#prefix' => '<div class="float-right" id="calendar-select">',
 
 

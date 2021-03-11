@@ -9,11 +9,11 @@
 
         $.get("/timecond?prm=" + tr_element.attr("data-browse") + "&start=" + td_element.attr("data-start-time") + "&end=" + td_element.attr("data-end-time"), function (result) {
           if (result > 0) {
-            td_element.append('<a href="/report/2/' + td_element.attr("data-start-time") +'">' + result + '</a>');
+            td_element.append('<a href="#' + td_element.attr("data-start-time") +'">' + result + '</a>');
             td_element.addClass("active");
           }
           else {
-            td_element.append('<a href="">X</a>');
+            td_element.append('<a href="#' + td_element.attr("data-start-time") +'"> X </a>');
           }
         });
 

@@ -181,6 +181,16 @@ p.small {
     background-color: #ffffff;
     color: #222222;
 }
+#table-daily td.active.total a {
+    color: #222222;
+}
+#table-daily td.active a {
+    color: #ffffff;
+}
+#table-daily a {
+    text-decoration: none;
+    color: #222222;
+}
 #calendar-select {
     width: 400px;
 }

@@ -13,6 +13,8 @@ stylesheets[all][] = css/font-awesome.min.css
 stylesheets[all][] = css/dataTables.bootstrap.min.css
 stylesheets[all][] = css/jquery.dataTables.min.css
 
+scripts[] = js/jquery.js
+scripts[] = js/bootstrap.min.js
 scripts[] = js/master.js
 scripts[] = js/select2.min.js
 scripts[] = js/highstock.js

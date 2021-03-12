@@ -146,6 +146,12 @@ p.small {
 #basic_wrapper .row {
     width: 100%;
 }
+.table th, .jsgrid .jsgrid-table th, .table td, .jsgrid .jsgrid-table td {
+    padding: 5px 10px;
+}
+#journal {
+    width: 100% !important;
+}
 #journal_wrapper .row {
     width: 100%;
 }

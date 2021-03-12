@@ -282,10 +282,12 @@ function core_ajax_get_condition() {
     }
     else {
       db_set_active('kns');
+      $finded_value = 1;
       $result = db_select('events')
         ->fields(['id'])
         ->condition('cnlnum', (int) $params['prm'])
         ->condition('created', (int) $params['start'], '>=')
+          ->condition('newcnlval', (int) $finded_value)
         ->condition('created', (int) $params['end'], '<')
         ->countQuery()
         ->execute()

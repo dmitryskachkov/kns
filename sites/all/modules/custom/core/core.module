@@ -283,6 +283,9 @@ function core_ajax_get_condition() {
     else {
       db_set_active('kns');
       $finded_value = 1;
+      if (!empty($params['find'])) {
+        $finded_value = (int) $params['find'];
+      }
       $result = db_select('events')
         ->fields(['id'])
         ->condition('cnlnum', (int) $params['prm'])

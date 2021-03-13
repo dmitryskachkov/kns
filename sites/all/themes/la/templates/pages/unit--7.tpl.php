@@ -404,7 +404,7 @@ drupal_set_title('КНС УВД');
     Highcharts.getJSON('/history?prm=331', function (data) {
         // Create the chart
 
-        let stockChart = Highcharts.stockChart('dr_levels', {
+        let stockChart2 = Highcharts.stockChart('dr_levels', {
             mapNavigation: {
                 enableMouseWheelZoom: true
             },
@@ -456,7 +456,7 @@ drupal_set_title('КНС УВД');
             }]
         });
 
-        var levels_errors = requestVerticalLineForErrorData(stockChart, '309', '#FF0000','Ошибка уровня');
+        var levels_errors = requestVerticalLineForErrorData(stockChart2, '309', '#FF0000','Ошибка уровня');
 
 
     });
@@ -527,8 +527,8 @@ drupal_set_title('КНС УВД');
                             series: MainChartOptions
 
                         });
-                        //var engine1_errors = requestVerticalLineForErrorData(enginesChart, '210', '#ffaf4d', 'Ошибка двигателя 1');
-                        //var engine2_errors = requestVerticalLineForErrorData(enginesChart, '211', '#4dbc29', 'Ошибка двигателя 2');
+                        var engine1_errors = requestVerticalLineForErrorData(enginesChart, '310', '#ffaf4d', 'Ошибка двигателя 1');
+                        var engine2_errors = requestVerticalLineForErrorData(enginesChart, '311', '#4dbc29', 'Ошибка двигателя 2');
                     }
                 }
 

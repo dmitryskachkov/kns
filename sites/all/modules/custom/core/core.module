@@ -193,7 +193,7 @@ function core_page_report($unit_id = NULL, $date = NULL) {
     ]);
     $query->fields('d', ['obj_name']);
     $query->fields('t');
-    //$query->range(0, 2000);
+    $query->range(0, 2000);
     $history = $query->execute()->fetchAll();
 
     db_set_active();

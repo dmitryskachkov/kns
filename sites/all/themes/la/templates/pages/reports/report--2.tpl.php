@@ -28,9 +28,7 @@
 
                             <fieldset>
                                 <h4>Отчет по работе насосов</h4>
-                                <p>Количество насосов  <span class="float-right"><?php print core_tag_get($unit->field_tag_engine_count['und'][0]['value']); ?></span></p>
-                                <p>Количество аварий уровня  <span class="float-right"><?php print core_tag_get($unit->field_tag_level_error['und'][0]['value']); ?></span></p>
-                                <p>Количество аварий насосов  <span class="float-right"><?php print core_tag_get($unit->field_tag_engine_error['und'][0]['value']); ?></span></p>
+                                <p>Количество насосов  <span class="float-right">2</span></p>
                                 <?php $engines_t = explode(',',$unit->field_tag_engines_time['und'][0]['value']); ?>
                                 <?php $e=0; ?>
                                 <?php for($i=1; $i<=core_tag_get($unit->field_tag_engine_count['und'][0]['value']); $i++): ?>

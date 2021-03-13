@@ -67,7 +67,7 @@
                                 <div class="media-body">
                                     <?php print render($date_form); ?>
                                     <h4>Дневной календарь событий ( в разработке)</h4>
-                                    <p>Кликните на нужную почасовку, чтобы получить подробную информацию</p>
+                                    <p></p>
                                     <hr>
                                     <table class="table table-bordered table-hover" id="table-daily" data-time="<?php print $date; ?>">
                                         <thead>

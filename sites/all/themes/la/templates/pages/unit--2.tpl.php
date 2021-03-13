@@ -348,7 +348,7 @@ drupal_set_title('КНС №22');
         });
 
         var levels_errors = requestVerticalLineForErrorData(stockChart, '119', '#FF0000','Ошибка уровня');
-
+        var doors = requestVerticalLineForErrorData(stockChart, '102', '#ffc92a','Движение');
 
     });
 

@@ -398,7 +398,7 @@ drupal_set_title('КНС УВД');
         });
 
         var levels_errors = requestVerticalLineForErrorData(stockChart, '309', '#FF0000','Ошибка уровня');
-
+        var doors = requestVerticalLineForErrorData(stockChart, '312', '#ffc92a','Ошибка уровня');
 
     });
     Highcharts.getJSON('/history?prm=331', function (data) {

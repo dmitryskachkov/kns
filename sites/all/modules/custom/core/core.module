@@ -369,12 +369,14 @@ function core_ajax_get_timeline() {
     ->fields( ['created'])
     ->condition('tag_id', (int) $params['prm'])
     ->condition('val', 1)
-    ->condition('created', strtotime('-24 hours'), '>')
     //->isNotNull('history.created')
     ->orderBy('created', 'ASC');
 
   if (isset($params['start'])) {
     $result->condition('created', (int) $params['start'], '>');
+  }
+  else {
+    $result->condition('created', strtotime('-24 hours'), '>');
   }
 
   if (isset($params['end'])) {

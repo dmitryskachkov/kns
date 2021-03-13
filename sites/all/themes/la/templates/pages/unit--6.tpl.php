@@ -417,8 +417,8 @@ drupal_set_title('КНС Ледовый');
                             series: MainChartOptions
 
                         });
-                        //var engine1_errors = requestVerticalLineForErrorData(enginesChart, '210', '#ffaf4d', 'Ошибка двигателя 1');
-                        //var engine2_errors = requestVerticalLineForErrorData(enginesChart, '211', '#4dbc29', 'Ошибка двигателя 2');
+                        var engine1_errors = requestVerticalLineForErrorData(enginesChart, '210', '#ffaf4d', 'Ошибка двигателя 1');
+                        var engine2_errors = requestVerticalLineForErrorData(enginesChart, '211', '#4dbc29', 'Ошибка двигателя 2');
                     }
                 }
 

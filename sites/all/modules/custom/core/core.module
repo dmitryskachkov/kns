@@ -363,17 +363,23 @@ function core_ajax_get_history() {
 
 function core_ajax_get_timeline() {
   $params = drupal_get_query_parameters();
-
   db_set_active('kns');
+    if (isset($params['start'])) {
+      $time = (int) $params['start'];
+    }
+    else {
+      $time = (int) strtotime('-24 hours');
+    }
   $result = db_query("
   SELECT created FROM {history}
-  WHERE tag_id = :tag AND val = :val WHERE created > :time", array(':tag' => (int) $params['prm'], ':val' => 1, ':time' => (int) strtotime('-24 hours') ) );
+  WHERE tag_id = :tag AND val = :val AND created >= :time", array(':tag' => (int) $params['prm'], ':val' => 1, ':time' => (int) $time ) );
+
 //  $result = db_select('history')
-//    ->fields( ['created','val'])
+//    ->fields( ['created'])
 //    ->condition('tag_id', (int) $params['prm'])
-//    ->condition('val', (int) 1)
+//    ->condition('val', (int) 1);
 //    //->isNotNull('history.created')
-//    ->orderBy('created', 'ASC');
+//   // ->orderBy('created', 'ASC');
 
 //  if (isset($params['start'])) {
 //    $result->condition('created', (int) $params['start'], '>');

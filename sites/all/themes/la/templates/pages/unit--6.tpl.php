@@ -347,7 +347,7 @@ drupal_set_title('КНС Ледовый');
         });
 
         var levels_errors = requestVerticalLineForErrorData(stockChart, '209', '#FF0000','Ошибка уровня');
-        var doors = requestVerticalLineForErrorData(stockChart, '212', '#ffc92a','Ошибка уровня');
+        var doors = requestVerticalLineForErrorData(stockChart, '212', '#ffc92a','Движение');
 
     });
 

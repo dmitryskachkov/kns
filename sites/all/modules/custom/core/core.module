@@ -368,7 +368,7 @@ function core_ajax_get_timeline() {
   $result = db_select('history')
     ->fields( ['created'])
     ->condition('tag_id', (int) $params['prm'])
-    ->condition('val', 1)
+    ->condition('val', (int) 1)
     //->isNotNull('history.created')
     ->orderBy('created', 'ASC');
 
@@ -376,7 +376,7 @@ function core_ajax_get_timeline() {
     $result->condition('created', (int) $params['start'], '>');
   }
   else {
-    $result->condition('created', strtotime('-24 hours'), '>');
+    $result->condition('created', (int) strtotime('-24 hours'), '>');
   }
 
   if (isset($params['end'])) {

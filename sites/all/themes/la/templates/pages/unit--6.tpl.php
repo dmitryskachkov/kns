@@ -264,8 +264,8 @@ drupal_set_title('КНС Ледовый');
 
     var day = (Date.now() / 1000) - 86400;
 
-    function requestVerticalLineForErrorData(stockChart, tag, color, msg) {
-        $.get('/timeline?prm=' + tag, function(data) {
+    function requestVerticalLineForErrorData(stockChart, tag, color, msg, val=1) {
+      $.get('/timeline?prm=' + tag + '&val=' + val, function(data) {
             var data = JSON.parse(data);
 
             const result = [];
@@ -347,7 +347,7 @@ drupal_set_title('КНС Ледовый');
         });
 
         var levels_errors = requestVerticalLineForErrorData(stockChart, '209', '#FF0000','Ошибка уровня');
-        var doors = requestVerticalLineForErrorData(stockChart, '212', '#ffc92a','Движение');
+        var doors = requestVerticalLineForErrorData(stockChart, '212', '#ffc92a','Движение', 0);
 
     });
 

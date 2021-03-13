@@ -265,8 +265,8 @@ drupal_set_title('КНС №22');
 
     var day = (Date.now() / 1000) - 86400;
 
-    function requestVerticalLineForErrorData(stockChart, tag, color, msg) {
-        $.get('/timeline?prm=' + tag, function(data) {
+    function requestVerticalLineForErrorData(stockChart, tag, color, msg, val=1) {
+      $.get('/timeline?prm=' + tag + '&val=' + val, function(data) {
             var data = JSON.parse(data);
 
             const result = [];
@@ -348,7 +348,7 @@ drupal_set_title('КНС №22');
         });
 
         var levels_errors = requestVerticalLineForErrorData(stockChart, '119', '#FF0000','Ошибка уровня');
-        var doors = requestVerticalLineForErrorData(stockChart, '102', '#ffc92a','Движение');
+        var doors = requestVerticalLineForErrorData(stockChart, '102', '#ffc92a','Движение', 0);
 
     });
 

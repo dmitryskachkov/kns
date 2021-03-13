@@ -270,8 +270,8 @@ drupal_set_title('КНС 4');
 
     var day = (Date.now() / 1000) - 86400;
 
-    function requestVerticalLineForErrorData(stockChart, tag, color, msg) {
-        $.get('/timeline?prm=' + tag, function(data) {
+    function requestVerticalLineForErrorData(stockChart, tag, color, msg, val=1) {
+        $.get('/timeline?prm=' + tag + '&val=' + val, function(data) {
             var data = JSON.parse(data);
 
             const result = [];

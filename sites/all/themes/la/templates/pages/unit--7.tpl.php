@@ -184,7 +184,7 @@ drupal_set_title('КНС УВД');
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div id="dr_levels" style="width: 100%; height: 310px "></div>
+                    <div id="dr_engines" style="width: 100%; height: 310px "></div>
                 </div>
             </div>
         </div>
@@ -401,10 +401,10 @@ drupal_set_title('КНС УВД');
         var doors = requestVerticalLineForErrorData(stockChart, '312', '#ffc92a','Движение', 0);
 
     });
-    Highcharts.getJSON('/history?prm=331', function (data) {
+    Highcharts.getJSON('/history?prm=323', function (data) {
         // Create the chart
 
-        let stockChart2 = Highcharts.stockChart('dr_levels', {
+        let stockChart2 = Highcharts.stockChart('dr_engines', {
             mapNavigation: {
                 enableMouseWheelZoom: true
             },
@@ -432,7 +432,7 @@ drupal_set_title('КНС УВД');
                 zoomType: 'x'
             },
             title: {
-                text: 'Уровень в дренажном резервуаре',
+                text: 'Работа дренажных насосов',
                 floating: true,
                 align: 'bottom',
                 x: 20,
@@ -447,7 +447,7 @@ drupal_set_title('КНС УВД');
             },
             series: [{
                 //type: 'area',
-                name: 'Уровень в резервуаре',
+                name: 'Работа дренажного насоса',
                 data: data,
                 step: true,
                 tooltip: {

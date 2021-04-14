@@ -228,7 +228,7 @@
                                                                                  aria-hidden="true"></i>
                                     </button>
                                     <a class="default-text" href="/unit/8">
-                                        <h4>КНС 4 (не подключено)</h4>
+                                        <h4>КНС 4</h4>
                                         <p class="text-muted font-weight-light">пос. Звездный (Зона) |  192.168.22.54</p>
                                     </a>
                                 </div>
@@ -262,7 +262,10 @@
                                             data-browse="414" data-var="voltage1"><i
                                                 class="fa fa-bolt"></i> 1
                                     </button>
-
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate"
+                                            style="margin-bottom: 10px; " data-href="btn"
+                                             data-var="filter_level"># MAX
+                                    </button>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
                                             data-browse=413" data-var="cold_status"><i

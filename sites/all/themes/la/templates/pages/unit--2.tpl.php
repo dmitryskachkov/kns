@@ -426,9 +426,7 @@ drupal_set_title('КНС №22');
             }
         });
     }
-    //var engine1_errors = requestVerticalLineForErrorData(enginesChart/, '120', '#FF0000');
-    //var engine2_errors = requestVerticalLineForErrorData(enginesChart, '121', '#FF0000');
-    //var total_engines_errors = [].concat(engine1_errors, engine2_errors)
+   
     );
 
 

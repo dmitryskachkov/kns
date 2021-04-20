@@ -262,7 +262,7 @@
                                             data-browse="414" data-var="voltage1"><i
                                                 class="fa fa-bolt"></i> 1
                                     </button>
-                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate"
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate error-btn"
                                             style="margin-bottom: 10px; " data-href="btn"
                                              data-var="filter_level"># MAX
                                     </button>
@@ -294,7 +294,7 @@
                                 <div class="col-lg-12">
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="float:right; margin-bottom: 10px; " data-href="btn"
-                                            data-browse="412" data-var="door"><i class="fa fa-lock"
+                                            data-browse="532" data-var="door"><i class="fa fa-lock"
                                                                                  aria-hidden="true"></i>
                                     </button>
                                     <a class="default-text" href="/unit/9">
@@ -308,10 +308,10 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="bar-progress">
-                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="508" data-var="level3"> </span>
-                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="507" data-var="level2"> </span>
-                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="506" data-var="level1"> </span>
-                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="505" data-var="level0"> </span>
+                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="509" data-var="level3"> </span>
+                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="508" data-var="level2"> </span>
+                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="507" data-var="level1"> </span>
+                                        <span class="bar-level bar25 toolipdate interactive" data-href="btn" data-browse="506" data-var="level0"> </span>
 
                                     </div>
                                 </div>
@@ -323,16 +323,21 @@
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="505" data-error="512" data-var="engine3.status"><span class="interactive-text" data-browse="321">0</span> A</p>
                                     </div>
                                     <hr>
-                                    <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="509" data-href="btn" data-var="unit.error_level"></button></p>
+                                    <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="533" data-href="btn" data-var="unit.error_level"></button></p>
                                     <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="510" data-href="btn"data-var="unit.error_engine"></button></p>
                                     <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="511" data-href="btn" data-var="unit.error_engine"></button></p>
+                                    <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="512" data-href="btn" data-var="unit.error_engine"></button></p>
                                     <hr>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
                                             data-browse="514" data-var="voltage1"><i
                                                 class="fa fa-bolt"></i> 1
                                     </button>
-
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                            style="margin-bottom: 10px; " data-href="btn"
+                                            data-browse="514" data-var="voltage1"><i
+                                                class="fa fa-bolt"></i> 1
+                                    </button>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
                                             data-browse=513" data-var="cold_status"><i

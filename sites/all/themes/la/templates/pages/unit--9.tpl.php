@@ -1,5 +1,5 @@
 <?php
-drupal_set_title('КНС 4');
+drupal_set_title('КНС 37');
 ?>
 <div class="row">
 <div class="col-md-12 grid-margin stretch-card">
@@ -17,19 +17,19 @@ drupal_set_title('КНС 4');
                             </a>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px" data-href="btn"
-                                    data-browse="505" data-var="level0">0
+                                    data-browse="506" data-var="level0">0
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px" data-href="btn"
-                                    data-browse="506" data-var="level1">1
+                                    data-browse="507" data-var="level1">1
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px" data-href="btn"
-                                    data-browse="507" data-var="level2">2
+                                    data-browse="508" data-var="level2">2
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="508" data-var="level3">3
+                                    data-browse="509" data-var="level3">3
                             </button>
 
                         </div>
@@ -45,7 +45,7 @@ drupal_set_title('КНС 4');
                                    data-browse="504" data-error="511" data-var="engine2.status" title="Насос №2"><span class="interactive-text" data-browse="521">0</span> A</p>
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
-                                   data-browse="505" data-error="512" data-var="engine2.status" title="Насос №3"><span class="interactive-text" data-browse="522">0</span> A</p>
+                                   data-browse="505" data-error="512" data-var="engine3.status" title="Насос №3"><span class="interactive-text" data-browse="522">0</span> A</p>
                             </div>
                         </div>
 
@@ -68,7 +68,7 @@ drupal_set_title('КНС 4');
                                         class="fa fa-snowflake-o" aria-hidden="true"></i></button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
-                                    data-browse="412" data-var="door" title="Датчик движения"><i class="fa fa-lock"
+                                    data-browse="532" data-var="door" title="Датчик движения"><i class="fa fa-lock"
                                                                                                aria-hidden="true"></i>
                             </button>
                         </div>
@@ -112,6 +112,11 @@ drupal_set_title('КНС 4');
                                          class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                          data-href="btn"
                                          data-browse="517" data-var="engine1mode"></span>
+
+                                Автоматика насоса №3 <span style="margin-left: 20px; margin-right: 20px;"
+                                                           class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                                           data-href="btn"
+                                                           data-browse="518" data-var="engine1mode"></span>
 
                                 Временные задержки в работе насосов<span style="margin-left: 20px"
                                                            class="btn btn-sm btn-inverse-light btn-fw toolipdate"
@@ -296,7 +301,7 @@ drupal_set_title('КНС 4');
             return result;
         });
     }
-    Highcharts.getJSON('/history?prm=518', function (data) {
+    Highcharts.getJSON('/history?prm=523', function (data) {
         // Create the chart
 
         let stockChart = Highcharts.stockChart('levels', {

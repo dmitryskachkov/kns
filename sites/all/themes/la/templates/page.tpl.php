@@ -26,7 +26,7 @@
                                 <div class="d-flex align-items-center justify-content-between flex-wrap">
                                     <div class="border-right pr-4 mb-3 mb-xl-0">
                                         <p class="text-muted">Объекты</p>
-                                        <h4 class="mb-0 font-weight-bold">3</h4>
+                                        <h4 class="mb-0 font-weight-bold">5</h4>
                                     </div>
                                     <div class="border-right pr-4 mb-3 mb-xl-0">
                                         <p class="text-muted">Параметры</p>

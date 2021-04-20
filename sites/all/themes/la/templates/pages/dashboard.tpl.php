@@ -326,7 +326,7 @@
                                     <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="533" data-href="btn" data-var="unit.error_level"></button></p>
                                     <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="510" data-href="btn"data-var="unit.error_engine"></button></p>
                                     <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="511" data-href="btn" data-var="unit.error_engine"></button></p>
-                                    <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="512" data-href="btn" data-var="unit.error_engine"></button></p>
+                                    <p style="line-height: 20px">Ошибка насоса 3: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn  interactive" data-browse="512" data-href="btn" data-var="unit.error_engine"></button></p>
                                     <hr>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"

@@ -298,7 +298,7 @@
                                                                                  aria-hidden="true"></i>
                                     </button>
                                     <a class="default-text" href="/unit/9">
-                                        <h4>КНС 37 (не подключено)</h4>
+                                        <h4>КНС 37</h4>
                                         <p class="text-muted font-weight-light">ул. И. Киртбая 18 |  192.168.22.55</p>
                                     </a>
                                 </div>

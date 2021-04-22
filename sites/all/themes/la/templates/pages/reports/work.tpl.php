@@ -3,8 +3,10 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="float-right">
-                        <?php print render($period_switch_form) ; ?>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <?php print render($period_switch_form) ; ?>
+                        </div>
                     </div>
                     <?php if ($units): ?>
                         <?php foreach($units as $unit): ?>
@@ -13,7 +15,7 @@
                                     <h5><?= $unit->title ?></h5>
                                     <p>Адрес: <?= $unit->description; ?></p>
                                     <hr>
-                                    <table>
+                                    <table class="table table-striped">
                                         <thead>
                                         <tr>
                                             <td>№</td>

@@ -20,6 +20,13 @@ function core_menu() {
     'description' => 'Панель мониторинга',
     'type' => MENU_CALLBACK,
   ];
+    $items['work'] = [
+    'title' => 'Отчет по наработкам насосов',
+    'page callback' => 'core_page_work',
+    'access callback' => 'user_is_logged_in',
+    'description' => 'Панель мониторинга',
+    'type' => MENU_CALLBACK,
+    ];
   $items['report/%'] = [
     'title' => 'Отчет системы',
     'page callback' => 'core_page_report',
@@ -164,6 +171,17 @@ function createDateRangeArray($strDateFrom, $strDateTo) {
     }
   }
   return $aryRange;
+}
+
+function core_page_work($date = NULL)
+{
+    $units = [];
+    $units = $units = entity_load('unit');
+    dpm($units);
+    return theme_render_template(drupal_get_path('theme', 'la') . '/templates/pages/reports/work.tpl.php', [
+        'period_switch_form' => drupal_get_form('core_period_switch_form'),
+        'units' => $units,
+    ]);
 }
 
 function core_page_report($unit_id = NULL, $date = NULL) {
@@ -619,6 +637,49 @@ function core_report_date_switch_form_submit($form, &$form_state) {
 
   drupal_goto('report/' . $form_state['values']['unit'] .'/' . $fecha_inicio);
 }
+
+function core_period_switch_form($form, &$form_state) {
+    $year = date ('Y');
+    $form['period'] = [
+        '#title' => '',
+        '#type' => 'select',
+        '#options' => [
+            '01' => 'Январь ' . $year,
+            '02' => 'Февраль ' . $year,
+            '03' => 'Март ' . $year,
+            '04' => 'Апоель ' . $year,
+            '05' => 'Май ' . $year,
+            '06' => 'Июнь ' . $year,
+            '07' => 'Июль ' . $year,
+            '08' => 'Авшуст ' . $year,
+            '09' => 'Сентябрь ' . $year,
+            '10' => 'Октябрь ' . $year,
+            '11' => 'Ноябрь ' . $year,
+            '12' => 'Декабрь ' . $year,
+        ],
+        "#empty_option" => t('- Выберите период'),
+        '#attributes' => [
+            'class' => [
+                'form-control',
+                'selectize-document-assigned-uid',
+            ],
+        ],
+    ];
+    $form['submit'] = [
+        '#type' => 'submit',
+        '#attributes' => ['class' => ['btn']],
+        '#value' => 'Сменить период',
+
+    ];
+
+
+    return $form;
+}
+
+function core_period_switch_form_submit($form, &$form_state) {
+    drupal_goto('work/' . $form_state['values']['period']);
+}
+
 function core_unit_switch_form($form, &$form_state) {
   $units = entity_load('unit');
 

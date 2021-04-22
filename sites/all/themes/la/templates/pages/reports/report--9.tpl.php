@@ -26,18 +26,7 @@
                     </div>
                     <div class="col-lg-6">
 
-                        <fieldset>
-                            <h4>Отчет по работе насосов</h4>
-                            <p>Количество насосов  <span class="float-right">3</span></p>
-                          <?php $engines_t = explode(',',$unit->field_tag_engines_time['und'][0]['value']); ?>
-                          <?php $e=0; ?>
-                          <?php for($i=1; $i<=core_tag_get($unit->field_tag_engine_count['und'][0]['value']); $i++): ?>
 
-                              <p>Время работы насоса №<?php print $i; ?>  <span class="float-right"><?php print core_tag_get($engines_t[$e]); ?> секунд (<?php print number_format(core_tag_get($engines_t[$e])/60, 1); ?> мин.)</span></p>
-                            <?php $e++; ?>
-                          <?php endfor; ?>
-                        </fieldset>
-                        <hr>
 
                     </div>
                 </div>

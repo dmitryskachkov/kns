@@ -177,7 +177,7 @@ function core_page_work($date = NULL)
 {
     $units = [];
     $units = $units = entity_load('unit');
-    dpm($units);
+    //dpm($units);
     return theme_render_template(drupal_get_path('theme', 'la') . '/templates/pages/reports/work.tpl.php', [
         'period_switch_form' => drupal_get_form('core_period_switch_form'),
         'units' => $units,
@@ -647,11 +647,11 @@ function core_period_switch_form($form, &$form_state) {
             '01' => 'Январь ' . $year,
             '02' => 'Февраль ' . $year,
             '03' => 'Март ' . $year,
-            '04' => 'Апоель ' . $year,
+            '04' => 'Апрель ' . $year,
             '05' => 'Май ' . $year,
             '06' => 'Июнь ' . $year,
             '07' => 'Июль ' . $year,
-            '08' => 'Авшуст ' . $year,
+            '08' => 'Август ' . $year,
             '09' => 'Сентябрь ' . $year,
             '10' => 'Октябрь ' . $year,
             '11' => 'Ноябрь ' . $year,

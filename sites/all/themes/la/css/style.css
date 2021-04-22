@@ -207,3 +207,6 @@ p.small {
 table#table-daily {
     overflow: hidden;
 }
+#core-period-switch-form .btn {
+    display: none;
+}

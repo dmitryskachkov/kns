@@ -64,6 +64,11 @@ drupal_set_title('КНС 37');
                             </button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"
                                     style="margin-bottom: 10px; " data-href="btn"
+                                    data-browse="515" data-var="voltage1" title="Напряжение на вводе №2"><i
+                                        class="fa fa-bolt"></i> 2
+                            </button>
+                            <button class="btn btn-inverse-light btn-fw toolipdate interactive"
+                                    style="margin-bottom: 10px; " data-href="btn"
                                     data-browse="513" title="Датчик холода"><i
                                         class="fa fa-snowflake-o" aria-hidden="true"></i></button>
                             <button class="btn btn-inverse-light btn-fw toolipdate interactive"

@@ -335,8 +335,8 @@
                                     </button>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
-                                            data-browse="514" data-var="voltage1"><i
-                                                class="fa fa-bolt"></i> 1
+                                            data-browse="515" data-var="voltage1"><i
+                                                class="fa fa-bolt"></i> 2
                                     </button>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"

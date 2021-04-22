@@ -380,7 +380,7 @@ drupal_set_title('КНС 37');
                     MainChartOptions[MainChartCounter] = {name: name, data: data};
 
                     MainChartCounter += 1;
-                    if (MainChartCounter === 2) {
+                    if (MainChartCounter === 3) {
                         let enginesChart = Highcharts.stockChart('engines', {
                             mapNavigation: {
                                 enableMouseWheelZoom: true
@@ -430,6 +430,7 @@ drupal_set_title('КНС 37');
                         });
                         var engine1_errors = requestVerticalLineForErrorData(enginesChart, '510', '#ffaf4d', 'Ошибка двигателя 1');
                         var engine2_errors = requestVerticalLineForErrorData(enginesChart, '511', '#4dbc29', 'Ошибка двигателя 2');
+                        var engine3_errors = requestVerticalLineForErrorData(enginesChart, '512', '#4dbc29', 'Ошибка двигателя 3');
                     }
                 }
 

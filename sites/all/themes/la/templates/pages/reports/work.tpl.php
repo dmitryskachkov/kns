@@ -36,7 +36,7 @@
 
                                             <?php foreach ($unit->engines as $n => $engine): ?>
                                                 <?php
-                                                $engine_q = core_perfomance_engine_stat($engine->field_tag_id['und'][0]['value'], $period, 'second') * $engine->field_performance_q['und'][0]['value'];
+                                                $engine_q = core_perfomance_engine_stat($engine->field_tag_id['und'][0]['value'], $period, 'second') / 3600  * $engine->field_performance_q['und'][0]['value'];
                                                 $unit->total_q = $unit->total_q + $engine_q;
                                                 ?>
                                                 <tr>
@@ -44,13 +44,13 @@
                                                     <td><?= $engine->title; ?></td>
                                                     <td><?= core_perfomance_engine_stat($engine->field_tag_id['und'][0]['value'], $period, 'time') ?></td>
                                                     <td><?= $engine->field_performance_q['und'][0]['value'] ?> м3/час</td>
-                                                    <td><?= $engine_q ?> м3</td>
+                                                    <td><?= number_format($engine_q, 2) ?> м3</td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                         <tr>
                                             <td colspan="4" style="text-align: right; font-weight: bold">Итого</td>
-                                            <td><?= $unit->total_q ?> м3</td>
+                                            <td><?= number_format($unit->total_q, 2) ?> м3</td>
                                         </tr>
                                         </tbody>
                                     </table>

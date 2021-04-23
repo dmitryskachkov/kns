@@ -1162,8 +1162,9 @@ function core_perfomance_engine_stat($tag_id, $period = NULL, $format = 'time') 
 
 
         $result = $result->countQuery()->execute()->fetchField();
+        $result = $result*2;
         db_set_active();
-        cache_set('work_' . $period, 'cache', time() + 3600);
+        cache_set('work_' . $period, $result, time() + 3600);
     }
     switch ($format) {
         case 'second':

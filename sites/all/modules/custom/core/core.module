@@ -23,6 +23,7 @@ function core_menu() {
   $items['work'] = [
     'title' => 'Отчет по наработкам насосов',
     'page callback' => 'core_page_work',
+    'page arguments' => [1],
     'access callback' => 'user_is_logged_in',
     'description' => 'Панель мониторинга',
     'type' => MENU_CALLBACK,
@@ -173,11 +174,14 @@ function createDateRangeArray($strDateFrom, $strDateTo) {
   return $aryRange;
 }
 
-function core_page_work($date = NULL) {
-  $period = date('m');
+function core_page_work($period = NULL) {
+  if (!$period ) {
+      $period = date('m');
+  }
   $units = [];
   $units = $units = entity_load('unit');
   foreach ($units as $n => $unit) {
+      $units[$n]->total_q = 0;
     if (isset($unit->field_engines_reference['und'])) {
       foreach ($unit->field_engines_reference['und'] as $i => $link) {
         if (isset($unit->field_engines_reference['und'][$i]['target_id'])) {
@@ -1033,30 +1037,6 @@ function core_registration_block_user_form_submit_validate($form, &$form_state) 
 }
 
 
-function core_meters_send_form_validate($form, $form_state) {
-
-  if (!is_numeric($form_state['values']['meter_value'])) {
-    form_set_error('meter_value', 'Показания состоит только из чисел');
-  }
-  if (floatval($form_state['values']['meter_value']) < floatval($form_state['values']['last_value_tech'])) {
-    form_set_error('meter_value', 'Новые показания не могут быть меньше предыдущих');
-  }
-  if ((floatval($form_state['values']['meter_value']) - floatval($form_state['values']['last_value_tech'])) > 1000) {
-    form_set_error('meter_value', 'Новые показания слишком большие, больше 1000 куб. метров передать нельзя');
-  }
-}
-
-function core_total_tags() {
-  $result = 0;
-  db_set_active('kns');
-  $result = db_select('data', 'data')
-    ->fields('data', ['tag_id'])
-    ->countQuery()
-    ->execute()
-    ->fetchField();
-  db_set_active();
-  return $result;
-}
 
 /**
  * Реализация hook_block_info()
@@ -1079,13 +1059,25 @@ function core_block_view($delta = '') {
     case 'event_block':
 
       $block['subject'] = t('Events blocks');
-      $block['content'] = core_event_bloсk();
+      $block['content'] = core_event_block();
       break;
   }
   return $block;
 }
 
-function core_event_bloсk() {
+function core_total_tags() {
+    $result = 0;
+    db_set_active('kns');
+    $result = db_select('data', 'data')
+        ->fields('data', ['tag_id'])
+        ->countQuery()
+        ->execute()
+        ->fetchField();
+    db_set_active();
+    return $result;
+}
+
+function core_event_block() {
   $event_count = 0;
   db_set_active('kns');
   $event_count = db_select('events', 'e')
@@ -1149,6 +1141,43 @@ function core_ajax_quit() {
   db_set_active();
 }
 
-function core_perfomance_engine_stat($tag_id, $period) {
-  return 0;
+function core_perfomance_engine_stat($tag_id, $period = NULL, $format = 'time') {
+
+    $period = strtotime('01.'. $period. '.'. date('Y'));
+    if ($cache = cache_get('work_' . $period)) {
+        $result = $cache->data;
+    }
+    else {
+        db_set_active('kns');
+
+        $result = db_select('history', 'history')
+            ->condition('history.tag_id', (int)$tag_id)
+            ->condition('history.val', 1);
+
+
+        if (isset($period)) {
+            $result->condition('history.created', (int)$period, '>');
+            $result->condition('history.created', (int)$period + (60 * 60 * 24 * 30), '<=');
+        }
+
+
+        $result = $result->countQuery()->execute()->fetchField();
+        db_set_active();
+        cache_set('work_' . $period, 'cache', time() + 3600);
+    }
+    switch ($format) {
+        case 'second':
+            return $result;
+            break;
+        case 'time':
+            return secondsToTime($result);
+            break;
+    }
+
+}
+
+function secondsToTime($seconds) {
+    $dtF = new \DateTime('@0');
+    $dtT = new \DateTime("@$seconds");
+    return $dtF->diff($dtT)->format('%a Д | %h : %i : %s');
 }

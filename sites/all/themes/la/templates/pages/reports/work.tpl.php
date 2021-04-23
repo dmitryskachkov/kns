@@ -4,7 +4,9 @@
             <div class="card-body">
                 <div class="row">
                         <div>
+                            <p>Выбранный период: <?= $period . '.' . date('Y'); ?></p>
                             <div style="float: right">
+
                               <?php print render($period_switch_form) ; ?>
                             </div>
                         </div>
@@ -31,19 +33,24 @@
                                         </thead>
                                         <tbody>
                                         <?php if (isset($unit->engines)) : ?>
+
                                             <?php foreach ($unit->engines as $n => $engine): ?>
+                                                <?php
+                                                $engine_q = core_perfomance_engine_stat($engine->field_tag_id['und'][0]['value'], $period, 'second') * $engine->field_performance_q['und'][0]['value'];
+                                                $unit->total_q = $unit->total_q + $engine_q;
+                                                ?>
                                                 <tr>
                                                     <td><?= $n ?></td>
                                                     <td><?= $engine->title; ?></td>
-                                                    <td><?= core_perfomance_engine_stat($engine->field_tag_id['und'][0]['value'], $period) ?></td>
+                                                    <td><?= core_perfomance_engine_stat($engine->field_tag_id['und'][0]['value'], $period, 'time') ?></td>
                                                     <td><?= $engine->field_performance_q['und'][0]['value'] ?> м3/час</td>
-                                                    <td><?= core_perfomance_engine_stat($engine->field_tag_id['und'][0]['value'], $period) * $engine->field_performance_q['und'][0]['value'] ?></td>
+                                                    <td><?= $engine_q ?> м3</td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                         <tr>
                                             <td colspan="4" style="text-align: right; font-weight: bold">Итого</td>
-                                            <td>0.0</td>
+                                            <td><?= $unit->total_q ?> м3</td>
                                         </tr>
                                         </tbody>
                                     </table>

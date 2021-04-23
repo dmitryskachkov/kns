@@ -2,6 +2,9 @@
     Drupal.behaviors.exampleModule = {
         attach: function (context, settings) {
 
+            $("#core-period-switch-form select").change(function () {
+                $("#core-period-switch-form").submit();
+            });
 
             $("#core-unit-switch-form select").change(function () {
                 $("#core-unit-switch-form").submit();

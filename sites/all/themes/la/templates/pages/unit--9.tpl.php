@@ -80,7 +80,7 @@ drupal_set_title('КНС 37');
                         <div class="col-md-2" style="padding-top: 30px">
                             <p style="line-height: 20px">Ошибка уровня:
                                 <button class="btn btn-inverse-light btn-fw btn-sm toolipdate float-right error-btn interactive"
-                                        data-browse="509" data-href="btn"
+                                        data-browse="533" data-href="btn"
                                         data-var="unit.error_level" title="Проблемы с датчиками уровня"></button>
                             </p>
                             <p style="line-height: 20px">Ошибка насоса 1:

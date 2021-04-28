@@ -378,7 +378,7 @@ function core_ajax_get_history() {
     $result->condition('history.created', (int) $params['start'], '>');
   }
   else {
-    $result->condition('history.created', (int) time() - 86400 * 2, '>');
+    $result->condition('history.created', (int) time() - 86400 * 5, '>');
   }
 
   if (isset($params['end'])) {

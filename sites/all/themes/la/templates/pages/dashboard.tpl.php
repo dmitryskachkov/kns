@@ -262,9 +262,9 @@
                                             data-browse="414" data-var="voltage1"><i
                                                 class="fa fa-bolt"></i> 1
                                     </button>
-                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate error-btn"
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate error-btn interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
-                                             data-var="filter_level"># MAX
+                                             data-var="filter_level"  data-browse="435"># MAX
                                     </button>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"

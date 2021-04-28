@@ -248,8 +248,8 @@
                                 <div class="col-md-9">
                                     <p class="small" style="margin-top:20px; margin-bottom: 20px">Насосы в работе:</p>
                                     <div style="margin-left: 10px">
-                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="403" data-error="410"  data-var="engine1.status"><span class="interactive-text" data-browse="320">0</span> A</p>
-                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="404" data-error="411" data-var="engine2.status"><span class="interactive-text" data-browse="321">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="403" data-error="410"  data-var="engine1.status"><span class="interactive-text" data-browse="420">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="404" data-error="411" data-var="engine2.status"><span class="interactive-text" data-browse="421">0</span> A</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="425"  data-var="engine_dr.status">Д</p>
                                     </div>
                                     <hr>

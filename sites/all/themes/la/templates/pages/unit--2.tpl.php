@@ -141,7 +141,6 @@ drupal_set_title('КНС №22');
 </div>
 
 <script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
-<script src="http://code.highcharts.com/maps/modules/map.js"></script>
 <script type="text/javascript">
     const timezone = new Date().getTimezoneOffset()
 

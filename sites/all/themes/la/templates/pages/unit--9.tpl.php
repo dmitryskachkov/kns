@@ -155,8 +155,6 @@ drupal_set_title('КНС 37');
 </div>
 </div>
 
-<script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
-<script src="http://code.highcharts.com/maps/modules/map.js"></script>
 <script type="text/javascript">
     const timezone = new Date().getTimezoneOffset()
 
@@ -235,12 +233,12 @@ drupal_set_title('КНС 37');
             chart = Highcharts.charts[i];
             event = chart.pointer.normalize(e.originalEvent); // Find coordinates within the chart
 
-            point = chart.series[0].searchPoint(event, true); // Get the hovered point
+            //point = chart.series[0].searchPoint(event, true); // Get the hovered point
             //point = searchPoint(event, chart);
 
-            if (point) {
-                point.highlight(e);
-            }
+            // if (point) {
+            //     point.highlight(e);
+            // }
         }
     });
     /**
@@ -319,6 +317,11 @@ drupal_set_title('КНС 37');
                     connectNulls: true,
                     dataGrouping: {
                         enabled: false,
+                    },
+                    states: {
+                        inactive: {
+                            opacity: 1
+                        }
                     },
                 },
             },

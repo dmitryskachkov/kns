@@ -271,12 +271,12 @@ drupal_set_title('КНС УВД');
             chart = Highcharts.charts[i];
             event = chart.pointer.normalize(e.originalEvent); // Find coordinates within the chart
 
-            point = chart.series[0].searchPoint(event, true); // Get the hovered point
-            //point = searchPoint(event, chart);
-
-            if (point) {
-                point.highlight(e);
-            }
+            // point = chart.series[0].searchPoint(event, true); // Get the hovered point
+            // //point = searchPoint(event, chart);
+            //
+            // if (point) {
+            //     point.highlight(e);
+            // }
         }
     });
     /**
@@ -355,6 +355,11 @@ drupal_set_title('КНС УВД');
                     connectNulls: true,
                     dataGrouping: {
                         enabled: false,
+                    },
+                    states: {
+                        inactive: {
+                            opacity: 1
+                        }
                     },
                 },
             },

@@ -20,7 +20,7 @@ scripts[] = js/select2.min.js
 scripts[] = js/highstock.js
 scripts[] = js/data.js
 scripts[] = js/exporting.js
-scripts[] = js/export-data.js
+;scripts[] = js/export-data.js
 scripts[] = js/datatables.min.js
 
 regions[header] = Header

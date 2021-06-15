@@ -365,7 +365,7 @@ drupal_set_title('КНС 37');
         });
 
         var levels_errors = requestVerticalLineForErrorData(stockChart, '509', '#FF0000','Ошибка уровня');
-
+        var doors = requestVerticalLineForErrorData(stockChart, '532', '#ffc92a','Движение', 0);
 
     });
 

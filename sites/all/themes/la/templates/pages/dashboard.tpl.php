@@ -318,9 +318,9 @@
                                 <div class="col-md-9">
                                     <p class="small" style="margin-top:20px; margin-bottom: 20px">Насосы в работе:</p>
                                     <div style="margin-left: 10px">
-                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="503" data-error="510"  data-var="engine1.status"><span class="interactive-text" data-browse="320">0</span> A</p>
-                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="504" data-error="511" data-var="engine2.status"><span class="interactive-text" data-browse="321">0</span> A</p>
-                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="505" data-error="512" data-var="engine3.status"><span class="interactive-text" data-browse="321">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="503" data-error="510"  data-var="engine1.status"><span class="interactive-text" data-browse="520">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="504" data-error="511" data-var="engine2.status"><span class="interactive-text" data-browse="521">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="505" data-error="512" data-var="engine3.status"><span class="interactive-text" data-browse="522">0</span> A</p>
                                     </div>
                                     <hr>
                                     <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="533" data-href="btn" data-var="unit.error_level"></button></p>

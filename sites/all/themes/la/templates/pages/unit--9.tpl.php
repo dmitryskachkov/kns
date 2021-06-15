@@ -37,9 +37,7 @@ drupal_set_title('КНС 37');
                             <h4>Состояние насосов</h4>
                             <p class="text-muted font-weight-light">Сигналы насосов</p>
                             <div style="margin-left: 10px">
-                                <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
-                                   style="margin-right: 12px;" data-href="btn"
-                                   data-browse="503" data-error="510" data-var="engine1.status" title="Насос №1"><span class="interactive-text" data-browse="520">0</span> A</p>
+                                <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive" style="margin-right: 12px;" data-href="btn" data-browse="503" data-error="510" data-var="engine1.status" title="Насос №1"><span class="interactive-text" data-browse="520">0</span> A</p>
                                 <p class="btn btn-outline-secondary btn-icon btn-rounded toolipdate interactive"
                                    style="margin-right: 12px;" data-href="btn"
                                    data-browse="504" data-error="511" data-var="engine2.status" title="Насос №2"><span class="interactive-text" data-browse="521">0</span> A</p>

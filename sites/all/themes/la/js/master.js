@@ -20,7 +20,7 @@
                 });
             });
             $(".container-scroller").click(function () {
-                $.sidr("close", "sidr-main");
+                $("#sidr-0").hide();
             });
             $("#event-resize").click(function () {
                 if ($("#event-body").hasClass("hidden")) {

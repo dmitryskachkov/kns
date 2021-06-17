@@ -218,8 +218,7 @@ table#table-daily {
     line-height: 30px;
     color: #ffffff;
 }
-@media (max-width: 991px) {
-    .navbar .navbar-menu-wrapper {
-    padding-right: 30px;
-    }
+#sidr-wrapper-0 {
+    font-size: 25px;
+    margin-right: 10px;
 }

@@ -20,7 +20,8 @@
                 });
             });
             $(".container-scroller").click(function () {
-                $("#sidr-0").hide();
+                $("#sidr-0").removeAttr("style");
+                $("#sidr-0").css("display","none");
             });
             $("#event-resize").click(function () {
                 if ($("#event-body").hasClass("hidden")) {

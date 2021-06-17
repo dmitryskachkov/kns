@@ -6,9 +6,7 @@
     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
 
       <?php print render($page['header']); ?>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-            <span class="ti-layout-grid2"></span>
-        </button>
+
     </div>
 </nav>
 <div class="container-scroller">

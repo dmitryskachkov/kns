@@ -210,3 +210,11 @@ table#table-daily {
 #core-period-switch-form .btn {
     display: none;
 }
+.sidr-inner li {
+    padding: 10px 10px;
+    list-style: none;
+}
+.sidr-inner li a {
+    line-height: 30px;
+    color: #ffffff;
+}

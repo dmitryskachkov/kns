@@ -1,7 +1,7 @@
 <body>
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="navbar-brand-wrapper d-flex">
-        <a class="navbar-brand brand-logo mr-5" style="padding-left: 40px; padding-top: 20px" href="/">КНС</a>
+        <a class=" mr-5" style="padding-left: 40px; padding-top: 20px; font-size: 25px" href="/">КНС</a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
 

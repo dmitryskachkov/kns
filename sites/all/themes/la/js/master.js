@@ -19,7 +19,9 @@
                     }
                 });
             });
-
+            $(".container-scroller").click(function () {
+                $.sidr("close", "sidr-main");
+            });
             $("#event-resize").click(function () {
                 if ($("#event-body").hasClass("hidden")) {
                     $("#event-body").removeClass("hidden");

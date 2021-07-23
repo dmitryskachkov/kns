@@ -13719,7 +13719,9 @@ input[type="button"].btn-block {
     border: 1px solid #e3e3e3;
     border-radius: 0;
 }
-
+.card:hover {
+    border: 1px solid #469fe3;
+}
 .card > hr {
     margin-right: 0;
     margin-left: 0;

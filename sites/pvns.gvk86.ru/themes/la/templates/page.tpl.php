@@ -1,7 +1,7 @@
 <body>
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="navbar-brand-wrapper d-flex">
-        <a class=" mr-5" style="padding-left: 40px; padding-top: 20px; font-size: 25px" href="/">КНС</a>
+        <a class=" mr-5" style="padding-left: 40px; padding-top: 20px; font-size: 25px" href="/">ПВНС</a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
 
@@ -18,7 +18,7 @@
                         <div class="row">
                             <div class="col-12 col-xl-5 mb-4 mb-xl-0">
                                 <h4 class="font-weight-bold"><?php print $title; ?></h4>
-                                <h4 class="small">Канализационные насосные станции</h4>
+                                <h4 class="small">Повысительные насосные станции</h4>
                             </div>
                             <div class="col-12 col-xl-7">
                                 <div class="d-flex align-items-center justify-content-between flex-wrap">

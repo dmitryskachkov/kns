@@ -11,7 +11,7 @@
                   </div>
                   <div class="col-lg-10">
                       <h4> Система мониторинга объектов</h4>
-                      <h6 class="font-weight-light" style="margin-bottom: 40px">Канализационные насосные станции</h6>
+                      <h6 class="font-weight-light" style="margin-bottom: 40px">Повысительные насосные станции</h6>
 
                   </div>
               </div>

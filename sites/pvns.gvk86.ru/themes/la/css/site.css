@@ -13720,7 +13720,7 @@ input[type="button"].btn-block {
     border-radius: 0;
 }
 .card:hover {
-    border: 1px solid #469fe3;
+    border: 1px solid #b4b4b4;
 }
 .card > hr {
     margin-right: 0;

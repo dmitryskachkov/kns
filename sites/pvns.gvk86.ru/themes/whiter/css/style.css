@@ -1,0 +1,119 @@
+.btn-active {
+    background-color: #f5a623;
+    border-color: #f5a623;
+    color: #313131;
+    font-weight: bold;
+}
+.btn-error {
+    background-color: #f55f60;
+    border-color: #f55f60;
+}
+.btn-rounded.btn-icon {
+    line-height: 44px;
+}
+.btn.btn-icon {
+
+    width: 48px;
+    height: 48px;
+}
+.level.interactive {
+    padding: 10px 8px;
+}
+.resizable-textarea .grippie {
+    display: none;
+}
+.default-text {
+    text-decoration: none;
+    color: #8c8c8c;
+}
+.default-text:hover {
+    color: #8c8c8c;
+    text-decoration: none;
+}
+.text-attr.btn-active {
+    background-color: transparent;
+    border-color: transparent;
+}
+.error-btn.btn-active {
+    background-color: #f51231;
+    border-color: #f51231;
+}
+.brand-logo-mini {
+    color: #ffffff;
+}
+.form-text {
+    height: 35px;
+    margin-right: 0;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #444444;
+}
+.form-text:focus {
+    border: 1px solid #444444;
+}
+.description {
+    margin-top: 15px;
+}
+.auth-form-light {
+    color: #444444;
+}
+.auth-form-light h4
+{
+    color: #222222;
+    font-size: 20px;
+}
+.auth-form-light .form-submit {
+    padding: 10px 40px;
+    border-radius: 0;
+    margin-top: 15px;
+}
+.mytooltip{
+    position: absolute;
+    z-index: 999;
+    left: 30px;
+    background-color: #f2f2f2;
+    border: 1px solid #fff;
+    width: 250px;
+    color: #222;
+    font-size: 11px;
+    padding: 10px;
+}
+.mytooltip p{
+    margin:0;
+    color:#fff;
+    background-color:#222;
+    padding:2px 7px;
+}
+p.small {
+    font-size: 10px;
+}
+.ymaps-layers-pane {
+    -webkit-filter: grayscale(100%);
+}
+.bar-progress {
+    margin-top: 20px;
+    height: 90%;
+    background-color: #878c9e;
+    display: block;
+    width: 30px;
+}
+.bar-progress .bar25 {
+    height: 25%;
+    display: block;
+}
+.bar-level .btn-active {
+    background-color: #f5a623;
+}
+.vertical-progress .progress-bar{
+    position:absolute;top:20%; width: 30px;height: 80%;
+
+}
+.mg-b-20 {
+    margin-bottom: 20px;
+}
+.mg-b-50 {
+    margin-bottom: 50px;
+}
+#core-unit-switch-form .btn {
+    display: none;
+}

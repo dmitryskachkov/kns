@@ -33,7 +33,7 @@
                                 <div class="row">
                                     <div class="col-md-8">
                                         
-                                        <div style="margin-left: 10px">
+                                        <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">3</p>
@@ -98,7 +98,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     
-                                    <div style="margin-left: 10px">
+                                    <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">3</p>
@@ -163,7 +163,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     
-                                    <div style="margin-left: 10px">
+                                    <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">3</p>
@@ -227,7 +227,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     
-                                    <div style="margin-left: 10px">
+                                    <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">3</p>
@@ -292,7 +292,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     
-                                    <div style="margin-left: 10px">
+                                    <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">3</p>
@@ -363,7 +363,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     
-                                    <div style="margin-left: 10px">
+                                    <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">3</p>
@@ -428,7 +428,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     
-                                    <div style="margin-left: 10px">
+                                    <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">3</p>
@@ -492,7 +492,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     
-                                    <div style="margin-left: 10px">
+                                    <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">3</p>

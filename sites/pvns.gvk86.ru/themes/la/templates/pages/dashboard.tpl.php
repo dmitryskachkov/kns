@@ -31,7 +31,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-9">
+                                    <div class="col-md-8">
                                         
                                         <div style="margin-left: 10px">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
@@ -56,7 +56,7 @@
                                                 data-browse=103" data-var="cold_status"><i
                                                     class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                         <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                         <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
@@ -96,7 +96,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     
                                     <div style="margin-left: 10px">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
@@ -121,7 +121,7 @@
                                             data-browse=103" data-var="cold_status"><i
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
@@ -161,7 +161,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     
                                     <div style="margin-left: 10px">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
@@ -185,7 +185,7 @@
                                             data-browse=103" data-var="cold_status"><i
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
@@ -225,7 +225,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     
                                     <div style="margin-left: 10px">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
@@ -250,7 +250,7 @@
                                             data-browse=103" data-var="cold_status"><i
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
@@ -290,7 +290,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     
                                     <div style="margin-left: 10px">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
@@ -321,7 +321,7 @@
                                             data-browse=103" data-var="cold_status"><i
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
@@ -361,7 +361,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     
                                     <div style="margin-left: 10px">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
@@ -386,7 +386,7 @@
                                             data-browse=103" data-var="cold_status"><i
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
@@ -426,7 +426,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     
                                     <div style="margin-left: 10px">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
@@ -450,7 +450,7 @@
                                             data-browse=103" data-var="cold_status"><i
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
@@ -490,7 +490,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     
                                     <div style="margin-left: 10px">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
@@ -515,7 +515,7 @@
                                             data-browse=103" data-var="cold_status"><i
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
                                     <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>

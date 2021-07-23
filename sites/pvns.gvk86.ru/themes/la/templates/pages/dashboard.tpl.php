@@ -24,7 +24,7 @@
                                         </button>
                                         <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 17</h4>
-                                        <p class="text-muted font-weight-light">Пос. Дорожный | 192.168.22.51</p>
+                                        <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                         </a>
                                     </div>
 
@@ -89,7 +89,7 @@
                                     </button>
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 47</h4>
-                                        <p class="text-muted font-weight-light">Пос. Дорожный | 192.168.22.51</p>
+                                        <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
                                 </div>
 
@@ -154,7 +154,7 @@
                                     </button>
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 37</h4>
-                                        <p class="text-muted font-weight-light">Пос. Дорожный | 192.168.22.51</p>
+                                        <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
                                 </div>
 
@@ -218,7 +218,7 @@
                                     </button>
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 56</h4>
-                                        <p class="text-muted font-weight-light">Пос. Дорожный | 192.168.22.51</p>
+                                        <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
                                 </div>
 
@@ -267,7 +267,7 @@
 
             </div>
         </div>
-        <div class="col-md-6 grid-margin stretch-card">
+        <div class="col-md-4 grid-margin stretch-card">
             <div class="card">
 
                 <div class="card-body">
@@ -283,7 +283,7 @@
                                     </button>
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 39</h4>
-                                        <p class="text-muted font-weight-light">Пос. Дорожный | 192.168.22.51</p>
+                                        <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
                                 </div>
 
@@ -354,7 +354,7 @@
                                     </button>
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 57</h4>
-                                        <p class="text-muted font-weight-light">Пос. Дорожный | 192.168.22.51</p>
+                                        <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
                                 </div>
 
@@ -419,7 +419,7 @@
                                     </button>
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 41</h4>
-                                        <p class="text-muted font-weight-light">Пос. Дорожный | 192.168.22.51</p>
+                                        <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
                                 </div>
 
@@ -483,7 +483,7 @@
                                     </button>
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 90</h4>
-                                        <p class="text-muted font-weight-light">Пос. Дорожный | 192.168.22.51</p>
+                                        <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
                                 </div>
 

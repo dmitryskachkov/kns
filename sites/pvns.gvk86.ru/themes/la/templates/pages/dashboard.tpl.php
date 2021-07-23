@@ -15,24 +15,13 @@
                     <div class="row">
 
                             <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
-                                                style="float:right; margin-bottom: 10px; " data-href="btn"
-                                                data-browse="102" data-var="door"  data-say="Станция №22. Движение на объекте"><i class="fa fa-lock"
-                                                                                                           aria-hidden="true"></i>
-                                        </button>
-                                        <a class="default-text" href="/unit/2">
-                                        <h4>ПВНС 17</h4>
-                                        <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
-                                        </a>
-                                    </div>
-
-                                </div>
 
                                 <div class="row">
                                     <div class="col-md-8">
-                                        
+                                        <a class="default-text" href="/unit/2">
+                                            <h4>ПВНС 17</h4>
+                                            <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
+                                        </a>
                                         <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
@@ -80,24 +69,13 @@
                     <div class="row">
 
                         <div class="col-md-12">
+
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
-                                            style="float:right; margin-bottom: 10px; " data-href="btn"
-                                            data-browse="102" data-var="door"  data-say="Станция №22. Движение на объекте"><i class="fa fa-lock"
-                                                                                                                              aria-hidden="true"></i>
-                                    </button>
+                                <div class="col-md-8">
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 47</h4>
                                         <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    
                                     <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
@@ -145,24 +123,14 @@
                     <div class="row">
 
                         <div class="col-md-12">
+
+
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
-                                            style="float:right; margin-bottom: 10px; " data-href="btn"
-                                            data-browse="102" data-var="door"  data-say="Станция №22. Движение на объекте"><i class="fa fa-lock"
-                                                                                                                              aria-hidden="true"></i>
-                                    </button>
+                                <div class="col-md-8">
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 37</h4>
                                         <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    
                                     <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
@@ -209,24 +177,14 @@
                     <div class="row">
 
                         <div class="col-md-12">
+
+
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
-                                            style="float:right; margin-bottom: 10px; " data-href="btn"
-                                            data-browse="102" data-var="door"  data-say="Станция №22. Движение на объекте"><i class="fa fa-lock"
-                                                                                                                              aria-hidden="true"></i>
-                                    </button>
+                                <div class="col-md-8">
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 56</h4>
                                         <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    
                                     <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
@@ -274,24 +232,14 @@
                     <div class="row">
 
                         <div class="col-md-12">
+
+
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
-                                            style="float:right; margin-bottom: 10px; " data-href="btn"
-                                            data-browse="102" data-var="door"  data-say="Станция №22. Движение на объекте"><i class="fa fa-lock"
-                                                                                                                              aria-hidden="true"></i>
-                                    </button>
+                                <div class="col-md-8">
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 39</h4>
                                         <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    
                                     <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
@@ -345,24 +293,14 @@
                     <div class="row">
 
                         <div class="col-md-12">
+
+
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
-                                            style="float:right; margin-bottom: 10px; " data-href="btn"
-                                            data-browse="102" data-var="door"  data-say="Станция №22. Движение на объекте"><i class="fa fa-lock"
-                                                                                                                              aria-hidden="true"></i>
-                                    </button>
+                                <div class="col-md-8">
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 57</h4>
                                         <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    
                                     <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
@@ -410,24 +348,14 @@
                     <div class="row">
 
                         <div class="col-md-12">
+
+
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
-                                            style="float:right; margin-bottom: 10px; " data-href="btn"
-                                            data-browse="102" data-var="door"  data-say="Станция №22. Движение на объекте"><i class="fa fa-lock"
-                                                                                                                              aria-hidden="true"></i>
-                                    </button>
+                                <div class="col-md-8">
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 41</h4>
                                         <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    
                                     <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>
@@ -474,24 +402,14 @@
                     <div class="row">
 
                         <div class="col-md-12">
+
+
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
-                                            style="float:right; margin-bottom: 10px; " data-href="btn"
-                                            data-browse="102" data-var="door"  data-say="Станция №22. Движение на объекте"><i class="fa fa-lock"
-                                                                                                                              aria-hidden="true"></i>
-                                    </button>
+                                <div class="col-md-8">
                                     <a class="default-text" href="/unit/2">
                                         <h4>ПВНС 90</h4>
                                         <p class="text-muted font-weight-light mg-b-20">Пос. Дорожный | 192.168.22.51</p>
                                     </a>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    
                                     <div class="engines">
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="113" data-error="120"  data-var="engine1.status">1</p>
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 5px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">2</p>

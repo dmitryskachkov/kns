@@ -8,7 +8,7 @@
                 </ol>
             </nav>
         </div>
-        <div class="col-md-4 grid-margin stretch-card">
+        <div class="col-md-4 col-xs-12 col-sm-12 grid-margin stretch-card">
             <div class="card">
 
                 <div class="card-body">
@@ -62,7 +62,7 @@
 
             </div>
         </div>
-        <div class="col-md-4 grid-margin stretch-card">
+        <div class="col-md-4 col-xs-12 col-sm-12 grid-margin stretch-card">
             <div class="card">
 
                 <div class="card-body">
@@ -116,7 +116,7 @@
 
             </div>
         </div>
-        <div class="col-md-4 grid-margin stretch-card">
+        <div class="col-md-4 col-xs-12 col-sm-12 grid-margin stretch-card">
             <div class="card">
 
                 <div class="card-body">
@@ -170,7 +170,7 @@
 
             </div>
         </div>
-        <div class="col-md-4 grid-margin stretch-card">
+        <div class="col-md-4 col-xs-12 col-sm-12 grid-margin stretch-card">
             <div class="card">
 
                 <div class="card-body">
@@ -225,7 +225,7 @@
 
             </div>
         </div>
-        <div class="col-md-4 grid-margin stretch-card">
+        <div class="col-md-4 col-xs-12 col-sm-12 grid-margin stretch-card">
             <div class="card">
 
                 <div class="card-body">
@@ -286,7 +286,7 @@
 
             </div>
         </div>
-        <div class="col-md-4 grid-margin stretch-card">
+        <div class="col-md-4 col-xs-12 col-sm-12 grid-margin stretch-card">
             <div class="card">
 
                 <div class="card-body">
@@ -341,7 +341,7 @@
 
             </div>
         </div>
-        <div class="col-md-4 grid-margin stretch-card">
+        <div class="col-md-4 col-xs-12 col-sm-12 grid-margin stretch-card">
             <div class="card">
 
                 <div class="card-body">
@@ -395,7 +395,7 @@
 
             </div>
         </div>
-        <div class="col-md-4 grid-margin stretch-card">
+        <div class="col-md-4 col-xs-12 col-sm-12 grid-margin stretch-card">
             <div class="card">
 
                 <div class="card-body">

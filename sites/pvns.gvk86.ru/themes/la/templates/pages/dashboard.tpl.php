@@ -105,9 +105,7 @@
 
                                     </div>
                                     <hr>
-                                    <p style="line-height: 20px">Затопление: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня"></button></p>
-
-                                    <hr>
+                                    
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
                                             data-browse="104" data-var="voltage1"><i
@@ -171,9 +169,6 @@
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">3</p>
 
                                     </div>
-                                    <hr>
-                                    <p style="line-height: 20px">Затопление: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня"></button></p>
-
                                     <hr>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
@@ -239,9 +234,7 @@
 
                                     </div>
                                     <hr>
-                                    <p style="line-height: 20px">Затопление: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня"></button></p>
-
-                                    <hr>
+                                   
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
                                             data-browse="104" data-var="voltage1"><i
@@ -306,9 +299,7 @@
 
                                     </div>
                                     <hr>
-                                    <p style="line-height: 20px">Затопление: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня"></button></p>
-
-                                    <hr>
+                                    
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
                                             data-browse="104" data-var="voltage1"><i
@@ -373,9 +364,7 @@
 
                                     </div>
                                     <hr>
-                                    <p style="line-height: 20px">Затопление: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня"></button></p>
 
-                                    <hr>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
                                             data-browse="104" data-var="voltage1"><i
@@ -439,9 +428,6 @@
                                         <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded interactive" style="margin-right: 12px;" data-href="btn" data-browse="114" data-error="121" data-var="engine2.status">3</p>
 
                                     </div>
-                                    <hr>
-                                    <p style="line-height: 20px">Затопление: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня"></button></p>
-
                                     <hr>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
@@ -507,9 +493,7 @@
 
                                     </div>
                                     <hr>
-                                    <p style="line-height: 20px">Затопление: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня"></button></p>
 
-                                    <hr>
                                     <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                             style="margin-bottom: 10px; " data-href="btn"
                                             data-browse="104" data-var="voltage1"><i

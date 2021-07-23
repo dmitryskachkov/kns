@@ -40,9 +40,7 @@
 
                                         </div>
                                             <hr>
-                                        <p style="line-height: 20px">Затопление: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня"></button></p>
-
-                                        <hr>
+                                        
                                         <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
                                                 style="margin-bottom: 10px; " data-href="btn"
                                                 data-browse="104" data-var="voltage1"><i
@@ -59,10 +57,10 @@
                                                     class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                     </div>
                                     <div class="col-md-3">
-                                        <p style="line-height: 25px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                        <p style="line-height: 25px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                        <p style="line-height: 25px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                        <p style="line-height: 25px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                        <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                        <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                        <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                        <p style="line-height: 30px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
 
                                     </div>
 
@@ -126,10 +124,10 @@
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
                                 <div class="col-md-3">
-                                    <p style="line-height: 25px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
 
                                 </div>
 
@@ -193,10 +191,10 @@
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
                                 <div class="col-md-3">
-                                    <p style="line-height: 25px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
 
                                 </div>
 
@@ -260,10 +258,10 @@
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
                                 <div class="col-md-3">
-                                    <p style="line-height: 25px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
 
                                 </div>
 
@@ -327,10 +325,10 @@
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
                                 <div class="col-md-3">
-                                    <p style="line-height: 25px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
 
                                 </div>
 
@@ -394,10 +392,10 @@
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
                                 <div class="col-md-3">
-                                    <p style="line-height: 25px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
 
                                 </div>
 
@@ -461,10 +459,10 @@
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
                                 <div class="col-md-3">
-                                    <p style="line-height: 25px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
 
                                 </div>
 
@@ -528,10 +526,10 @@
                                                 class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="109" style="margin-left: 5px">0</span> ℃</button>
                                 </div>
                                 <div class="col-md-3">
-                                    <p style="line-height: 25px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
-                                    <p style="line-height: 25px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вх: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Р вых: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Ток ПЧ: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
+                                    <p style="line-height: 30px">Расход: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn interactive" data-browse="119" data-href="btn" data-var="unit.error_level"  data-say="Станция №22. Ошибка уровня">0.00</button></p>
 
                                 </div>
 

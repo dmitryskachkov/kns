@@ -355,4 +355,79 @@
 
             </div>
         </div>
+        <div class="col-md-3 grid-margin stretch-card">
+            <div class="card">
+
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate"
+                                            style="float:right; margin-bottom: 10px; " data-href="btn"
+                                            data-browse="532" data-var="door"><i class="fa fa-lock"
+                                                                                 aria-hidden="true"></i>
+                                    </button>
+                                    <a class="default-text" href="/unit/10">
+                                        <h4>КНС 12</h4>
+                                        <p class="text-muted font-weight-light">ул. проспект Комсомольский |  192.168.22.56</p>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="bar-progress">
+                                        <span class="bar-level bar25 toolipdate" data-href="btn" data-browse="509" data-var="level4"> </span>
+                                        <span class="bar-level bar25 toolipdate " data-href="btn" data-browse="509" data-var="level3"> </span>
+                                        <span class="bar-level bar25 toolipdate" data-href="btn" data-browse="508" data-var="level2"> </span>
+                                        <span class="bar-level bar25 toolipdate" data-href="btn" data-browse="507" data-var="level1"> </span>
+                                        <span class="bar-level bar25 toolipdate" data-href="btn" data-browse="506" data-var="level0"> </span>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <p class="small" style="margin-top:20px; margin-bottom: 20px">Насосы в работе:</p>
+                                    <div style="margin-left: 10px">
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded" style="margin-right: 12px;" data-href="btn" data-browse="503" data-error="510"  data-var="engine1.status"><span class="interactive-text" data-browse="520">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded" style="margin-right: 12px;" data-href="btn" data-browse="504" data-error="511" data-var="engine2.status"><span class="interactive-text" data-browse="521">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded" style="margin-right: 12px;" data-href="btn" data-browse="505" data-error="512" data-var="engine3.status"><span class="interactive-text" data-browse="522">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded" style="margin-right: 12px;" data-href="btn" data-browse="505" data-error="512" data-var="engine3.status"><span class="interactive-text" data-browse="522">0</span> A</p>
+                                        <p class="btn btn-outline-secondary toolipdate btn-icon btn-rounded" style="margin-right: 12px;" data-href="btn" data-browse="505" data-error="512" data-var="engine3.status"><span class="interactive-text" data-browse="522">0</span> A</p>
+                                    </div>
+                                    <hr>
+                                    <p style="line-height: 20px">Ошибка уровня: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn" data-browse="533" data-href="btn" data-var="unit.error_level"></button></p>
+                                    <p style="line-height: 20px">Ошибка насоса 1: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn" data-browse="510" data-href="btn"data-var="unit.error_engine"></button></p>
+                                    <p style="line-height: 20px">Ошибка насоса 2: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn " data-browse="511" data-href="btn" data-var="unit.error_engine"></button></p>
+                                    <p style="line-height: 20px">Ошибка насоса 3: <button class="btn btn-inverse-light btn-fw btn-sm float-right error-btn" data-browse="512" data-href="btn" data-var="unit.error_engine"></button></p>
+                                    <hr>
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                            style="margin-bottom: 10px; " data-href="btn"
+                                            data-browse="514" data-var="voltage1"><i
+                                                class="fa fa-bolt"></i> 1
+                                    </button>
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                            style="margin-bottom: 10px; " data-href="btn"
+                                            data-browse="515" data-var="voltage1"><i
+                                                class="fa fa-bolt"></i> 2
+                                    </button>
+                                    <button class="btn btn-sm btn-inverse-light btn-fw toolipdate interactive"
+                                            style="margin-bottom: 10px; " data-href="btn"
+                                            data-browse=513" data-var="cold_status"><i
+                                                class="fa fa-snowflake-o" aria-hidden="true"></i> <span class="interactive-text" data-browse="519" style="margin-left: 5px">0</span> ℃</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </div>

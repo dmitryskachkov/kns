@@ -1,0 +1,10 @@
+@media (min-width: 992px)
+{
+    .module {
+        width: 20%;
+        max-width: 20%;
+    }
+    .modulehead h2 {
+        font-size: 15px;
+    }
+}
